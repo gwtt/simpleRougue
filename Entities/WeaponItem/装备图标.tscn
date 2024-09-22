@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://g4vjtrv5p0ap"]
+
+[ext_resource type="Texture2D" uid="uid://cjqcirysdsap4" path="res://Entities/WeaponItem/Art/item_box_no_shader.png" id="1_161ho"]
+[ext_resource type="Script" path="res://Entities/WeaponItem/装备图标.gd" id="2_nsald"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8oqie"]
+
+[node name="装备图标" type="TextureRect"]
+custom_minimum_size = Vector2(150, 150)
+offset_right = 139.0
+offset_bottom = 102.0
+scale = Vector2(10, 10)
+texture = ExtResource("1_161ho")
+script = ExtResource("2_nsald")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 151.0
+offset_bottom = 107.0
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8oqie")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

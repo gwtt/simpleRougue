@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfctmwgccni2v"]
+
+[ext_resource type="Script" path="res://Entities/BaseWeapon/攻速手套/AttackSpeed​​Gloves.gd" id="1_uhpij"]
+[ext_resource type="Texture2D" uid="uid://dnrjxwp3gvwrk" path="res://Entities/BaseWeapon/攻速手套/Art/bow_01a.png" id="2_8fkqr"]
+
+[node name="攻速手套" type="Node2D"]
+script = ExtResource("1_uhpij")
+"装备名称" = "攻速手套"
+"装备图片" = ExtResource("2_8fkqr")
+"装备信息" = "攻速加10%"

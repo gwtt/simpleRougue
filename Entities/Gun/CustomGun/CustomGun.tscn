@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://csajreh0577ui"]
+
+[ext_resource type="Script" path="res://Entities/Gun/CustomGun/CustomGun.gd" id="1_5noaw"]
+[ext_resource type="Texture2D" uid="uid://j4k14r7sfa3n" path="res://Entities/Gun/CustomGun/Art/gun.png" id="2_2eb2c"]
+[ext_resource type="PackedScene" uid="uid://clctv28x4gpc5" path="res://Entities/Bullet/CustomBullet/CustomBullet.tscn" id="3_nglx0"]
+[ext_resource type="AudioStream" uid="uid://dmaulb5v3y1h8" path="res://Entities/Gun/CustomGun/Sound/GUNPis_Pistol Fire_01.wav" id="4_uweru"]
+
+[node name="宝宝枪" type="Node2D"]
+position = Vector2(3, 1)
+script = ExtResource("1_5noaw")
+image = ExtResource("2_2eb2c")
+weapon_type = "SUBMACHINE_GUNSRELOAD"
+bullet_scene = ExtResource("3_nglx0")
+damage = 0.7
+bullet_speed = 500
+knockback_speed = 0
+knockback_time = 0.0
+time_scale = 0.0
+freeze_frame = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+offset = Vector2(6, -1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="shoot_timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_uweru")
+
+[node name="Tip" type="Node2D" parent="."]
+
+[connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]

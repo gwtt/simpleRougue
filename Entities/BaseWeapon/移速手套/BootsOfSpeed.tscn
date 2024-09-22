@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://beeoa0c3mu8ky"]
+
+[ext_resource type="Script" path="res://Entities/BaseWeapon/移速手套/BootsOfSpeed.gd" id="1_cfeo8"]
+[ext_resource type="Texture2D" uid="uid://611dqllc277" path="res://Entities/BaseWeapon/移速手套/Art/boots_01a.png" id="2_qxf26"]
+
+[node name="移速之靴" type="Node2D"]
+script = ExtResource("1_cfeo8")
+"装备名称" = "移速之靴"
+"装备图片" = ExtResource("2_qxf26")
+"装备信息" = "速度加50"

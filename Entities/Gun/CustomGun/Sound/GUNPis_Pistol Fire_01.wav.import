@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmaulb5v3y1h8"
+path="res://.godot/imported/GUNPis_Pistol Fire_01.wav-2ab7773be29d94f4d54050e1e01185ab.sample"
+
+[deps]
+
+source_file="res://Entities/Gun/CustomGun/Sound/GUNPis_Pistol Fire_01.wav"
+dest_files=["res://.godot/imported/GUNPis_Pistol Fire_01.wav-2ab7773be29d94f4d54050e1e01185ab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

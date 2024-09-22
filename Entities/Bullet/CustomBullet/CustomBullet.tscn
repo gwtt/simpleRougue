@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://clctv28x4gpc5"]
+
+[ext_resource type="Script" path="res://Entities/Bullet/CustomBullet/CustomBullet.gd" id="1_l6l60"]
+[ext_resource type="PackedScene" uid="uid://cmqexl0md85ud" path="res://Entities/Bullet/BulletImpact/BulletImpact.tscn" id="2_sm4rk"]
+[ext_resource type="PackedScene" uid="uid://byocsbwpd2q2c" path="res://Entities/Bullet/BulletSmoke/子弹烟雾.tscn" id="3_8yvyx"]
+[ext_resource type="Texture2D" uid="uid://bmktx4keu4o00" path="res://Entities/Bullet/CustomBullet/Art/CustomBullet.png" id="4_ncwqd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4no6r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_64lhm"]
+
+[node name="宝宝枪子弹" type="CharacterBody2D"]
+z_index = 40
+collision_layer = 0
+collision_mask = 2147483650
+script = ExtResource("1_l6l60")
+bullet_impact = ExtResource("2_sm4rk")
+bullet_smoke = ExtResource("3_8yvyx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_ncwqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4no6r")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_64lhm")
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
