@@ -849,7 +849,6 @@ script = ExtResource("1_6luf8")
 
 [node name="魔法骷髅" parent="." instance=ExtResource("2_thrbp")]
 position = Vector2(955, 532)
-scale = Vector2(4, 4)
 
 [node name="ControlUI" parent="." instance=ExtResource("1_jhclc")]
 

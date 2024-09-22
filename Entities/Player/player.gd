@@ -15,7 +15,6 @@ class_name Player
 var look_dir = null
 var gun = null
 var SPEED = 200.0
-
 var is_dead = false #是否死亡
 var is_knockback = false #后坐力
 var knockback_speed = 0 #后坐力速度
@@ -23,12 +22,12 @@ var direction:Vector2
 func _init() -> void:
 	PlayerDataManager.onHpChange.connect(self.onHpChange)
 	PlayerDataManager.playerWeaponListChange.connect(self.playerWeaponListChange)
-	
+	SkillDataManager.onDash.connect(self.onDashChange)
 func _ready():
 	Utils.player = self
 	var temp = Utils.weapon_list["0"].instantiate()
 	PlayerDataManager.add_weapon(Utils.weapon_list["0"].instantiate())
-
+	
 func _physics_process(delta):
 	if is_dead:
 		return
@@ -68,9 +67,8 @@ func setLookat(dir):
 	else:
 		look_dir = null
 
-func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("dash"):
-		state_chart.send_event("toDash")
+func stateSendEvent(name:String):
+	state_chart.send_event(name)
 		
 func playerWeaponListChange():
 	for weapon_id in PlayerDataManager.player_weapon_list:
@@ -108,9 +106,14 @@ func onHit(hurt):
 				
 func onHpChange(hp,max_hp):
 	if hp <= 0:
-		is_dead = true
-		#anim.play("die")
+		state_chart.send_event("to_die")
 
+func onDashChange():
+	state_chart.send_event("toDash")
+
+func onSpeedChange(speed):
+	SPEED = speed
+	
 func cameraSnake(step):
 	get_tree().call_group("camera","shootShake",step)
 	
@@ -154,13 +157,13 @@ func _on_idle_state_processing(delta: float) -> void:
 	animPlay("idle")
 	
 func _on_run_state_processing(delta: float) -> void:
-	velocity = direction * SPEED
+	velocity = direction * (SPEED + PlayerDataManager.移速加成)
 	changeAnim(direction)
 	animPlay("run")
 	move_and_slide()
 	
 func _on_dash_state_processing(delta: float) -> void:
-	velocity = direction * SPEED
+	velocity = direction * (SPEED + PlayerDataManager.移速加成)
 	velocity = direction * 1200
 	changeAnim(direction)
 	move_and_slide()
@@ -170,3 +173,7 @@ func _on_dash_state_entered() -> void:
 	await get_tree().create_timer(0.2).timeout
 	state_chart.send_event("toNotDash")
 	dash_timer.stop()
+
+func _on_die_state_processing(delta: float) -> void:
+	is_dead = true
+	animPlay("die")

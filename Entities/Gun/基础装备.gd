@@ -11,6 +11,7 @@ var id = Time.get_ticks_usec() #配件在背包中的ID
 
 func _ready() -> void:
 	name = str(id)
+	
 func onStart():
 	pass
 

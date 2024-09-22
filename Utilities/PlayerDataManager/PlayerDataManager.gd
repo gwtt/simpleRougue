@@ -4,9 +4,10 @@ signal onWeaponChangeAnim()
 signal onWeaponChanged()
 signal playerWeaponListChange() #武器列表改变
 signal onPlayerFireRateChange(player_fire_rate) #玩家复活信号
-signal onRewardChange(reward)#血量变化
+signal onRewardChange(reward)#奖励变化
+signal onSpeedChange(speed)#血量变化
 signal onHpChange(hp,max_hp)#血量变化
-signal onGoldChange(gold)#血量变化
+signal onGoldChange(gold)#金钱变化
 signal onPlayerLevelChange(level) #玩家等级信号
 signal onPlayerExpChange(exp,max_exp) #玩家经验信号
 signal onPlayerGoldChange(exp,max_exp) #玩家经验信号
@@ -15,7 +16,7 @@ var player_ammo = 9999999:#子弹数量
 	set(value):
 		player_ammo = value
 		emit_signal("onAmmoChange",player_ammo)
-var 移速加成 = 0.0
+var 移速加成:float = 0.0
 var 伤害加成 = 0.0
 var 攻速加成 = 0.0
 var 子弹暴击率 = 0 #子弹暴击增幅

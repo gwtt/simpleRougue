@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvjh7h2w8jqia"]
+
+[ext_resource type="Script" path="res://Entities/Skill/DashSkill/DashSkill.gd" id="1_fg1qv"]
+[ext_resource type="Texture2D" uid="uid://b6pkddqjrh5rx" path="res://Entities/Skill/DashSkill/Art/swiftness.png" id="2_eana3"]
+
+[node name="DashSkill" type="Node2D"]
+script = ExtResource("1_fg1qv")
+"技能名称" = "冲刺"
+"技能图片" = ExtResource("2_eana3")
+"技能信息" = "向指定方向冲刺一点距离"
