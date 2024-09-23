@@ -1,19 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://clctv28x4gpc5"]
+[gd_scene load_steps=8 format=3 uid="uid://clctv28x4gpc5"]
 
 [ext_resource type="Script" path="res://Entities/Bullet/CustomBullet/CustomBullet.gd" id="1_l6l60"]
 [ext_resource type="PackedScene" uid="uid://cmqexl0md85ud" path="res://Entities/Bullet/BulletImpact/BulletImpact.tscn" id="2_sm4rk"]
 [ext_resource type="PackedScene" uid="uid://byocsbwpd2q2c" path="res://Entities/Bullet/BulletSmoke/子弹烟雾.tscn" id="3_8yvyx"]
 [ext_resource type="Texture2D" uid="uid://bmktx4keu4o00" path="res://Entities/Bullet/CustomBullet/Art/CustomBullet.png" id="4_ncwqd"]
+[ext_resource type="Script" path="res://Entities/Bullet/HitboxComponent.gd" id="5_uxf32"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4no6r"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_64lhm"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqesj"]
 
-[node name="宝宝枪子弹" type="CharacterBody2D"]
+[node name="宝宝枪子弹" type="CharacterBody2D" node_paths=PackedStringArray("hitBoxComponent")]
 z_index = 40
 collision_layer = 0
-collision_mask = 2147483650
+collision_mask = 2147483664
 script = ExtResource("1_l6l60")
+hitBoxComponent = NodePath("HitBoxComponent")
 bullet_impact = ExtResource("2_sm4rk")
 bullet_smoke = ExtResource("3_8yvyx")
 
@@ -23,9 +25,11 @@ texture = ExtResource("4_ncwqd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4no6r")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="HitBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("bullet")]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("5_uxf32")
+bullet = NodePath("..")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_64lhm")
-
-[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
+shape = SubResource("CircleShape2D_aqesj")

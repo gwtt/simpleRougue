@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Bullet
 
-
+@export var hitBoxComponent:HitBoxComponent
 @export var bullet_impact:PackedScene
 @export var bullet_smoke:PackedScene
 
@@ -17,6 +17,7 @@ var gun:BaseGun
 var timer = Timer.new()
 var queue_time = 0
 func _ready():
+	hitBoxComponent.hit.connect(_hit)
 	set_process(false)
 	get_tree().create_tween().set_ease(Tween.EASE_OUT_IN).tween_property(self,"scale",Vector2(1.2,1.2),0.1).from(Vector2(0.5,1.5))
 	add_child(timer)
@@ -47,12 +48,11 @@ func _process(delta):
 	#	delta = 0.0
 	var collisionResult = move_and_collide(velocity * delta)
 	if collisionResult:
-		var coller = collisionResult.get_collider()
-		if coller is BaseEnemy:
-			coller.hitFlash(collisionResult,self)
-		bulletSmoke(collisionResult)
-		queue_free()
+		_hit(collisionResult)
 
+func _hit(collisionResult)->void:
+	bulletSmoke(collisionResult)
+	queue_free()
 
 func _on_timer_timeout():
 	z_index = 35
@@ -60,11 +60,13 @@ func _on_timer_timeout():
 	if queue_time > 2:
 		queue_free()
 
-func bulletSmoke(collisionResult: KinematicCollision2D):
+func bulletSmoke(collisionResult):
 	var ins = bullet_smoke.instantiate()
 	get_parent().add_child(ins)
-	ins.global_position = collisionResult.get_position()
-	ins.rotation = collisionResult.get_normal().angle()
+	if collisionResult is KinematicCollision2D:
+			ins.global_position = collisionResult.get_position()
+	ins.global_position = collisionResult.get_global_position()
+	ins.look_at(player.get_global_position())
 	#
 	#var imapct = bullet_impact.instantiate()
 	#get_parent().add_child(imapct)

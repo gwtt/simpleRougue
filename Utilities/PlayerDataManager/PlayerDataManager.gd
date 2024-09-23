@@ -3,6 +3,7 @@ signal onWeaponBulletsChange()
 signal onWeaponChangeAnim()
 signal onWeaponChanged()
 signal playerWeaponListChange() #武器列表改变
+signal onPlayerDiedChange() #玩家死亡信号
 signal onPlayerFireRateChange(player_fire_rate) #玩家复活信号
 signal onRewardChange(reward)#奖励变化
 signal onSpeedChange(speed)#血量变化
@@ -69,6 +70,7 @@ func add_weapon(weapon:BaseGun):
 		emit_signal("playerWeaponListChange")
 		return true
 	return false
+	
 func getMaxExp():
 	return 1;
 	

@@ -1,8 +1,7 @@
-[gd_scene load_steps=30 format=4 uid="uid://call3bghgxu1a"]
+[gd_scene load_steps=29 format=4 uid="uid://call3bghgxu1a"]
 
 [ext_resource type="Script" path="res://Stages/MainScene/地图.gd" id="1_6luf8"]
 [ext_resource type="PackedScene" uid="uid://cp7ei4p08hsst" path="res://Entities/UI/Detail/control.tscn" id="1_jhclc"]
-[ext_resource type="PackedScene" uid="uid://t00spyboxk4x" path="res://Entities/Enemy/MagicSkeleton/魔法骷髅.tscn" id="2_thrbp"]
 [ext_resource type="Shader" path="res://Stages/MainScene/Data/地图.gdshader" id="3_veawg"]
 [ext_resource type="Texture2D" uid="uid://cqqpoaul6edo2" path="res://Assets/场景/Sprites/Free_Tilemap.png" id="4_2sutb"]
 [ext_resource type="Texture2D" uid="uid://bk307nhldfpxd" path="res://Assets/场景/Sprites/Ground_Tiles.png" id="5_k6ngy"]
@@ -10,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cta1dgup21453" path="res://Assets/地牢/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="7_t8ncc"]
 [ext_resource type="Texture2D" uid="uid://bafmuvtuj4ut" path="res://Assets/场景/龙骑士/Set 1.2.png" id="8_3rykl"]
 [ext_resource type="PackedScene" uid="uid://d0a4c67g7j1qu" path="res://Entities/NPC/铁砧商店/npc.tscn" id="9_ptrti"]
-[ext_resource type="PackedScene" uid="uid://dhg8xbngla50n" path="res://Entities/Player/player.tscn" id="9_xvwk4"]
+[ext_resource type="PackedScene" uid="uid://dhg8xbngla50n" path="res://Entities/People/Player/player.tscn" id="9_xvwk4"]
 [ext_resource type="PackedScene" uid="uid://csajreh0577ui" path="res://Entities/Gun/CustomGun/CustomGun.tscn" id="11_w1vcb"]
 [ext_resource type="AudioStream" uid="uid://bx01oq36swnyt" path="res://Stages/MainScene/Sound/Cut and Run.mp3" id="13_if78t"]
 
@@ -822,8 +821,8 @@ texture = ExtResource("8_3rykl")
 
 [sub_resource type="TileSet" id="TileSet_sgdog"]
 physics_layer_0/collision_layer = 2147483649
-physics_layer_1/collision_layer = 16
-physics_layer_1/collision_mask = 16
+physics_layer_1/collision_layer = 512
+physics_layer_1/collision_mask = 512
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "ground"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
@@ -846,9 +845,6 @@ pattern_7 = SubResource("TileMapPattern_b3k01")
 [node name="地图" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_6luf8")
-
-[node name="魔法骷髅" parent="." instance=ExtResource("2_thrbp")]
-position = Vector2(955, 532)
 
 [node name="ControlUI" parent="." instance=ExtResource("1_jhclc")]
 

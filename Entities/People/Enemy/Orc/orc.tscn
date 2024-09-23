@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://xu4ianhv1tl0"]
+
+[ext_resource type="Script" path="res://Entities/People/Enemy/Orc/orc.gd" id="1_sxws1"]
+[ext_resource type="SpriteFrames" uid="uid://kk8ifyc5d4kf" path="res://Entities/People/Enemy/Orc/Data/orc.tres" id="2_77e8p"]
+[ext_resource type="Script" path="res://Entities/People/Enemy/EnemyHealthComponent.gd" id="2_lr7qe"]
+[ext_resource type="Script" path="res://Entities/People/Enemy/EnemyHitboxComponent.gd" id="3_5aasi"]
+[ext_resource type="Script" path="res://Entities/People/Enemy/EnemyHurtboxComponent.gd" id="4_ep8pi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqr01"]
+size = Vector2(12, 15.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yngm"]
+size = Vector2(12, 17.25)
+
+[node name="Orc" type="CharacterBody2D" node_paths=PackedStringArray("healthComponent", "hitBoxComponent", "hurtBoxComponent")]
+position = Vector2(561, 472)
+scale = Vector2(4, 4)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_sxws1")
+healthComponent = NodePath("EnemyHealthComponent")
+hitBoxComponent = NodePath("EnemyHitBoxComponent")
+hurtBoxComponent = NodePath("EnemyHurtBoxComponent")
+
+[node name="body" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="body"]
+sprite_frames = ExtResource("2_77e8p")
+animation = &"die"
+
+[node name="EnemyHealthComponent" type="Node2D" parent="."]
+script = ExtResource("2_lr7qe")
+
+[node name="EnemyHitBoxComponent" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("3_5aasi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBoxComponent"]
+position = Vector2(0, -0.625)
+shape = SubResource("RectangleShape2D_pqr01")
+
+[node name="EnemyHurtBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("healthComponent")]
+position = Vector2(0, -0.5)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("4_ep8pi")
+healthComponent = NodePath("../EnemyHealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHurtBoxComponent"]
+position = Vector2(0, 0.875)
+shape = SubResource("RectangleShape2D_7yngm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -0.625)
+shape = SubResource("RectangleShape2D_pqr01")
+
+[connection signal="body_entered" from="EnemyHurtBoxComponent" to="EnemyHurtBoxComponent" method="_on_body_entered"]
