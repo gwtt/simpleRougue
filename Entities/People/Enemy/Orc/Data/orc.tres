@@ -166,7 +166,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack1",
-"speed": 12.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -189,7 +189,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack2",
-"speed": 12.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,

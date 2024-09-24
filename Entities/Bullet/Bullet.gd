@@ -64,8 +64,9 @@ func bulletSmoke(collisionResult):
 	var ins = bullet_smoke.instantiate()
 	get_parent().add_child(ins)
 	if collisionResult is KinematicCollision2D:
-			ins.global_position = collisionResult.get_position()
-	ins.global_position = collisionResult.get_global_position()
+		ins.global_position = collisionResult.get_position()
+	else:
+		ins.global_position = collisionResult.get_global_position()
 	ins.look_at(player.get_global_position())
 	#
 	#var imapct = bullet_impact.instantiate()

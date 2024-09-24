@@ -15,13 +15,8 @@ var navigationAgent2D := NavigationAgent2D.new()
 @onready var anim :AnimatedSprite2D = get_node("body/AnimatedSprite2D")
 
 
-var target_player:Player = Utils.player
-var state_array = []
+var target_player:Player
 var hit = false
-var is_die = false
-var is_flip
-var is_atk = false
-
 var death_callback :Callable
 
 
@@ -31,6 +26,7 @@ func _ready():
 	add_child(node)
 	name = str(Time.get_ticks_usec())
 	hurtBoxComponent.hurt.connect(hurted)
+	target_player = Utils.player
 	#audio_hit.stream = load("res://audio/body_hit_finisher_52.wav")
 
 
@@ -39,35 +35,6 @@ func setData(data):
 	hurt = data['hurt']
 	HP = data['hp']
 	knockback_def = 5
-
-func _physics_process(delta):
-	#if Engine.get_physics_frames() % 60 :
-	if is_atk || is_die:
-		return
-	if hit:
-		move_and_slide()
-	elif target_player != null:
-		var next_path_position = target_player.global_position
-		#var next_path_position = navigationAgent2D.get_next_path_position()
-		var current_agent_position: Vector2 = global_position
-		var new_velocity: Vector2 = current_agent_position.direction_to(next_path_position) * SPEED
-		_on_velocity_computed(new_velocity)
-
-	if velocity != Vector2.ZERO:
-		anim.play("run")
-		if velocity.x > 0:
-			flip_h(false)
-		elif velocity.x < 0 && scale.x == 1:
-			flip_h(true)
-	else:
-		anim.play("idle")
-
-func _on_velocity_computed(safe_velocity: Vector2) -> void:
-	if state_array.has(Utils.STATE_TYPE.STUN):
-		anim.play("idle")
-		return
-	velocity = safe_velocity
-	move_and_slide()
 
 func hurted(bullet:Bullet)->void:
 	var speed = bullet.knockback_speed - knockback_def
@@ -81,16 +48,7 @@ func hurted(bullet:Bullet)->void:
 		sprite_body.get_node("AnimatedSprite2D").material = null; hit = false )
 	
 
-func flip_h(flip:bool):
-	if is_flip == flip:
-		return
-	is_flip = flip
-	var x_axis = sprite_body.global_transform.x
-	sprite_body.global_transform.x.x = (-1 if flip else 1) * abs(x_axis.x)
-
-
 func onDie(is_death_effect = true):
-	is_die = true
 	PlayerDataManager.player_exp += 1
 	if death_callback:
 		death_callback.call(self)

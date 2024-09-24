@@ -931,7 +931,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2pu7"]
-size = Vector2(11, 9)
+size = Vector2(12, 18)
 
 [sub_resource type="Curve" id="Curve_nb30i"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.436364), 0.0, 0.0, 0, 0]
@@ -981,9 +981,7 @@ shape = SubResource("CapsuleShape2D_r6ath")
 [node name="头" type="AnimatedSprite2D" parent="身体"]
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_refuv")
-animation = &"die"
-frame = 3
-frame_progress = 0.301508
+animation = &"idle"
 offset = Vector2(0, -6)
 
 [node name="身子" type="AnimatedSprite2D" parent="身体"]
@@ -1005,7 +1003,7 @@ animation = &"hurt"
 offset = Vector2(0, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_r2pu7")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]

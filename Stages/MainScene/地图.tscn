@@ -821,6 +821,7 @@ texture = ExtResource("8_3rykl")
 
 [sub_resource type="TileSet" id="TileSet_sgdog"]
 physics_layer_0/collision_layer = 2147483649
+physics_layer_0/collision_mask = 0
 physics_layer_1/collision_layer = 512
 physics_layer_1/collision_mask = 512
 terrain_set_0/mode = 0

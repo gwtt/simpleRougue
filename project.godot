@@ -86,6 +86,7 @@ e={
 
 [layer_names]
 
+2d_physics/layer_1="custom"
 2d_physics/layer_4="PlayerHurtBox"
 2d_physics/layer_5="EnemyHurtBox"
 2d_physics/layer_32="map"
