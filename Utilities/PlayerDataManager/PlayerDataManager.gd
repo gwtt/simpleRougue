@@ -6,8 +6,7 @@ signal playerWeaponListChange() #武器列表改变
 signal onPlayerDiedChange() #玩家死亡信号
 signal onPlayerFireRateChange(player_fire_rate) #玩家复活信号
 signal onRewardChange(reward)#奖励变化
-signal onSpeedChange(speed)#血量变化
-signal onHpChange(hp,max_hp)#血量变化
+signal onSpeedChange(speed)#速度变化
 signal onGoldChange(gold)#金钱变化
 signal onPlayerLevelChange(level) #玩家等级信号
 signal onPlayerExpChange(exp,max_exp) #玩家经验信号

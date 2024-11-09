@@ -9,6 +9,7 @@ signal hit(hurtbox)
 @export var Hit_body_record:Array[HurtBoxComponent] = []
 #攻击前摇时间
 @export var beforeAttackTime:float = 0.15
+@export var damage = 1
 func _init() -> void:
 	area_entered.connect(_on_area_entered)
 
@@ -22,7 +23,7 @@ func _on_area_entered(hurtbox:HurtBoxComponent) -> void:
 		return
 	print("[Hit] %s => %s" % [self.owner.name, hurtbox.owner.name])
 	hit.emit(hurtbox)
-	hurtbox.hurt.emit(self)
+	hurtbox.hurt.emit(self,damage)
 
 #近战攻击
 func meleeAttack()->void:
@@ -30,8 +31,12 @@ func meleeAttack()->void:
 	for i in Density:
 		var collsion = CollisionShape2D.new()
 		var line = SegmentShape2D.new()
-		line.b.y = -Length
-		line.b = line.get_b().rotated(deg_to_rad(i * (RangeAngle/Density)))
+		if Utils.player.global_position.y > global_position.y:
+			line.b.y = Length
+			line.b = line.get_b().rotated(deg_to_rad(i * (-RangeAngle/Density)))
+		else:
+			line.b.y = -Length
+			line.b = line.get_b().rotated(deg_to_rad(i * (RangeAngle/Density)))
 		collsion.set_shape(line)
 		collsion.debug_color = Color("#ffff00c8")
 		call_deferred("add_child",collsion)

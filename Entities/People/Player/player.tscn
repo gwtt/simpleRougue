@@ -173,7 +173,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wfooh")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 12.0
 }, {
@@ -397,7 +397,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6ybka")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 12.0
 }, {
@@ -621,9 +621,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xbpxc")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -845,9 +845,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eq4qr")
 }],
-"loop": true,
-"name": &"death",
-"speed": 5.0
+"loop": false,
+"name": &"die",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -981,25 +981,25 @@ shape = SubResource("CapsuleShape2D_r6ath")
 [node name="头" type="AnimatedSprite2D" parent="身体"]
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_refuv")
-animation = &"idle"
+animation = &"die"
 offset = Vector2(0, -6)
 
 [node name="身子" type="AnimatedSprite2D" parent="身体"]
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_1glbw")
-animation = &"hurt"
+animation = &"die"
 offset = Vector2(0, -6)
 
 [node name="左手" type="AnimatedSprite2D" parent="身体"]
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_lhuxv")
-animation = &"hurt"
+animation = &"die"
 offset = Vector2(0, -6)
 
 [node name="右手" type="AnimatedSprite2D" parent="身体"]
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_5dwks")
-animation = &"hurt"
+animation = &"die"
 offset = Vector2(0, -6)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1055,6 +1055,12 @@ to = NodePath("../../die")
 event = &"to_die"
 delay_in_seconds = "0.0"
 
+[node name="toHurt" type="Node" parent="StateChart/并行状态/root/idle"]
+script = ExtResource("18_iux58")
+to = NodePath("../../hurt")
+event = &"to_hurt"
+delay_in_seconds = "0.0"
+
 [node name="run" type="Node" parent="StateChart/并行状态/root"]
 script = ExtResource("17_8kn7u")
 
@@ -1070,8 +1076,23 @@ to = NodePath("../../die")
 event = &"to_die"
 delay_in_seconds = "0.0"
 
+[node name="toHurt" type="Node" parent="StateChart/并行状态/root/run"]
+script = ExtResource("18_iux58")
+to = NodePath("../../hurt")
+event = &"to_hurt"
+delay_in_seconds = "0.0"
+
 [node name="die" type="Node" parent="StateChart/并行状态/root"]
 script = ExtResource("17_8kn7u")
+
+[node name="hurt" type="Node" parent="StateChart/并行状态/root"]
+script = ExtResource("17_8kn7u")
+
+[node name="hurtToIdle" type="Node" parent="StateChart/并行状态/root/hurt"]
+script = ExtResource("18_iux58")
+to = NodePath("../../idle")
+event = &"hurt_to_idle"
+delay_in_seconds = "0.0"
 
 [node name="dash" type="Node" parent="StateChart/并行状态"]
 script = ExtResource("16_xr65y")
@@ -1083,7 +1104,7 @@ script = ExtResource("17_8kn7u")
 [node name="toNotDash" type="Node" parent="StateChart/并行状态/dash/dash"]
 script = ExtResource("18_iux58")
 to = NodePath("../../notDash")
-event = &"toNotDash"
+event = &"to_not_dash"
 delay_in_seconds = "0.0"
 
 [node name="notDash" type="Node" parent="StateChart/并行状态/dash"]
@@ -1092,7 +1113,7 @@ script = ExtResource("17_8kn7u")
 [node name="toDash" type="Node" parent="StateChart/并行状态/dash/notDash"]
 script = ExtResource("18_iux58")
 to = NodePath("../../dash")
-event = &"toDash"
+event = &"to_dash"
 delay_in_seconds = "0.0"
 
 [connection signal="body_shape_entered" from="检测遮挡" to="." method="_on_检测遮挡_body_shape_entered"]
@@ -1101,5 +1122,6 @@ delay_in_seconds = "0.0"
 [connection signal="state_processing" from="StateChart/并行状态/root/idle" to="." method="_on_idle_state_processing"]
 [connection signal="state_processing" from="StateChart/并行状态/root/run" to="." method="_on_run_state_processing"]
 [connection signal="state_processing" from="StateChart/并行状态/root/die" to="." method="_on_die_state_processing"]
+[connection signal="state_entered" from="StateChart/并行状态/root/hurt" to="." method="_on_hurt_state_entered"]
 [connection signal="state_entered" from="StateChart/并行状态/dash/dash" to="." method="_on_dash_state_entered"]
 [connection signal="state_processing" from="StateChart/并行状态/dash/dash" to="." method="_on_dash_state_processing"]

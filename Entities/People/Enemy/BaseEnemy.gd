@@ -13,8 +13,9 @@ var movement_delta: float
 var navigationAgent2D := NavigationAgent2D.new()
 @onready var sprite_body = get_node("body")
 @onready var anim :AnimatedSprite2D = get_node("body/AnimatedSprite2D")
-
-
+@onready var state_chart: StateChart = $StateChart
+var attack_timer = 0 # 计时器
+var attack_delay = 1 * 30 # 攻击前摇时间
 var target_player:Player
 var hit = false
 var death_callback :Callable
@@ -29,6 +30,8 @@ func _ready():
 	target_player = Utils.player
 	#audio_hit.stream = load("res://audio/body_hit_finisher_52.wav")
 
+func _process(delta: float) -> void:
+	attack_timer += 1
 
 func setData(data):
 	SPEED = data['speed']
@@ -72,3 +75,6 @@ func setDeathCallBack(death_callback:Callable):
 
 func addEffect(node):
 	get_node("EffectRoot").add_child(node)
+
+func stateSendEvent(name:String):
+	state_chart.send_event(name)

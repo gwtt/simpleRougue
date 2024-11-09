@@ -1,5 +1,5 @@
 extends BaseEnemy
-@onready var state_chart: StateChart = $StateChart
+
 var is_atk = false
 var is_die = false
 
@@ -35,16 +35,23 @@ func _on_walk_state_processing(delta: float) -> void:
 	
 
 func _on_attack_area_area_entered(area: Area2D) -> void:
-	state_chart.send_event("to_attack")
+	stateSendEvent("to_attack")
 
 func _on_attack_area_area_exited(area: Area2D) -> void:
-	await anim.animation_looped
-	state_chart.send_event("to_walk")
+	await anim.animation_finished
+	stateSendEvent("to_walk")
 
-func _on_attack_state_entered() -> void:
-	var attack_item = randi_range(1,2)
-	anim.play("attack%d" % attack_item)
-	hitBoxComponent.meleeAttack()
+#func _on_attack_state_entered() -> void:
+	#var attack_item = randi_range(1,2)
+	#anim.play("attack%d" % attack_item)
+	#hitBoxComponent.meleeAttack()
 
 func _on_attack_state_processing(delta: float) -> void:
-	pass # Replace with function body.
+	# 如果正在攻击，并且动画在播放就直接返回
+	if anim.animation.begins_with("attack") && anim.is_playing():
+		return
+	if attack_timer > attack_delay:
+		attack_timer = 0
+		var attack_item = randi_range(1,2)
+		anim.play("attack%d" % attack_item)
+		hitBoxComponent.meleeAttack()

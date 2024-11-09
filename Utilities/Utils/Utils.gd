@@ -41,8 +41,6 @@ func showHitLabelMore(num,traget:Node2D,position = Vector2.ZERO,color = Color.WH
 	traget.add_child(ins)
 	
 func freezeFrame(scale):
-	#OS.delay_msec(50)
-	#return
 	if !freeze_frame && scale > 0:
 		# 冻结帧
 		pass

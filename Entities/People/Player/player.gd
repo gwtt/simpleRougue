@@ -1,5 +1,6 @@
 extends CharacterBody2D
 class_name Player
+
 @onready var body = $"身体"
 @onready var 头 = $"身体/头"
 @onready var 身子 = $"身体/身子"
@@ -18,7 +19,6 @@ var is_knockback = false #后坐力
 var knockback_speed = 0 #后坐力速度
 var direction:Vector2
 func _init() -> void:
-	PlayerDataManager.onHpChange.connect(self.onHpChange)
 	PlayerDataManager.playerWeaponListChange.connect(self.playerWeaponListChange)
 	SkillDataManager.onDash.connect(self.onDashChange)
 func _ready():
@@ -41,9 +41,9 @@ func _physics_process(delta):
 		setLookat(get_global_mouse_position())
 func changeAnim(direction):
 	if direction != Vector2.ZERO:
-		state_chart.send_event("idle_to_run")
+		stateSendEvent("idle_to_run")
 	else:
-		state_chart.send_event("run_to_idle")
+		stateSendEvent("run_to_idle")
 	
 func animPlay(anim_name,speed = 1.0,is_back = false):
 	if 头.animation != anim_name:
@@ -104,10 +104,10 @@ func onHit(hurt):
 				
 func onHpChange(hp,max_hp):
 	if hp <= 0:
-		state_chart.send_event("to_die")
+		stateSendEvent("to_die")
 
 func onDashChange():
-	state_chart.send_event("toDash")
+	stateSendEvent("to_dash")
 
 func onSpeedChange(speed):
 	SPEED = speed
@@ -169,9 +169,16 @@ func _on_dash_state_processing(delta: float) -> void:
 func _on_dash_state_entered() -> void:
 	dash_timer.start()
 	await get_tree().create_timer(0.2).timeout
-	state_chart.send_event("toNotDash")
+	stateSendEvent("to_not_dash")
 	dash_timer.stop()
 
 func _on_die_state_processing(delta: float) -> void:
 	is_dead = true
 	animPlay("die")
+
+
+func _on_hurt_state_entered() -> void:
+	print("主角受伤")
+	animPlay("hurt")
+	await 头.animation_looped
+	stateSendEvent("hurt_to_idle")
