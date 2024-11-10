@@ -11,6 +11,8 @@ enum GUN_CHANGE_TYPE { #切枪类型
 	CHANGE, #切换枪械
 	RELOAD #切换子弹
 }
+
+
 var weapon_list = {
 	"0" = preload("res://Entities/Gun/CustomGun/CustomGun.tscn"),
 }

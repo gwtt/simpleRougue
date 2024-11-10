@@ -42,11 +42,3 @@ func _on_button_pressed() -> void:
 		emit_signal("onWeaponClick",id,gun)
 	if am != null:
 		emit_signal("onAmClick",id,am)
-
-
-func _on_button_mouse_entered() -> void:
-	emit_signal("mouseEvent",true,am)
-
-
-func _on_button_mouse_exited() -> void:
-	emit_signal("mouseEvent",false,null)

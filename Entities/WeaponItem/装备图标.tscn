@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://g4vjtrv5p0ap"]
 
-[ext_resource type="Texture2D" uid="uid://cjqcirysdsap4" path="res://Entities/WeaponItem/Art/item_box_no_shader.png" id="1_161ho"]
+[ext_resource type="Texture2D" uid="uid://cjqcirysdsap4" path="res://Entities/UI/装备图标/Art/item_box_no_shader.png" id="1_161ho"]
 [ext_resource type="Script" path="res://Entities/WeaponItem/装备图标.gd" id="2_nsald"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8oqie"]

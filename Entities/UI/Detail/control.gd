@@ -11,9 +11,6 @@ func _ready() -> void:
 func crosshairChange(is_show):
 	$TextureRect.visible = is_show
 
-func _on_virtual_joystick_2_on_touch(vector) -> void:
-	Utils.player.setGunLookat(vector)
-
 func showToast(msg,time):
 	timer.stop()
 	timer.start(time)
