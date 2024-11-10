@@ -1,13 +1,15 @@
 extends CanvasLayer
-
+@onready var health_bar: ProgressBar = $"GameUI/HPUI/血条"
 @onready var toast = $Control/Label
 @onready var toast_ui = $Control
 @onready var timer = $Control/Timer
 
 func _ready() -> void:
 	Utils.canvasLayer = self
+	PlayerDataManager.onHpChange.connect(on_hp_change)
+	
 	toast_ui.visible = false
-
+	
 func crosshairChange(is_show):
 	$TextureRect.visible = is_show
 
@@ -32,3 +34,6 @@ func hit():
 	var tween = create_tween().set_ease(Tween.EASE_IN)
 	tween.tween_property(material_hit,"shader_parameter/fade",0,0.2).from(0.01)
 	tween.tween_callback(func back(): $Sprite2D.visible = false)
+
+func on_hp_change(hp,max_hp):
+	health_bar.value = hp

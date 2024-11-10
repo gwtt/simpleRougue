@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://b70p2spve6yfu"]
+[gd_scene load_steps=25 format=4 uid="uid://evvls8qecx4g"]
 
 [ext_resource type="Shader" path="res://Stages/MainScene/Data/地图.gdshader" id="1_5in6g"]
 [ext_resource type="Texture2D" uid="uid://cqqpoaul6edo2" path="res://Assets/场景/Sprites/Free_Tilemap.png" id="2_41rkb"]

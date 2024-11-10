@@ -130,7 +130,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_jpald")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 16
 text = "瞄准镜
 装备"
 horizontal_alignment = 1
@@ -142,8 +142,8 @@ _max_steps = 2
 _size_per_step = 1
 _size_just_modified_by_autosizer = false
 _set_defaults = true
-_base_font_size = 18
-_current_font_size = 18
+_base_font_size = 16
+_current_font_size = 16
 _last_size_state = 1
 
 [node name="type" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
@@ -176,6 +176,7 @@ offset_right = 267.0
 offset_bottom = 393.0
 text = "购买"
 script = ExtResource("4_koq8o")
+duration = 0.2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(61.5, 369.5)

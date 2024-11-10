@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="简单肉鸽"
-run/main_scene="res://Entities/UI/store/商店.tscn"
+run/main_scene="res://Stages/FirstScene/一号地图.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,7 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 PlayerDataManager="*res://Utilities/PlayerDataManager/PlayerDataManager.gd"
 SkillDataManager="*res://Utilities/SkillDataManager/SkillDataManager.gd"
 ItemManager="*res://Utilities/ItemManager/ItemManager.gd"
+GlobalControl="*res://Entities/UI/Detail/control.tscn"
 
 [display]
 

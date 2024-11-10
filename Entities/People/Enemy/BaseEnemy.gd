@@ -27,6 +27,7 @@ func _ready():
 	add_child(node)
 	name = str(Time.get_ticks_usec())
 	hurtBoxComponent.hurt.connect(hurted)
+	healthComponent.onDie.connect(onDie)
 	target_player = Utils.player
 	#audio_hit.stream = load("res://audio/body_hit_finisher_52.wav")
 
@@ -52,7 +53,9 @@ func hurted(bullet:Bullet)->void:
 	
 
 func onDie(is_death_effect = true):
+	print("%s死亡" % [self.name])
 	PlayerDataManager.player_exp += 1
+	stateSendEvent("to_die")
 	if death_callback:
 		death_callback.call(self)
 	var nodes = get_tree().get_nodes_in_group("reward")
@@ -65,8 +68,12 @@ func onDie(is_death_effect = true):
 	for item in get_node("EffectRoot").get_children():
 		item.queue_free()
 	get_node("CollisionShape2D").call_deferred("set_disabled",true)
-	#anim.play("die")
-	get_tree().create_tween().tween_property(get_node("角色阴影"),"scale",Vector2.ZERO,0.3)
+	anim.play("die")
+	await anim.animation_finished
+	var tween = create_tween()
+	tween.tween_property(self,"modulate",Color(1,1,1,0),2)
+	await tween.finished
+	open_store()
 	#await anim.animation_finished
 	queue_free()
 	
@@ -78,3 +85,8 @@ func addEffect(node):
 
 func stateSendEvent(name:String):
 	state_chart.send_event(name)
+
+func open_store() -> void:
+	var store = Utils.store.instantiate()
+	get_tree().paused = true
+	get_tree().current_scene.add_child(store)

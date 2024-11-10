@@ -10,6 +10,8 @@ class_name Player
 @export var ghost_node:PackedScene
 @onready var dash_timer: Timer = $dashTimer
 @onready var state_chart: StateChart = $StateChart
+@onready var health_component: HealthComponent = $HealthComponent
+@onready var hurt_box_component: HurtBoxComponent = $HurtBoxComponent
 
 var look_dir = null
 var gun = null
@@ -25,7 +27,7 @@ func _ready():
 	Utils.player = self
 	var temp = Utils.weapon_list["0"].instantiate()
 	PlayerDataManager.add_weapon(Utils.weapon_list["0"].instantiate())
-	
+
 func _physics_process(delta):
 	if is_dead:
 		return
@@ -103,9 +105,10 @@ func onHit(hurt):
 			node.call("afterPlayerHit",hurt)		
 				
 func onHpChange(hp,max_hp):
+	PlayerDataManager.onHpChange.emit(hp,max_hp)
 	if hp <= 0:
 		stateSendEvent("to_die")
-
+		
 func onDashChange():
 	stateSendEvent("to_dash")
 

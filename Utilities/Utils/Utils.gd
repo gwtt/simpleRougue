@@ -11,7 +11,7 @@ enum GUN_CHANGE_TYPE { #切枪类型
 	CHANGE, #切换枪械
 	RELOAD #切换子弹
 }
-
+var store = preload("res://Entities/UI/store/选择界面.tscn")
 
 var weapon_list = {
 	"0" = preload("res://Entities/Gun/CustomGun/CustomGun.tscn"),
@@ -29,18 +29,18 @@ func gameStart():
 	is_game_start = true
 	emit_signal("onGameStart")
 	
-func showHitLabel(num,traget:Node2D):
+func showHitLabel(num,target:Node2D):
 	var ins = hitlabel.instantiate()
 	ins.setNumber(num)
-	traget.add_child(ins)
+	target.add_child(ins)
 	
 #伤害数字 加强版
-func showHitLabelMore(num,traget:Node2D,position = Vector2.ZERO,color = Color.WHITE):
+func showHitLabelMore(num,target:Node2D,position = Vector2.ZERO,color = Color.WHITE):
 	var ins = hitlabel.instantiate()
 	ins.setNumber(num)
-	ins.position = position
 	ins.setColor(color)
-	traget.add_child(ins)
+	target.add_child(ins)
+	ins.global_position = position
 	
 func freezeFrame(scale):
 	if !freeze_frame && scale > 0:

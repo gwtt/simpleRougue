@@ -4,12 +4,11 @@ extends Control
 @onready var item_type: RichTextLabel = %type
 @onready var description: RichTextLabel = $"%description"
 
-signal buy
 var item:Item
 
 
 func _on_animated_button_pressed() -> void:
-	buy.emit()
+	PlayerDataManager.buy.emit(item)
 	print("购买成功")
 	item.use()
 	item.now_use()

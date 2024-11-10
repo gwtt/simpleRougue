@@ -13,8 +13,6 @@ signal hit(hurtbox)
 func _init() -> void:
 	area_entered.connect(_on_area_entered)
 
-func _process(delta: float) -> void:
-	pass
 
 func _on_area_entered(hurtbox:HurtBoxComponent) -> void:
 	if !Hit_body_record.has(hurtbox):

@@ -16,8 +16,12 @@ func _ready() -> void:
 	PlayerDataManager.onPlayerLevelChange.connect(self.onPlayerLevelChange)
 	PlayerDataManager.onWeaponChangeAnim.connect(self.onWeaponChangeAnim) #武器化监听
 	PlayerDataManager.onWeaponBulletsChange.connect(self.onWeaponBulletsChange) #武器化监听
-	PlayerDataManager.onHpChange.connect(func hpChange(hp,max_hp): #血量变化监听
-		hp_bar.max_value = max_hp;hp_bar.value = hp)
+	if Utils.player:
+		Utils.player.health_component.onHpChange.connect(
+			func hpChange(hp,max_hp): #血量变化监听
+				hp_bar.max_value = max_hp
+				hp_bar.value = hp
+		)
 func onGameStart():
 	onGoldChange(PlayerDataManager.gold)
 	var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_parallel(true)

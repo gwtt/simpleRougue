@@ -94,6 +94,8 @@ animations = [{
 }]
 
 [node name="ControlUI" type="CanvasLayer"]
+process_mode = 3
+layer = 100
 script = ExtResource("1_i5f8j")
 
 [node name="GameUI" type="Control" parent="."]
@@ -104,6 +106,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("2_te4ue")
 
 [node name="HPUI" type="Control" parent="GameUI"]
@@ -174,22 +177,24 @@ grow_vertical = 0
 
 [node name="BulletHbox" type="HBoxContainer" parent="GameUI/Container"]
 layout_mode = 1
-offset_left = -210.0
-offset_top = -61.0
-offset_right = 73.0
-offset_bottom = -34.0
+offset_left = -236.0
+offset_top = -57.0
+offset_right = 47.0
+offset_bottom = -30.0
 pivot_offset = Vector2(-15, -10)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GameUI"]
 stream = ExtResource("5_0fvn0")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = 200
+[node name="鼠标光标" type="TextureRect" parent="."]
+z_index = 999
+y_sort_enabled = true
 offset_left = 575.0
 offset_top = 235.0
 offset_right = 595.0
 offset_bottom = 255.0
 pivot_offset = Vector2(10, 10)
+mouse_filter = 2
 texture = ExtResource("6_gqxnh")
 expand_mode = 1
 script = ExtResource("6_oix4d")
@@ -200,6 +205,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 134.0
 grow_horizontal = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 1
