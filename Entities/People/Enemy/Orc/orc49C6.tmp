@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://xu4ianhv1tl0"]
+[gd_scene load_steps=13 format=3 uid="uid://xu4ianhv1tl0"]
 
 [ext_resource type="Script" path="res://Entities/People/Enemy/Orc/orc.gd" id="1_sxws1"]
 [ext_resource type="SpriteFrames" uid="uid://kk8ifyc5d4kf" path="res://Entities/People/Enemy/Orc/Data/orc.tres" id="2_77e8p"]
 [ext_resource type="Script" path="res://Entities/People/Enemy/EnemyHealthComponent.gd" id="2_lr7qe"]
-[ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://Entities/People/Ghost.tscn" id="2_oot3s"]
 [ext_resource type="Script" path="res://Entities/People/Enemy/EnemyHitboxComponent.gd" id="3_5aasi"]
 [ext_resource type="Script" path="res://Entities/People/Enemy/EnemyHurtboxComponent.gd" id="4_ep8pi"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="6_l3us1"]
@@ -18,19 +17,15 @@ size = Vector2(12, 17.25)
 size = Vector2(12, 15.25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_54hmr"]
-radius = 12.2729
+radius = 18.7916
 
 [node name="Orc" type="CharacterBody2D" node_paths=PackedStringArray("healthComponent", "hitBoxComponent", "hurtBoxComponent")]
-z_index = 40
-scale = Vector2(4, 4)
+scale = Vector2(-4, 4)
 script = ExtResource("1_sxws1")
-ghost_node = ExtResource("2_oot3s")
 healthComponent = NodePath("EnemyHealthComponent")
 hitBoxComponent = NodePath("EnemyHitBoxComponent")
 hurtBoxComponent = NodePath("EnemyHurtBoxComponent")
 SPEED = 200.0
-hurt = 20
-HP = 160
 
 [node name="body" type="Node2D" parent="."]
 
@@ -208,15 +203,10 @@ to = NodePath("../../walk")
 event = &"to_walk"
 delay_in_seconds = "0.0"
 
-[node name="rageTimer" type="Timer" parent="."]
-wait_time = 0.2
-
 [connection signal="body_entered" from="EnemyHurtBoxComponent" to="EnemyHurtBoxComponent" method="_on_body_entered"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
-[connection signal="state_entered" from="StateChart/root/walk" to="." method="_on_walk_state_entered"]
 [connection signal="state_processing" from="StateChart/root/walk" to="." method="_on_walk_state_processing"]
 [connection signal="state_entered" from="StateChart/root/attack" to="." method="_on_attack_state_entered"]
 [connection signal="state_processing" from="StateChart/root/attack" to="." method="_on_attack_state_processing"]
 [connection signal="state_entered" from="StateChart/root/Rage" to="." method="_on_rage_state_entered"]
-[connection signal="timeout" from="rageTimer" to="." method="_on_rage_timer_timeout"]

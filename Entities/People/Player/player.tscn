@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cekoqlwfe4vc2" path="res://Entities/People/Player/Art/Base Body/Head/Head-Idle.png" id="1_62kaq"]
 [ext_resource type="Script" path="res://Entities/People/Player/player.gd" id="1_nbg82"]
-[ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://Entities/People/Player/playerGhost.tscn" id="2_3rlnn"]
+[ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://Entities/People/Ghost.tscn" id="2_3rlnn"]
 [ext_resource type="Texture2D" uid="uid://c7dn4w6cj7qbv" path="res://Entities/People/Player/Art/Base Body/Head/Head-Run.png" id="2_r0hjg"]
 [ext_resource type="Texture2D" uid="uid://bi0vgog5swue2" path="res://Entities/People/Player/Art/Base Body/Head/Head-Walk.png" id="3_2bgfk"]
 [ext_resource type="Script" path="res://Entities/People/HealthComponent.gd" id="3_8ccx6"]
@@ -958,7 +958,7 @@ color = Color(0.956863, 0.956863, 0.956863, 1)
 size = Vector2(15, 9)
 
 [node name="player" type="CharacterBody2D"]
-z_index = 40
+z_index = 50
 position = Vector2(751, 386)
 scale = Vector2(2, 2)
 script = ExtResource("1_nbg82")

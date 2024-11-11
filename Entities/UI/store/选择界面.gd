@@ -5,11 +5,7 @@ extends CanvasLayer
 var choose_id = null
 var choose_am : 基础装备= null
 var item_list_index
-func _enter_tree():
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-func _exit_tree():
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 
 func _ready() -> void:
 	PlayerDataManager.buy.connect(_refresh)

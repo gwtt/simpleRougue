@@ -2,7 +2,7 @@ extends Node2D
 class_name EnemyHealthComponent
 signal onDie()
 signal onHpChange()
-@export var MAX_HEALTH:float = 10.0
+@export var MAX_HEALTH:float = 160.0
 var health:float
 
 func _ready() -> void:

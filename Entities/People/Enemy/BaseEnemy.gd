@@ -19,7 +19,7 @@ var attack_delay = 1 * 30 # 攻击前摇时间
 var target_player:Player
 var hit = false
 var death_callback :Callable
-
+var attack_speed = 1.0
 
 func _ready():
 	var node = Node2D.new()
