@@ -201,11 +201,13 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 2
 position = Vector2(282, -29)
 zoom = Vector2(2, 2)
+process_callback = 0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+process_priority = 300
+process_physics_priority = 300
 script = ExtResource("4_mylkx")
 
 [node name="Player" type="Node" parent="."]
@@ -221,8 +223,8 @@ zoom = Vector2(2, 2)
 tween_resource = ExtResource("6_tju6r")
 tween_on_load = false
 follow_damping = true
-dead_zone_width = 0.416
-dead_zone_height = 0.63
+dead_zone_width = 0.4
+dead_zone_height = 0.8
 show_viewfinder_in_play = true
 draw_limits = true
 

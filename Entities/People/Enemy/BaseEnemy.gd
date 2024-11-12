@@ -29,6 +29,7 @@ func _ready():
 	hurtBoxComponent.hurt.connect(hurted)
 	healthComponent.onDie.connect(onDie)
 	target_player = Utils.player
+	Utils.boss = self
 	#audio_hit.stream = load("res://audio/body_hit_finisher_52.wav")
 
 func _process(delta: float) -> void:

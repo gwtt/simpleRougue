@@ -208,11 +208,14 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 2
-position = Vector2(107, -172.5)
+position = Vector2(186, -172.5)
+zoom = Vector2(1.5, 1.5)
+process_callback = 0
 position_smoothing_speed = 8.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+process_priority = 300
+process_physics_priority = 300
 script = ExtResource("4_2efwt")
 
 [node name="Label" type="Label" parent="."]
@@ -226,15 +229,18 @@ text = "[WASD] to move
 [Space] to jump"
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_targets")]
-position = Vector2(107, -172.5)
+position = Vector2(186, -172.5)
 script = ExtResource("6_diuy4")
 priority = 10
 follow_mode = 3
 follow_targets = [NodePath("../GroupNPCSprite"), NodePath("../CharacterBody2D/PlayerVisuals")]
+zoom = Vector2(1.5, 1.5)
 tween_resource = SubResource("Resource_spy00")
 tween_on_load = false
 follow_damping = true
 auto_zoom = true
+auto_zoom_min = 0.5
+auto_zoom_max = 1.5
 auto_zoom_margin = Vector4(200, 0, 200, 0)
 draw_limits = true
 

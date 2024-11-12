@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cp7ei4p08hsst"]
+[gd_scene load_steps=24 format=3 uid="uid://cp7ei4p08hsst"]
 
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://Assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_g8ke5"]
 [ext_resource type="Script" path="res://Entities/UI/Detail/control.gd" id="1_i5f8j"]
@@ -8,15 +8,29 @@
 [ext_resource type="Texture2D" uid="uid://62glx2elo8d5" path="res://Entities/UI/Detail/Art/control.tres" id="6_gqxnh"]
 [ext_resource type="Script" path="res://Entities/UI/Detail/Crosshair.gd" id="6_oix4d"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnfyr"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyk5s"]
 bg_color = Color(0.176471, 0.211765, 0.196078, 0.784314)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1rdk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuur4"]
 bg_color = Color(0.425327, 0.988883, 0.483315, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc0nm"]
+bg_color = Color(0.176471, 0.211765, 0.196078, 0.784314)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x18bu"]
+bg_color = Color(1.54018e-06, 0.971044, 0.957986, 0.6)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -93,6 +107,12 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71ury"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0iftd"]
+bg_color = Color(1, 0, 0.00612242, 1)
+
 [node name="ControlUI" type="CanvasLayer"]
 process_mode = 3
 layer = 100
@@ -121,19 +141,34 @@ offset_left = 20.0
 offset_top = 16.0
 offset_right = 200.0
 offset_bottom = 43.0
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
+theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("1_g8ke5")
 theme_override_font_sizes/font_size = 20
-theme_override_styles/background = SubResource("StyleBoxFlat_qnfyr")
-theme_override_styles/fill = SubResource("StyleBoxFlat_j1rdk")
+theme_override_styles/background = SubResource("StyleBoxFlat_vyk5s")
+theme_override_styles/fill = SubResource("StyleBoxFlat_yuur4")
+value = 100.0
+
+[node name="蓝条" type="ProgressBar" parent="GameUI/HPUI"]
+layout_mode = 1
+offset_left = 22.0
+offset_top = 71.0
+offset_right = 202.0
+offset_bottom = 98.0
+scale = Vector2(1.5, 1.5)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_g8ke5")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/background = SubResource("StyleBoxFlat_lc0nm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x18bu")
 value = 100.0
 
 [node name="金币" type="Label" parent="GameUI/HPUI"]
 layout_mode = 0
 offset_left = 72.0
-offset_top = 90.0
+offset_top = 130.0
 offset_right = 112.0
-offset_bottom = 113.0
+offset_bottom = 153.0
 scale = Vector2(2, 2)
 text = "100
 "
@@ -160,6 +195,29 @@ offset_bottom = 23.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="BossUI" type="Control" parent="GameUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="血条" type="ProgressBar" parent="GameUI/BossUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 452.0
+offset_top = 996.0
+offset_right = 1406.0
+offset_bottom = 1035.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_71ury")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0iftd")
+value = 80.0
+show_percentage = false
 
 [node name="Container" type="Control" parent="GameUI"]
 layout_mode = 1
@@ -203,7 +261,10 @@ script = ExtResource("6_oix4d")
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 134.0
+offset_left = -61.0
+offset_top = -17.0
+offset_right = -61.0
+offset_bottom = 117.0
 grow_horizontal = 2
 mouse_filter = 2
 

@@ -11,8 +11,8 @@ func createBullet():
 	for i in 1:
 		var b = bullet_scene.instantiate()
 		b.setOnwer(player)
-		get_tree().root.add_child(b)
 		b.position = tip.global_position
+		get_tree().root.add_child(b)
 		b.rotation = tip.rotation
 		fire(b)
 		call_deferred("_shootAnim")

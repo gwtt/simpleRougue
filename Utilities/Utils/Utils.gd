@@ -6,6 +6,7 @@ var canvasLayer:CanvasLayer
 var pause_state = false #暂停状态
 var is_game_start = false #游戏是否开始
 var player:Player
+var boss:BaseEnemy
 var freeze_frame = false
 enum GUN_CHANGE_TYPE { #切枪类型
 	CHANGE, #切换枪械

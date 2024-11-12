@@ -4,6 +4,7 @@ signal onWeaponBulletsChange()
 signal onWeaponChangeAnim()
 signal onWeaponChanged()
 signal onHpChange()
+signal onMagicChange()
 signal playerWeaponListChange() #武器列表改变
 signal onPlayerDiedChange() #玩家死亡信号
 signal onPlayerFireRateChange(player_fire_rate) #玩家复活信号

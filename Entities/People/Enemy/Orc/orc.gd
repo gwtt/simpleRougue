@@ -3,6 +3,7 @@ extends BaseEnemy
 var is_atk = false
 var is_die = false
 var is_flip:bool = false	
+
 @onready var rage_timer: Timer = $rageTimer
 @onready var sprite: AnimatedSprite2D = $body/AnimatedSprite2D
 @onready var body: Node2D = $body

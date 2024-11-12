@@ -15,7 +15,7 @@ class_name Player
 
 var look_dir = null
 var gun = null
-var SPEED = 200.0
+var SPEED = 200
 var is_dead = false #是否死亡
 var is_knockback = false #后坐力
 var knockback_speed = 0 #后坐力速度

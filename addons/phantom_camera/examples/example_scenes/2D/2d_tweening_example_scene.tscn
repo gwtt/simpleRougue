@@ -230,11 +230,13 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 2
 position = Vector2(227, -28)
+process_callback = 0
 position_smoothing_speed = 10.0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+process_priority = 300
+process_physics_priority = 300
 script = ExtResource("4_bb7en")
 
 [node name="Player" type="Node" parent="."]

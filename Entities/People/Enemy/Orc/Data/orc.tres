@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=41 format=3 uid="uid://kk8ifyc5d4kf"]
+[gd_resource type="SpriteFrames" load_steps=40 format=3 uid="uid://kk8ifyc5d4kf"]
 
 [ext_resource type="Texture2D" uid="uid://djy8e7ulfwi02" path="res://Entities/People/Enemy/Orc/Art/Orc with shadows/Orc-Attack01.png" id="1_xaink"]
 [ext_resource type="Texture2D" uid="uid://2ohm17882ete" path="res://Entities/People/Enemy/Orc/Art/Orc with shadows/Orc-Attack02.png" id="2_n1wr4"]
@@ -82,10 +82,6 @@ region = Rect2(100, 0, 100, 100)
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wclx"]
 atlas = ExtResource("4_6efor")
 region = Rect2(200, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rua0c"]
-atlas = ExtResource("4_6efor")
-region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cjeyy"]
 atlas = ExtResource("5_aqs0m")
@@ -217,9 +213,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7wclx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rua0c")
 }],
 "loop": true,
 "name": &"hurt",

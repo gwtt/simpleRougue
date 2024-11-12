@@ -1,5 +1,7 @@
 extends CanvasLayer
 @onready var health_bar: ProgressBar = $"GameUI/HPUI/血条"
+@onready var magic_bar: ProgressBar = $"GameUI/HPUI/蓝条"
+@onready var boss_health_bar: ProgressBar = $"GameUI/BossUI/血条"
 @onready var toast = $Control/Label
 @onready var toast_ui = $Control
 @onready var timer = $Control/Timer
@@ -7,7 +9,8 @@ extends CanvasLayer
 func _ready() -> void:
 	Utils.canvasLayer = self
 	PlayerDataManager.onHpChange.connect(on_hp_change)
-	
+	PlayerDataManager.onMagicChange.connect(on_magic_change)
+	BossDataManager.onHpChange.connect(on_boss_hp_change)
 	toast_ui.visible = false
 	
 func crosshairChange(is_show):
@@ -36,4 +39,13 @@ func hit():
 	tween.tween_callback(func back(): $Sprite2D.visible = false)
 
 func on_hp_change(hp,max_hp):
+	health_bar.max_value = max_hp
 	health_bar.value = hp
+
+func on_magic_change(mp,max_mp):
+	magic_bar.max_value = max_mp
+	magic_bar.value = max_mp
+
+func on_boss_hp_change(hp,max_hp):
+	boss_health_bar.max_value = max_hp
+	boss_health_bar.value = hp
