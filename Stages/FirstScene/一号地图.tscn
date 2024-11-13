@@ -879,6 +879,7 @@ position = Vector2(1499, 492)
 physics_interpolation_mode = 1
 position = Vector2(439, 478)
 zoom = Vector2(1.5, 1.5)
+process_callback = 0
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 process_priority = 300

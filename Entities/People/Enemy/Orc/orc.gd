@@ -58,8 +58,8 @@ func _on_rage_state_entered() -> void:
 	rage_timer.start()
 	SPEED *= 2
 	attack_speed = 1.5
-	# 2秒后解除狂暴
-	await get_tree().create_timer(2).timeout
+	# 1秒后解除狂暴
+	await get_tree().create_timer(1).timeout
 	SPEED /= 2
 	attack_speed = 1
 	rage_timer.stop()

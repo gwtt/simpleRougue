@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cp7ei4p08hsst"]
+[gd_scene load_steps=25 format=3 uid="uid://cp7ei4p08hsst"]
 
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://Assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_g8ke5"]
 [ext_resource type="Script" path="res://Entities/UI/Detail/control.gd" id="1_i5f8j"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://diq1hlkbgn6nx" path="res://Entities/UI/Detail/Sound/CLOTHMvmt_Clothing Rustle Arm_01.wav" id="5_0fvn0"]
 [ext_resource type="Texture2D" uid="uid://62glx2elo8d5" path="res://Entities/UI/Detail/Art/control.tres" id="6_gqxnh"]
 [ext_resource type="Script" path="res://Entities/UI/Detail/Crosshair.gd" id="6_oix4d"]
+[ext_resource type="PackedScene" uid="uid://cvjh7h2w8jqia" path="res://Entities/Skill/DashSkill/DashSkill.tscn" id="6_t5k0j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyk5s"]
 bg_color = Color(0.176471, 0.211765, 0.196078, 0.784314)
@@ -243,6 +244,33 @@ pivot_offset = Vector2(-15, -10)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GameUI"]
 stream = ExtResource("5_0fvn0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -602.0
+offset_top = 48.0
+offset_right = -202.0
+offset_bottom = 87.0
+grow_horizontal = 2
+theme_override_constants/separation = 100
+
+[node name="SkillButton" parent="GameUI/HBoxContainer" instance=ExtResource("6_t5k0j")]
+layout_mode = 2
+
+[node name="SkillButton2" parent="GameUI/HBoxContainer" instance=ExtResource("6_t5k0j")]
+visible = false
+layout_mode = 2
+
+[node name="SkillButton3" parent="GameUI/HBoxContainer" instance=ExtResource("6_t5k0j")]
+visible = false
+layout_mode = 2
+
+[node name="SkillButton4" parent="GameUI/HBoxContainer" instance=ExtResource("6_t5k0j")]
+visible = false
+layout_mode = 2
 
 [node name="鼠标光标" type="TextureRect" parent="."]
 z_index = 999

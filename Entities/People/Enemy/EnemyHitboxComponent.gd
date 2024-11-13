@@ -38,8 +38,8 @@ func meleeAttack(attack_speed: int)->void:
 		collsion.set_shape(line)
 		collsion.debug_color = Color("#ffff00c8")
 		call_deferred("add_child",collsion)
-		await get_tree().create_timer(0.1*(1.0/Speed)*(1.0/Density)*(17.0/Density)/attack_speed).timeout
-	await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.2*(1.0/Speed)*(1.0/Density)*(17.0/Density)/attack_speed).timeout
+	await get_tree().create_timer(0.1).timeout
 	for child in self.get_children():
 		child.set_deferred("disabled",true)
 		if child.is_inside_tree():

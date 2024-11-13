@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://2hufptefrmxd"]
+
+[ext_resource type="Texture2D" uid="uid://cebg01jae2afq" path="res://Entities/Skill/DashSkill/Art/1bit 16px icons part-2 outlines.png" id="1_5uclo"]
+
+[node name="Skill" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5uclo")
+region_enabled = true
+region_rect = Rect2(344, 200, 16, 16)

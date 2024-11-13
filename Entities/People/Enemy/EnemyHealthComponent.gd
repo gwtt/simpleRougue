@@ -13,6 +13,6 @@ func _ready() -> void:
 func damage(attack:float) -> void:
 	health -= attack
 	onHpChange.emit()
-	if health <= 0:
+	if health < 0:
 		onDie.emit()
 	

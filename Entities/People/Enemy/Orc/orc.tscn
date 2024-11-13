@@ -30,7 +30,7 @@ hitBoxComponent = NodePath("EnemyHitBoxComponent")
 hurtBoxComponent = NodePath("EnemyHurtBoxComponent")
 SPEED = 200.0
 hurt = 20
-HP = 160
+HP = 120
 
 [node name="body" type="Node2D" parent="."]
 
