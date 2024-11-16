@@ -11,17 +11,17 @@ config_version=5
 [application]
 
 config/name="简单肉鸽"
-run/main_scene="res://Stages/FirstScene/一号地图.tscn"
+run/main_scene="res://Entities/UI/firstStore/初始界面.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Utils="*res://Utilities/Utils/Utils.gd"
+BossDataManager="*res://Utilities/BossDataManager/BossDataManager.gd"
 PlayerDataManager="*res://Utilities/PlayerDataManager/PlayerDataManager.gd"
 SkillDataManager="*res://Utilities/SkillDataManager/SkillDataManager.gd"
 ItemManager="*res://Utilities/ItemManager/ItemManager.gd"
-BossDataManager="*res://Utilities/BossDataManager/BossDataManager.gd"
 GlobalControl="*res://Entities/UI/Detail/control.tscn"
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 
@@ -43,6 +43,10 @@ movie_writer/fps=144
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/animatedbutton/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/label_font_auto_sizer/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+
+[global_group]
+
+camera=""
 
 [gui]
 
@@ -94,6 +98,11 @@ reload={
 e={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+"无敌"={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194343,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

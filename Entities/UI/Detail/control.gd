@@ -44,7 +44,7 @@ func on_hp_change(hp,max_hp):
 
 func on_magic_change(mp,max_mp):
 	magic_bar.max_value = max_mp
-	magic_bar.value = max_mp
+	magic_bar.value = mp
 
 func on_boss_hp_change(hp,max_hp):
 	boss_health_bar.max_value = max_hp

@@ -21,7 +21,7 @@ const particles_pre = preload("res://Entities/GunParticle/CustomParticle/CustomP
 @export var time_scale = 0.1 #帧冻结时间倍数
 @export var freeze_frame = 3 #帧冻结帧数
 @export var recoil = 0 #后坐力大小
-@export var shake_vector = Vector2.ZERO #屏幕晃动大小
+@export var shake_vector = Vector2.ONE * 10 #屏幕晃动大小
 @export var reload_stream :AudioStream = load("res://assets/声音/GUNMech_Insert Clip_01.wav")
 
 var attachments = {
@@ -99,9 +99,9 @@ func reload_over():
 func setOwner(player):
 	self.player = player
 
-func _process(delta):
+func _process(_delta):
 	if Utils.freeze_frame:
-		delta = 0.0
+		_delta = 0.0
 	var mouse_pos = get_global_mouse_position()
 	direction = (mouse_pos - tip.global_position).normalized()
 	#Input.mouse_mode == Input.MOUSE_MODE_CONFINED_HIDDEN && 
@@ -169,9 +169,9 @@ func reload_ammo():
 func playReload():
 	anim_player.play("reload")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Utils.freeze_frame:
-		delta = 0.0
+		_delta = 0.0
 	#if Utils.freeze_frame:
 		#if Engine.get_physics_frames() % freeze_frame == 0:
 			# 暂停一帧

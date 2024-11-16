@@ -13,6 +13,7 @@ ignore_texture_size = true
 script = ExtResource("1_fg1qv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = -36.0
 offset_top = -28.0
 offset_right = -18.0
@@ -28,6 +29,7 @@ region_rect = Rect2(344, 200, 16, 16)
 
 [node name="coolDown" type="TextureProgressBar" parent="."]
 modulate = Color(0, 0, 0, 0.737255)
+layout_mode = 0
 offset_left = -36.0
 offset_top = -28.0
 offset_right = -24.0
@@ -39,6 +41,7 @@ fill_mode = 5
 texture_progress = ExtResource("3_lc8mj")
 
 [node name="Key" type="Label" parent="."]
+layout_mode = 0
 offset_left = -36.0
 offset_top = 11.0
 offset_right = 33.0
@@ -53,6 +56,7 @@ text = "sp
 "
 
 [node name="Time" type="Label" parent="."]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 28.0
 offset_right = 58.0

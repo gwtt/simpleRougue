@@ -36,7 +36,7 @@ HP = 120
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="body"]
 sprite_frames = ExtResource("2_77e8p")
-animation = &"hurt"
+animation = &"idle"
 
 [node name="EnemyHealthComponent" type="Node2D" parent="."]
 script = ExtResource("2_lr7qe")
@@ -45,6 +45,7 @@ script = ExtResource("2_lr7qe")
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("3_5aasi")
+damage = 1
 
 [node name="EnemyHurtBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("healthComponent")]
 position = Vector2(0, -0.5)

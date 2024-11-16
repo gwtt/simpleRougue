@@ -7,7 +7,7 @@ class_name Player
 @onready var 右手 = $"身体/右手"
 @onready var 左手 = $"身体/左手"
 @onready var weapon = $"WeaponRoot"
-@export var ghost_node:PackedScene
+@export var ghost_node: PackedScene
 @onready var dash_timer: Timer = $dashTimer
 @onready var state_chart: StateChart = $StateChart
 @onready var health_component: HealthComponent = $HealthComponent
@@ -16,10 +16,10 @@ class_name Player
 var look_dir = null
 var gun = null
 var SPEED = 200
-var is_dead = false #是否死亡
-var is_knockback = false #后坐力
-var knockback_speed = 0 #后坐力速度
-var direction:Vector2
+var is_dead = false # 是否死亡
+var is_knockback = false # 后坐力
+var knockback_speed = 0 # 后坐力速度
+var direction: Vector2
 func _init() -> void:
 	PlayerDataManager.playerWeaponListChange.connect(self.playerWeaponListChange)
 	SkillDataManager.onDash.connect(self.onDashChange)
@@ -37,25 +37,26 @@ func _physics_process(delta):
 			#velocity = (SPEED - knockback_speed) * global_position.direction_to(get_global_mouse_position())
 		#else:
 			#velocity = -knockback_speed * global_position.direction_to(get_global_mouse_position())
-	changeAnim(direction)	
+	changeAnim(direction)
 	if gun:
 		gun.look_at(get_global_mouse_position())
 		setLookat(get_global_mouse_position())
-func changeAnim(direction):
-	if direction != Vector2.ZERO:
+		
+func changeAnim(move_direction):
+	if move_direction != Vector2.ZERO:
 		stateSendEvent("idle_to_run")
 	else:
 		stateSendEvent("run_to_idle")
 	
-func animPlay(anim_name,speed = 1.0,is_back = false):
+func animPlay(anim_name, speed = 1.0, is_back = false):
 	if 头.animation != anim_name:
-		头.play(anim_name,speed,is_back)
+		头.play(anim_name, speed, is_back)
 	if 身子.animation != anim_name:
-		身子.play(anim_name,speed,is_back)
+		身子.play(anim_name, speed, is_back)
 	if 右手.animation != anim_name:
-		右手.play(anim_name,speed,is_back)
+		右手.play(anim_name, speed, is_back)
 	if 左手.animation != anim_name:
-		左手.play(anim_name,speed,is_back)	
+		左手.play(anim_name, speed, is_back)
 
 func setLookat(dir):
 	if dir != null:
@@ -67,7 +68,7 @@ func setLookat(dir):
 	else:
 		look_dir = null
 
-func stateSendEvent(name:String):
+func stateSendEvent(name: String):
 	state_chart.send_event(name)
 		
 func playerWeaponListChange():
@@ -90,22 +91,22 @@ func onHit(hurt):
 	var temp_hurt = 0
 	for node in nodes:
 		if node.connect_beforePlayerHit:
-			var num = node.call("beforePlayerHit",hurt)
+			var num = node.call("beforePlayerHit", hurt)
 			temp_hurt += num
 	hurt += temp_hurt
 	if hurt < 1:
 		hurt = 1
 	PlayerDataManager.player_hp -= hurt
-	Utils.showHitLabel(hurt,self)
-	get_tree().call_group("control","hit")
+	Utils.showHitLabel(hurt, self)
+	get_tree().call_group("control", "hit")
 	#Utils.freeze_frame = true
 	Utils.freezeFrame(0.1)
 	for node in nodes:
 		if node.connect_afterPlayerHit:
-			node.call("afterPlayerHit",hurt)		
+			node.call("afterPlayerHit", hurt)
 				
-func onHpChange(hp,max_hp):
-	PlayerDataManager.onHpChange.emit(hp,max_hp)
+func onHpChange(hp, max_hp):
+	PlayerDataManager.onHpChange.emit(hp, max_hp)
 	if hp <= 0:
 		stateSendEvent("to_die")
 		
@@ -116,11 +117,11 @@ func onSpeedChange(speed):
 	SPEED = speed
 	
 func cameraSnake(step):
-	get_tree().call_group("camera","shootShake",step)
+	get_tree().call_group("camera", "shootShake", step)
 	
-func add_ghost()->void:
+func add_ghost() -> void:
 	var ghost = ghost_node.instantiate()
-	ghost.set_property(global_position,body,scale)
+	ghost.set_property(global_position, body, scale)
 	get_parent().add_child(ghost)
 
 func _on_检测遮挡_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
@@ -138,7 +139,7 @@ func _on_检测遮挡_body_shape_entered(body_rid, body, body_shape_index, local
 	var 材质 = body.get_cell_tile_data(cellCroods).material
 	if 材质 != null:
 		var shader = 材质 as ShaderMaterial
-		shader.set_shader_parameter("alpha",0.65)
+		shader.set_shader_parameter("alpha", 0.65)
 	pass
 
 func _on_检测遮挡_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
@@ -148,22 +149,22 @@ func _on_检测遮挡_body_shape_exited(body_rid, body, body_shape_index, local_
 	var 材质 = body.get_cell_tile_data(cellCroods).material
 	if 材质 != null:
 		var shader = 材质 as ShaderMaterial
-		shader.set_shader_parameter("alpha",0)
+		shader.set_shader_parameter("alpha", 0)
 	pass
 
 func _on_dash_timer_timeout() -> void:
 	add_ghost()
 
-func _on_idle_state_processing(delta: float) -> void:
+func _on_idle_state_processing(_delta: float) -> void:
 	animPlay("idle")
 	
-func _on_run_state_processing(delta: float) -> void:
+func _on_run_state_processing(_delta: float) -> void:
 	velocity = direction * (SPEED + PlayerDataManager.移速加成)
 	changeAnim(direction)
 	animPlay("run")
 	move_and_slide()
 	
-func _on_dash_state_processing(delta: float) -> void:
+func _on_dash_state_processing(_delta: float) -> void:
 	velocity = direction * (SPEED + PlayerDataManager.移速加成)
 	velocity = direction * 1200
 	changeAnim(direction)
@@ -175,13 +176,12 @@ func _on_dash_state_entered() -> void:
 	stateSendEvent("to_not_dash")
 	dash_timer.stop()
 
-func _on_die_state_processing(delta: float) -> void:
+func _on_die_state_processing(_delta: float) -> void:
 	is_dead = true
 	animPlay("die")
 
 
 func _on_hurt_state_entered() -> void:
-	print("主角受伤")
 	animPlay("hurt")
 	await 头.animation_looped
 	stateSendEvent("hurt_to_idle")

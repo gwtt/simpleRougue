@@ -5,7 +5,7 @@ class_name Bullet
 @export var bullet_impact:PackedScene
 @export var bullet_smoke:PackedScene
 
-@export var hurt = 1
+@export var hurt = 1.0
 @export var speed = 600
 @export var knockback_speed = 50
 @export var knockback_time = 0.1
@@ -25,8 +25,8 @@ func _ready():
 	timer.start(0.05)
 	z_index = 0
 
-func setOnwer(player):
-	self.player = player
+func setOnwer(_player):
+	self.player = _player
 
 func start(local:Vector2,pos:Vector2):
 	global_position = local
@@ -34,7 +34,7 @@ func start(local:Vector2,pos:Vector2):
 
 func fire():
 	hurt += PlayerDataManager.基础伤害
-	velocity = Vector2(speed * 2, 0).rotated(rotation)
+	velocity = Vector2(speed, 0).rotated(rotation)
 	set_process(true)
 	
 	#var ins = bullet_shell.instantiate()
@@ -57,7 +57,7 @@ func _hit(collisionResult)->void:
 func _on_timer_timeout():
 	z_index = 35
 	queue_time += 0.05
-	if queue_time > 2:
+	if queue_time > 0.5:
 		queue_free()
 
 func bulletSmoke(collisionResult):

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://yxsd0m7ijqbd"]
+
+[ext_resource type="Script" path="res://Entities/People/Enemy/Archer/Arrow/arrow.gd" id="1_m0250"]
+[ext_resource type="Texture2D" uid="uid://lgr6m3d7pkvh" path="res://Entities/People/Enemy/Archer/Arrow/Art/Arrow03(100x100).png" id="2_mwevt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tms3r"]
+size = Vector2(20, 5)
+
+[node name="Arror" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_m0250")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mwevt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_tms3r")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_tms3r")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

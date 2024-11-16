@@ -8,4 +8,4 @@ script = ExtResource("1_0yyw8")
 item = ExtResource("2_fp7a3")
 item_name = "望远镜"
 type = "装备"
-description = "[color=green]+3[/color] 攻击力"
+description = "10%的几率攻击永久增加[color=green]+0.1[/color] 攻击力"

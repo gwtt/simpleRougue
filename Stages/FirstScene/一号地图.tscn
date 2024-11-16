@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cta1dgup21453" path="res://Assets/地牢/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="5_mxboq"]
 [ext_resource type="Texture2D" uid="uid://bafmuvtuj4ut" path="res://Assets/场景/龙骑士/Set 1.2.png" id="6_txqwq"]
 [ext_resource type="PackedScene" uid="uid://dhg8xbngla50n" path="res://Entities/People/Player/player.tscn" id="7_x8lc0"]
-[ext_resource type="PackedScene" uid="uid://xu4ianhv1tl0" path="res://Entities/People/Enemy/Orc/orc.tscn" id="8_ulsp0"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="9_3xke1"]
+[ext_resource type="PackedScene" uid="uid://t00spyboxk4x" path="res://Entities/People/Enemy/Archer/archer.tscn" id="8_j5a8a"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_7e1fg"]
+[ext_resource type="PackedScene" uid="uid://c3ohc6jcps3l7" path="res://Entities/UI/Camera/Camera.tscn" id="9_qho5c"]
 [ext_resource type="Resource" uid="uid://euybd2w0bax" path="res://addons/phantom_camera/examples/resources/tween/player_phantom_camera_2d_tween.tres" id="11_dbuhc"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_3cmtx"]
@@ -872,19 +872,10 @@ position = Vector2(1708, 520)
 [node name="player" parent="." instance=ExtResource("7_x8lc0")]
 position = Vector2(439, 478)
 
-[node name="Orc" parent="." instance=ExtResource("8_ulsp0")]
-position = Vector2(1499, 492)
+[node name="Archer" parent="." instance=ExtResource("8_j5a8a")]
+position = Vector2(1317, 478)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(439, 478)
-zoom = Vector2(1.5, 1.5)
-process_callback = 0
-
-[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("9_3xke1")
+[node name="Camera" parent="." instance=ExtResource("9_qho5c")]
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 position = Vector2(439, 478)

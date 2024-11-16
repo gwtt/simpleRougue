@@ -113,6 +113,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0iftd"]
 bg_color = Color(1, 0, 0.00612242, 1)
+shadow_color = Color(0, 0, 0, 0.133333)
 
 [node name="ControlUI" type="CanvasLayer"]
 process_mode = 3
@@ -199,8 +200,10 @@ offset_bottom = 23.0
 
 [node name="BossUI" type="Control" parent="GameUI"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 2.0
+offset_top = -59.0
+offset_right = 42.0
+offset_bottom = -19.0
 
 [node name="血条" type="ProgressBar" parent="GameUI/BossUI"]
 layout_mode = 1
@@ -217,7 +220,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_71ury")
 theme_override_styles/fill = SubResource("StyleBoxFlat_0iftd")
-value = 80.0
 show_percentage = false
 
 [node name="Container" type="Control" parent="GameUI"]
@@ -302,9 +304,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -440.0
-offset_top = 30.0
+offset_top = 85.0
 offset_right = 440.0
-offset_bottom = 103.0
+offset_bottom = 158.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_g8ke5")
 theme_override_font_sizes/font_size = 40

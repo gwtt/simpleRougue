@@ -104,3 +104,4 @@ size_flags_horizontal = 3
 stream = ExtResource("5_p3n28")
 
 [connection signal="pressed" from="Refresh" to="." method="_on_refresh_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

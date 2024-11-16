@@ -14,3 +14,6 @@ func setNumber(number):
 
 func setColor(color):
 	set("theme_override_colors/font_color",color)
+
+func setString(text_value):
+	text = text_value

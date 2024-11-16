@@ -17,6 +17,7 @@ knockback_speed = 0
 knockback_time = 0.0
 time_scale = 0.0
 freeze_frame = 0
+shake_vector = Vector2(100, 100)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 offset = Vector2(6, -1)

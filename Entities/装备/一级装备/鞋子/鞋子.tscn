@@ -8,4 +8,4 @@ script = ExtResource("1_bes8v")
 item = ExtResource("2_fhxca")
 item_name = "鞋子"
 type = "装备"
-description = "[color=green]+1[/color] 速度"
+description = "10%的几率攻击永久增加 [color=green]+0.1[/color] 速度"

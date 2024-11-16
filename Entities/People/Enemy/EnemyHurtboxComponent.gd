@@ -9,11 +9,12 @@ var audio_hit = AudioStreamPlayer2D.new() #受击音效
 var idle_frame_num = 0
 func _init() -> void:
 	hurt.connect(hitFlash)
+
 func _ready() -> void:
 	add_child(audio_hit)
 	healthComponent.onDie.connect(toDie)
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if idle_frame_num > 0:
 		Utils.showHitLabel(idle_frame_num,self)
 		idle_frame_num = 0
@@ -22,7 +23,6 @@ func toDie()->void:
 	is_die = true
 
 func hitFlash(bullet:Bullet):
-	print("触发")
 	if is_die:
 		return
 	Utils.freezeFrame(bullet.gun.time_scale)
@@ -30,9 +30,10 @@ func hitFlash(bullet:Bullet):
 	audio_hit.play(0.17)
 
 
-func onHit(hit_num,is_show_label = true,is_death_effect = true):
+func onHit(hit_num,is_show_label = true,_is_death_effect = true):
 	if PlayerDataManager.子弹暴击率 > 0 && PlayerDataManager.子弹暴击率 > randi()%100:
 		hit_num *= 1.5
+	PlayerDataManager.attack.emit()
 	var nodes = get_tree().get_nodes_in_group("reward")
 	var temp_hurt = 0
 	for node in nodes:

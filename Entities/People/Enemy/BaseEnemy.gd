@@ -16,7 +16,9 @@ var navigationAgent2D := NavigationAgent2D.new()
 @onready var state_chart: StateChart = $StateChart
 var attack_timer = 0 # 计时器
 var attack_delay = 1 * 30 # 攻击前摇时间
-var target_player:Player
+var target_player:Player:
+	get:
+		return Utils.player
 var hit = false
 var death_callback :Callable
 var attack_speed = 1.0
@@ -28,12 +30,13 @@ func _ready():
 	name = str(Time.get_ticks_usec())
 	hurtBoxComponent.hurt.connect(hurted)
 	healthComponent.onDie.connect(onDie)
-	target_player = Utils.player
 	Utils.boss = self
 	#audio_hit.stream = load("res://audio/body_hit_finisher_52.wav")
 
 func _process(delta: float) -> void:
 	attack_timer += 1
+	print("进入死亡状态")
+	stateSendEvent("to_die")
 
 func setData(data):
 	SPEED = data['speed']
@@ -56,6 +59,7 @@ func hurted(bullet:Bullet)->void:
 func onDie(is_death_effect = true):
 	print("%s死亡" % [self.name])
 	PlayerDataManager.player_exp += 1
+	BossDataManager.onDie.emit()
 	stateSendEvent("to_die")
 	if death_callback:
 		death_callback.call(self)
@@ -74,8 +78,7 @@ func onDie(is_death_effect = true):
 	var tween = create_tween()
 	tween.tween_property(self,"modulate",Color(1,1,1,0),2)
 	await tween.finished
-	open_store()
-	#await anim.animation_finished
+	Utils.open_store()
 	queue_free()
 	
 func setDeathCallBack(death_callback:Callable):
@@ -86,8 +89,3 @@ func addEffect(node):
 
 func stateSendEvent(name:String):
 	state_chart.send_event(name)
-
-func open_store() -> void:
-	var store = Utils.store.instantiate()
-	get_tree().paused = true
-	get_tree().current_scene.add_child(store)

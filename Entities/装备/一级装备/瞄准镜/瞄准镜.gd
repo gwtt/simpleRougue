@@ -1,7 +1,7 @@
 extends Item
 
 func now_use():
-	PlayerDataManager.伤害加成 += 3
+	PlayerDataManager.add_attack_probability += 0.1
 
 func miss():
-	PlayerDataManager.伤害加成 -= 3
+	PlayerDataManager.add_attack_probability -= 0.1
