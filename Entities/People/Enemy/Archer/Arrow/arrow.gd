@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var damage = 2
+var damage = 1.5
 var direction
 var speed = 1000
 

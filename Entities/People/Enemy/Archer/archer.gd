@@ -4,8 +4,8 @@ extends BaseEnemy
 @onready var effect: AnimatedSprite2D = $body/effect
 @export var arrow_scene: PackedScene # 普通箭矢场景
 @export var charged_arrow_scene: PackedScene # 蓄力箭矢场景
-@export var attack_range: float = 800.0 # 攻击范围
-@export var safe_distance: float = 100.0 # 安全距离
+@export var attack_range: float = 700.0 # 攻击范围
+@export var safe_distance: float = 200.0 # 安全距离
 @export var stealth_move_range: float = 150.0 # 隐身移动范围
 @export var attack_cooldown: float = 0.5 # 普通攻击冷却时间
 
@@ -17,6 +17,7 @@ var anim_speed: float = 1.0
 var is_half_health: bool = false
 var time = 0.0
 var rage_time = 5.0
+var damage = 1.5
 func flip_h(flip: bool):
 	sprite.flip_h = flip
 	shadow.flip_h = flip
@@ -103,19 +104,18 @@ func _on_rage_state_entered() -> void:
 	print("进入狂暴状态")
 	is_stealthed = true
 	modulate.a = 0.5 # 半透明效果
-	
-	# 随机选择移动位置
-	var random_angle = randf_range(0, 2 * PI)
-	var random_distance = randf_range(50, stealth_move_range)
-	var target_pos = global_position + Vector2(
-		cos(random_angle) * random_distance,
-		sin(random_angle) * random_distance
-	)
-	
-	# 快速移动到目标位置
-	global_position = target_pos
+    # 计算玩家背后的位置
+	if target_player:
+		var player_direction = global_position.direction_to(target_player.global_position)
+		var behind_position = target_player.global_position + player_direction * safe_distance * 1.5
+		
+        # 快速移动到玩家背后
+		global_position = behind_position
+        # 确保面向玩家
+		find_player_and_flip_h()
+    
 	anim.play("attack2", anim_speed)
-	# 蓄力射击
+    # 蓄力射击
 	await anim.animation_finished
 	_shoot_charged_arrow()
 	is_stealthed = false
@@ -129,14 +129,15 @@ func _on_rage_state_processing(delta: float) -> void:
 func _shoot_arrow() -> void:
 	if arrow_scene and target_player:
 		var arrow = arrow_scene.instantiate()
+		self.add_child(arrow)
 		arrow.global_position = global_position
-		get_parent().add_child(arrow)
 		arrow.init_target(target_player_postion)
-
+		arrow.damage = damage
 # 发射蓄力箭矢
 func _shoot_charged_arrow() -> void:
 	if charged_arrow_scene and target_player:
 		var arrow = charged_arrow_scene.instantiate()
+		self.add_child(arrow)
 		arrow.global_position = global_position
-		get_parent().add_child(arrow)
 		arrow.init_target(target_player_postion)
+		arrow.damage = damage
