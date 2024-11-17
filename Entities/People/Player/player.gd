@@ -27,7 +27,11 @@ func _ready():
 	Utils.player = self
 	var temp = Utils.weapon_list["0"].instantiate()
 	PlayerDataManager.add_weapon(Utils.weapon_list["0"].instantiate())
+	health_component.onDie.connect(onDie)
 
+func onDie():
+	is_dead = true
+	
 func _physics_process(delta):
 	if is_dead:
 		return

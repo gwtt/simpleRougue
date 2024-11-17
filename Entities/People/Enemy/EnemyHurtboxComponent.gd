@@ -42,8 +42,6 @@ func onHit(hit_num,is_show_label = true,_is_death_effect = true):
 			temp_hurt += num
 	hit_num += temp_hurt
 	hit_num = snapped(hit_num,0.01)
-	if is_show_label:
-		Utils.showHitLabel(hit_num,self)
 	healthComponent.damage(hit_num)	
 	for node in nodes:
 		if node.connect_afterAtk:

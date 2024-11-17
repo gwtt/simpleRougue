@@ -5,9 +5,15 @@ class_name BaseEnemy
 @export var hitBoxComponent:EnemyHitBoxComponent
 @export var hurtBoxComponent:EnemyHurtBoxComponent
 @export var is_boss = false
+@export_group("速度")
 @export var SPEED = 50.0
+@export var base_speed = 50.0
+
+@export_group("伤害")
 @export var hurt = 1
 @export var HP = 5
+
+@export_group("击退")
 @export var knockback_def = 5 #击退抵抗
 var movement_delta: float
 var navigationAgent2D := NavigationAgent2D.new()
@@ -15,7 +21,9 @@ var navigationAgent2D := NavigationAgent2D.new()
 @onready var anim :AnimatedSprite2D = get_node("body/AnimatedSprite2D")
 @onready var state_chart: StateChart = $StateChart
 var attack_timer = 0 # 计时器
-var attack_delay = 1 * 30 # 攻击前摇时间
+@export_group("攻击")
+@export var attack_delay = 1 * 30 # 攻击前摇时间
+@export var base_attack_delay = 1 * 30
 var target_player:Player:
 	get:
 		return Utils.player
@@ -35,8 +43,6 @@ func _ready():
 
 func _process(delta: float) -> void:
 	attack_timer += 1
-	print("进入死亡状态")
-	stateSendEvent("to_die")
 
 func setData(data):
 	SPEED = data['speed']
@@ -45,16 +51,16 @@ func setData(data):
 	knockback_def = 5
 
 func hurted(bullet:Bullet)->void:
-	var speed = bullet.knockback_speed - knockback_def
-	if speed > 0:
-		velocity = -(global_position.direction_to(Utils.player.global_position)) * speed
-		hit = true
-	#var materialFlash = ShaderMaterial.new()
-	#materialFlash.shader = load("res://shader/Monster1.gdshader")
-	#sprite_body.get_node("AnimatedSprite2D").material = materialFlash
-	await get_tree().create_timer(bullet.knockback_time).timeout.connect(func timeout():
-		sprite_body.get_node("AnimatedSprite2D").material = null; hit = false )
-	
+	# var speed = bullet.knockback_speed - knockback_def
+	# if speed > 0:
+	# 	velocity = -(global_position.direction_to(Utils.player.global_position)) * speed
+	# 	hit = true
+	# #var materialFlash = ShaderMaterial.new()
+	# #materialFlash.shader = load("res://shader/Monster1.gdshader")
+	# #sprite_body.get_node("AnimatedSprite2D").material = materialFlash
+	# await get_tree().create_timer(bullet.knockback_time).timeout.connect(func timeout():
+	# 	sprite_body.get_node("AnimatedSprite2D").material = null; hit = false )
+	pass
 
 func onDie(is_death_effect = true):
 	print("%s死亡" % [self.name])

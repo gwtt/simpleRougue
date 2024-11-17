@@ -6,6 +6,8 @@ signal onHpChange(hp,max_hp)#血量变化
 var health:float = 4:
 	set(value):
 		onHpChange.emit(value,MAX_HEALTH)
+		if value <= 0:
+			onDie.emit()
 		health = value
 
 func _ready() -> void:

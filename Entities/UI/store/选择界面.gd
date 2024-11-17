@@ -35,4 +35,5 @@ func _on_refresh_pressed() -> void:
 
 # 关闭商店，并且初始化角色状态，开始下一波
 func _on_next_pressed() -> void:
+	Utils.initGame()
 	Utils.close_store()

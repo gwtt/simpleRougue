@@ -101,26 +101,30 @@ func _on_attack_state_processing(delta: float) -> void:
 
 # 状态：隐身技能（狂暴）
 func _on_rage_state_entered() -> void:
+	await anim.animation_finished
 	print("进入狂暴状态")
 	is_stealthed = true
 	modulate.a = 0.5 # 半透明效果
-    # 计算玩家背后的位置
+	# 计算玩家背后的位置
 	if target_player:
 		var player_direction = global_position.direction_to(target_player.global_position)
 		var behind_position = target_player.global_position + player_direction * safe_distance * 1.5
 		
-        # 快速移动到玩家背后
+		# 快速移动到玩家背后
 		global_position = behind_position
-        # 确保面向玩家
-		find_player_and_flip_h()
-    
+		# 确保面向玩家
+		find_player_and_flip_h()	
+		
+	can_attack = false
 	anim.play("attack2", anim_speed)
-    # 蓄力射击
+	# 蓄力射击
 	await anim.animation_finished
 	_shoot_charged_arrow()
 	is_stealthed = false
 	modulate.a = 1.0
-	stateSendEvent("to_walk")
+	stateSendEvent("to_attack")
+	await get_tree().create_timer(attack_cooldown).timeout
+	can_attack = true
 
 func _on_rage_state_processing(delta: float) -> void:
 	pass

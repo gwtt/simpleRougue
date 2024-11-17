@@ -10,6 +10,8 @@ var player:Player
 var boss:BaseEnemy
 var store_ins
 var freeze_frame = false
+var player_init_postion = Vector2.ZERO
+var boss_init_postion = Vector2.ZERO
 enum GUN_CHANGE_TYPE { #切枪类型
 	CHANGE, #切换枪械
 	RELOAD #切换子弹
@@ -72,4 +74,22 @@ func close_store() -> void:
 
 func nextLevel():
 	now_level += 1
+	
+func initPlayer():
+	player = PlayerDataManager.player.instantiate()
+	get_tree().current_scene.add_child(player)
+	player.global_position = player_init_postion
+	
+func initBoss():
+	boss = BossDataManager.getBoss().instantiate()
+	get_tree().current_scene.add_child(boss)
+	boss.global_position = boss_init_postion
+
+func initGame():
+	print("初始化游戏")
+	if !player:
+		initPlayer()
+	else:
+		player.global_position = player_init_postion
+	initBoss()
 	

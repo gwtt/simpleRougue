@@ -958,7 +958,7 @@ color = Color(0.956863, 0.956863, 0.956863, 1)
 size = Vector2(15, 9)
 
 [node name="player" type="CharacterBody2D"]
-z_index = 50
+z_index = 40
 position = Vector2(751, 386)
 scale = Vector2(2, 2)
 script = ExtResource("1_nbg82")

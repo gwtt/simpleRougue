@@ -29,6 +29,7 @@ healthComponent = NodePath("EnemyHealthComponent")
 hitBoxComponent = NodePath("EnemyHitBoxComponent")
 hurtBoxComponent = NodePath("EnemyHurtBoxComponent")
 SPEED = 200.0
+base_speed = 200.0
 hurt = 20
 HP = 120
 
@@ -212,6 +213,10 @@ delay_in_seconds = "0.0"
 [node name="rageTimer" type="Timer" parent="."]
 wait_time = 0.1
 
+[node name="toRageTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="body_entered" from="EnemyHurtBoxComponent" to="EnemyHurtBoxComponent" method="_on_body_entered"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
@@ -220,4 +225,6 @@ wait_time = 0.1
 [connection signal="state_entered" from="StateChart/root/attack" to="." method="_on_attack_state_entered"]
 [connection signal="state_processing" from="StateChart/root/attack" to="." method="_on_attack_state_processing"]
 [connection signal="state_entered" from="StateChart/root/Rage" to="." method="_on_rage_state_entered"]
+[connection signal="state_exited" from="StateChart/root/Rage" to="." method="_on_rage_state_exited"]
 [connection signal="timeout" from="rageTimer" to="." method="_on_rage_timer_timeout"]
+[connection signal="timeout" from="toRageTimer" to="." method="_on_to_rage_timer_timeout"]
