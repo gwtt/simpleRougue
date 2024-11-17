@@ -122,7 +122,7 @@ func _on_rage_state_entered() -> void:
 	_shoot_charged_arrow()
 	is_stealthed = false
 	modulate.a = 1.0
-	stateSendEvent("to_attack")
+	stateSendEvent("to_walk")
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
