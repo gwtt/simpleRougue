@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dglibu5c5qp3j"]
+
+[ext_resource type="Script" path="res://entities/equipment/first_equipment/shoes/shoes.gd" id="1_bes8v"]
+[ext_resource type="Texture2D" uid="uid://dkc4kh1l7it4e" path="res://entities/equipment/first_equipment/shoes/art/boot.png" id="2_fhxca"]
+
+[node name="速度之靴" type="Node2D"]
+script = ExtResource("1_bes8v")
+item = ExtResource("2_fhxca")
+item_name = "鞋子"
+type = "装备"
+description = "10%的几率攻击永久增加 [color=green]+0.1[/color] 速度"

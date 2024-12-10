@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drx0yeyts80gl"
-path="res://.godot/imported/Body-Jumping.png-8707efa793e92cf9f97693afb801446d.ctex"
+path="res://.godot/imported/Body-Jumping.png-53287109f67e99ae9d22a04dd2e76dec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Body/Body-Jumping.png"
-dest_files=["res://.godot/imported/Body-Jumping.png-8707efa793e92cf9f97693afb801446d.ctex"]
+source_file="res://entities/people/player/art/Base Body/Body/Body-Jumping.png"
+dest_files=["res://.godot/imported/Body-Jumping.png-53287109f67e99ae9d22a04dd2e76dec.ctex"]
 
 [params]
 

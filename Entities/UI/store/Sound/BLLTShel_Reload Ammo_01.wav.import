@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6yx7bp3e6gg"
-path="res://.godot/imported/BLLTShel_Reload Ammo_01.wav-3cfca92809b1969ba0eec716ee8c6db0.sample"
+path="res://.godot/imported/BLLTShel_Reload Ammo_01.wav-5639fb2c26c701a99badbdcbef9a09eb.sample"
 
 [deps]
 
-source_file="res://Entities/UI/store/Sound/BLLTShel_Reload Ammo_01.wav"
-dest_files=["res://.godot/imported/BLLTShel_Reload Ammo_01.wav-3cfca92809b1969ba0eec716ee8c6db0.sample"]
+source_file="res://entities/ui/store/sound/BLLTShel_Reload Ammo_01.wav"
+dest_files=["res://.godot/imported/BLLTShel_Reload Ammo_01.wav-5639fb2c26c701a99badbdcbef9a09eb.sample"]
 
 [params]
 

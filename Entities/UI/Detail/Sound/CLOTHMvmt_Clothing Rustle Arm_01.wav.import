@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://diq1hlkbgn6nx"
-path="res://.godot/imported/CLOTHMvmt_Clothing Rustle Arm_01.wav-9ab9ba9f12d3f7c511c2fcc3a54e2cdd.sample"
+path="res://.godot/imported/CLOTHMvmt_Clothing Rustle Arm_01.wav-f40f8e43ab09fa06fe64c0abfd341abf.sample"
 
 [deps]
 
-source_file="res://Entities/UI/Detail/Sound/CLOTHMvmt_Clothing Rustle Arm_01.wav"
-dest_files=["res://.godot/imported/CLOTHMvmt_Clothing Rustle Arm_01.wav-9ab9ba9f12d3f7c511c2fcc3a54e2cdd.sample"]
+source_file="res://entities/ui/detail/sound/CLOTHMvmt_Clothing Rustle Arm_01.wav"
+dest_files=["res://.godot/imported/CLOTHMvmt_Clothing Rustle Arm_01.wav-f40f8e43ab09fa06fe64c0abfd341abf.sample"]
 
 [params]
 

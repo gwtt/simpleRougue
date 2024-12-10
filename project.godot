@@ -11,18 +11,18 @@ config_version=5
 [application]
 
 config/name="简单肉鸽"
-run/main_scene="res://Entities/UI/firstStore/初始界面.tscn"
+run/main_scene="res://entities/ui/first_store/first_store.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Utils="*res://Utilities/Utils/Utils.gd"
-BossDataManager="*res://Utilities/BossDataManager/BossDataManager.gd"
-PlayerDataManager="*res://Utilities/PlayerDataManager/PlayerDataManager.gd"
-SkillDataManager="*res://Utilities/SkillDataManager/SkillDataManager.gd"
-ItemManager="*res://Utilities/ItemManager/ItemManager.gd"
-GlobalControl="*res://Entities/UI/Detail/control.tscn"
+Utils="*res://utilities/utils/Utils.gd"
+BossDataManager="*res://utilities/boss_data_manager/boss_data_manager.gd"
+PlayerDataManager="*res://utilities/player_data_manager/player_data_manager.gd"
+SkillDataManager="*res://utilities/skill_data_manager/skill_data_manager.gd"
+ItemManager="*res://utilities/item_manager/item_manager.gd"
+GlobalControl="*res://entities/ui/detail/control.tscn"
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 
 [display]
@@ -42,7 +42,13 @@ movie_writer/fps=144
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/animatedbutton/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/label_font_auto_sizer/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/animatedbutton/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/label_font_auto_sizer/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/qframework_godot/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://entities/people/": "red"
+}
 
 [global_group]
 
@@ -50,8 +56,8 @@ camera=""
 
 [gui]
 
-theme/custom="res://Utilities/Utils/global_theme.tres"
-theme/custom_font="res://Assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf"
+theme/custom="res://utilities/utils/global_theme.tres"
+theme/custom_font="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf"
 
 [input]
 

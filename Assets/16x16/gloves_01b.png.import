@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2ia70n2n4oal"
-path="res://.godot/imported/gloves_01b.png-e4dd8b023d3403a1e09bc6c004434f86.ctex"
+path="res://.godot/imported/gloves_01b.png-a30e986f97dc16e57e9782a365bb686f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/16x16/gloves_01b.png"
-dest_files=["res://.godot/imported/gloves_01b.png-e4dd8b023d3403a1e09bc6c004434f86.ctex"]
+source_file="res://assets/16x16/gloves_01b.png"
+dest_files=["res://.godot/imported/gloves_01b.png-a30e986f97dc16e57e9782a365bb686f.ctex"]
 
 [params]
 

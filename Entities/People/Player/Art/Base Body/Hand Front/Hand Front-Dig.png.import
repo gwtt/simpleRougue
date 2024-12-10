@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn5fg3f5unse0"
-path="res://.godot/imported/Hand Front-Dig.png-d6052ca9f4f717fdb52563f4b2e7febf.ctex"
+path="res://.godot/imported/Hand Front-Dig.png-f5cd560983b3b37dc8fdd1007a594c29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Front/Hand Front-Dig.png"
-dest_files=["res://.godot/imported/Hand Front-Dig.png-d6052ca9f4f717fdb52563f4b2e7febf.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Front/Hand Front-Dig.png"
+dest_files=["res://.godot/imported/Hand Front-Dig.png-f5cd560983b3b37dc8fdd1007a594c29.ctex"]
 
 [params]
 

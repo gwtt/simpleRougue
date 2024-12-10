@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cxvrsyb0x3s1c"
-path="res://.godot/imported/鸿蒙.ttf-0a7248690f0b3a0eca33a0ccbdc71bd9.fontdata"
+path="res://.godot/imported/鸿蒙.ttf-c6cb9c93ff89917700f04d42c7e38196.fontdata"
 
 [deps]
 
-source_file="res://Assets/字体/鸿蒙.ttf"
-dest_files=["res://.godot/imported/鸿蒙.ttf-0a7248690f0b3a0eca33a0ccbdc71bd9.fontdata"]
+source_file="res://assets/字体/鸿蒙.ttf"
+dest_files=["res://.godot/imported/鸿蒙.ttf-c6cb9c93ff89917700f04d42c7e38196.fontdata"]
 
 [params]
 

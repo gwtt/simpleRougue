@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brqgjte0m3xim"
-path="res://.godot/imported/Female Hair-Death.png-cc4c852b6fd8f9d09c085e5ab34e1c57.ctex"
+path="res://.godot/imported/Female Hair-Death.png-d40bf5fdbf4c5b6051c8f272f76b7dc6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Female Hair/Red/Female Hair-Death.png"
-dest_files=["res://.godot/imported/Female Hair-Death.png-cc4c852b6fd8f9d09c085e5ab34e1c57.ctex"]
+source_file="res://entities/people/player/art/Accessories/Female Hair/Red/Female Hair-Death.png"
+dest_files=["res://.godot/imported/Female Hair-Death.png-d40bf5fdbf4c5b6051c8f272f76b7dc6.ctex"]
 
 [params]
 

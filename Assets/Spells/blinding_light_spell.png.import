@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcuboquvtx0k6"
-path="res://.godot/imported/blinding_light_spell.png-4a972ca40c3165bf1df0056be74bfa20.ctex"
+path="res://.godot/imported/blinding_light_spell.png-461e2d34e1df22783de6386ae8d3e7de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spells/blinding_light_spell.png"
-dest_files=["res://.godot/imported/blinding_light_spell.png-4a972ca40c3165bf1df0056be74bfa20.ctex"]
+source_file="res://assets/Spells/blinding_light_spell.png"
+dest_files=["res://.godot/imported/blinding_light_spell.png-461e2d34e1df22783de6386ae8d3e7de.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c52ppv28xfii7"
-path="res://.godot/imported/Female Hair-Dig.png-002bae6f6446360946daf5c555407817.ctex"
+path="res://.godot/imported/Female Hair-Dig.png-ab836889021948d9535550c82d45a38e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Female Hair/Yellow/Female Hair-Dig.png"
-dest_files=["res://.godot/imported/Female Hair-Dig.png-002bae6f6446360946daf5c555407817.ctex"]
+source_file="res://entities/people/player/art/Accessories/Female Hair/Yellow/Female Hair-Dig.png"
+dest_files=["res://.godot/imported/Female Hair-Dig.png-ab836889021948d9535550c82d45a38e.ctex"]
 
 [params]
 

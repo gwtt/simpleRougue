@@ -1,10 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://yxsd0m7ijqbd"]
+[gd_scene load_steps=7 format=3 uid="uid://yxsd0m7ijqbd"]
 
-[ext_resource type="Script" path="res://Entities/People/Enemy/Archer/Arrow/arrow.gd" id="1_m0250"]
-[ext_resource type="Texture2D" uid="uid://lgr6m3d7pkvh" path="res://Entities/People/Enemy/Archer/Arrow/Art/Arrow03(100x100).png" id="2_mwevt"]
+[ext_resource type="Script" path="res://entities/people/enemy/archer/arrow/arrow.gd" id="1_m0250"]
+[ext_resource type="Texture2D" uid="uid://lgr6m3d7pkvh" path="res://entities/people/enemy/archer/arrow/Art/Arrow03(100x100).png" id="2_mwevt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tms3r"]
 size = Vector2(20, 5)
+
+[sub_resource type="Gradient" id="Gradient_l1hrn"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.466667)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dhfpy"]
+gradient = SubResource("Gradient_l1hrn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_246sk"]
+particle_flag_disable_z = true
+direction = Vector3(-180, 0, 0)
+spread = 5.0
+initial_velocity_min = 400.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 3.0
+color_ramp = SubResource("GradientTexture1D_dhfpy")
 
 [node name="Arrow" type="CharacterBody2D"]
 collision_layer = 0
@@ -26,5 +43,10 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_tms3r")
+
+[node name="TrailParticles" type="GPUParticles2D" parent="."]
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_246sk")
+lifetime = 0.1
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

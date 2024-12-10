@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgpaay15npipq"
-path="res://.godot/imported/Hand Back-Run.png-b92b90add925701954250485d4e3cb55.ctex"
+path="res://.godot/imported/Hand Back-Run.png-c31772cc1502917bc1ab76711eafbd92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Back/Hand Back-Run.png"
-dest_files=["res://.godot/imported/Hand Back-Run.png-b92b90add925701954250485d4e3cb55.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Back/Hand Back-Run.png"
+dest_files=["res://.godot/imported/Hand Back-Run.png-c31772cc1502917bc1ab76711eafbd92.ctex"]
 
 [params]
 

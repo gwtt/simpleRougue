@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bh1glo1lgc868"
-path="res://.godot/imported/Survival Cloth-Building.png-248c89d9fa5c77731693a91526bc30a6.ctex"
+path="res://.godot/imported/Survival Cloth-Building.png-41022ca20f08ef5dffdc418a20c2676a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Survival Cloth/Survival Cloth-Building.png"
-dest_files=["res://.godot/imported/Survival Cloth-Building.png-248c89d9fa5c77731693a91526bc30a6.ctex"]
+source_file="res://entities/people/player/art/Accessories/Survival Cloth/Survival Cloth-Building.png"
+dest_files=["res://.godot/imported/Survival Cloth-Building.png-41022ca20f08ef5dffdc418a20c2676a.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbln2n5hdy2yb"
-path="res://.godot/imported/Survival Cloth-Walk.png-a3b0adcd91f7171d2e0f7ceba3560e70.ctex"
+path="res://.godot/imported/Survival Cloth-Walk.png-0fab516a9df19a6d424b819b571319e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Survival Cloth/Survival Cloth-Walk.png"
-dest_files=["res://.godot/imported/Survival Cloth-Walk.png-a3b0adcd91f7171d2e0f7ceba3560e70.ctex"]
+source_file="res://entities/people/player/art/Accessories/Survival Cloth/Survival Cloth-Walk.png"
+dest_files=["res://.godot/imported/Survival Cloth-Walk.png-0fab516a9df19a6d424b819b571319e1.ctex"]
 
 [params]
 

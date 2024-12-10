@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bergc1b2ubiea"
-path="res://.godot/imported/FFFFORWA.TTF-fdff6430a774ba072c08952fc8aae59f.fontdata"
+path="res://.godot/imported/FFFFORWA.TTF-727cb3c257a89f72156c85bcdc809f89.fontdata"
 
 [deps]
 
-source_file="res://Assets/字体/FFFFORWA.TTF"
-dest_files=["res://.godot/imported/FFFFORWA.TTF-fdff6430a774ba072c08952fc8aae59f.fontdata"]
+source_file="res://assets/字体/FFFFORWA.TTF"
+dest_files=["res://.godot/imported/FFFFORWA.TTF-727cb3c257a89f72156c85bcdc809f89.fontdata"]
 
 [params]
 

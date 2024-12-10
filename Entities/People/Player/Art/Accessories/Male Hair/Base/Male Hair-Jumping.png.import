@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvc54p3jtpgc4"
-path="res://.godot/imported/Male Hair-Jumping.png-f6bf4719413f7fb000f21da066b024df.ctex"
+path="res://.godot/imported/Male Hair-Jumping.png-b5514288771432a38e7326d7ad044d21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Base/Male Hair-Jumping.png"
-dest_files=["res://.godot/imported/Male Hair-Jumping.png-f6bf4719413f7fb000f21da066b024df.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Base/Male Hair-Jumping.png"
+dest_files=["res://.godot/imported/Male Hair-Jumping.png-b5514288771432a38e7326d7ad044d21.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j8j6lcyp3r45"
-path="res://.godot/imported/Sunglasses-Sleeping Side.png-53979b265c1e1450c0cfbc285ff870a3.ctex"
+path="res://.godot/imported/Sunglasses-Sleeping Side.png-a1707cc3aa3c4c9f602d83f523e8297c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Sunglasses/Sunglasses-Sleeping Side.png"
-dest_files=["res://.godot/imported/Sunglasses-Sleeping Side.png-53979b265c1e1450c0cfbc285ff870a3.ctex"]
+source_file="res://entities/people/player/art/Accessories/Sunglasses/Sunglasses-Sleeping Side.png"
+dest_files=["res://.godot/imported/Sunglasses-Sleeping Side.png-a1707cc3aa3c4c9f602d83f523e8297c.ctex"]
 
 [params]
 

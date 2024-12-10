@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn5ogfsrj34b0"
-path="res://.godot/imported/swiftness.png-8bd72a107041f8a7edaaf5a54cc85e25.ctex"
+path="res://.godot/imported/swiftness.png-d1e64e9eaf59ed0a3653698a98d44815.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buffs/swiftness.png"
-dest_files=["res://.godot/imported/swiftness.png-8bd72a107041f8a7edaaf5a54cc85e25.ctex"]
+source_file="res://assets/Buffs/swiftness.png"
+dest_files=["res://.godot/imported/swiftness.png-d1e64e9eaf59ed0a3653698a98d44815.ctex"]
 
 [params]
 

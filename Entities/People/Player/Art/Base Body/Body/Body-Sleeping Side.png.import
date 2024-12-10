@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biu50m8d6qwnr"
-path="res://.godot/imported/Body-Sleeping Side.png-6af7f78badcc4b155aa2647e969dd813.ctex"
+path="res://.godot/imported/Body-Sleeping Side.png-2921754872e128db4a5c9cbf59c7ba39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Body/Body-Sleeping Side.png"
-dest_files=["res://.godot/imported/Body-Sleeping Side.png-6af7f78badcc4b155aa2647e969dd813.ctex"]
+source_file="res://entities/people/player/art/Base Body/Body/Body-Sleeping Side.png"
+dest_files=["res://.godot/imported/Body-Sleeping Side.png-2921754872e128db4a5c9cbf59c7ba39.ctex"]
 
 [params]
 

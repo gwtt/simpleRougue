@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhli62v56wf24"
-path="res://.godot/imported/Hand Back-Idle.png-437b80562f5ca6ce723845dbd1673697.ctex"
+path="res://.godot/imported/Hand Back-Idle.png-d80fd3c039d63aeb84db2b5a377f543c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Back/Hand Back-Idle.png"
-dest_files=["res://.godot/imported/Hand Back-Idle.png-437b80562f5ca6ce723845dbd1673697.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Back/Hand Back-Idle.png"
+dest_files=["res://.godot/imported/Hand Back-Idle.png-d80fd3c039d63aeb84db2b5a377f543c.ctex"]
 
 [params]
 

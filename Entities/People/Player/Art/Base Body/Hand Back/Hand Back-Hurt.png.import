@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3b4sv0fe7sn5"
-path="res://.godot/imported/Hand Back-Hurt.png-3f3f6745ac47bbcfd644e77b9e528d63.ctex"
+path="res://.godot/imported/Hand Back-Hurt.png-b5f587a38c2f5dfaa99b826d5b0d9579.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Back/Hand Back-Hurt.png"
-dest_files=["res://.godot/imported/Hand Back-Hurt.png-3f3f6745ac47bbcfd644e77b9e528d63.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Back/Hand Back-Hurt.png"
+dest_files=["res://.godot/imported/Hand Back-Hurt.png-b5f587a38c2f5dfaa99b826d5b0d9579.ctex"]
 
 [params]
 

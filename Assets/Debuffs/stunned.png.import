@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bx8p6nahe5dde"
-path="res://.godot/imported/stunned.png-0504347da678f86b4a723d4aa555517c.ctex"
+path="res://.godot/imported/stunned.png-eab79ef4118ef1b934ea8aefad87b2e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Debuffs/stunned.png"
-dest_files=["res://.godot/imported/stunned.png-0504347da678f86b4a723d4aa555517c.ctex"]
+source_file="res://assets/Debuffs/stunned.png"
+dest_files=["res://.godot/imported/stunned.png-eab79ef4118ef1b934ea8aefad87b2e4.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb02hgokgfjae"
-path="res://.godot/imported/Survival Cloth-Sleeping Side.png-f845cafff8f5903c403befe7a3123397.ctex"
+path="res://.godot/imported/Survival Cloth-Sleeping Side.png-cb2ff2b655218fde2e207a4f19290e7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Survival Cloth/Survival Cloth-Sleeping Side.png"
-dest_files=["res://.godot/imported/Survival Cloth-Sleeping Side.png-f845cafff8f5903c403befe7a3123397.ctex"]
+source_file="res://entities/people/player/art/Accessories/Survival Cloth/Survival Cloth-Sleeping Side.png"
+dest_files=["res://.godot/imported/Survival Cloth-Sleeping Side.png-cb2ff2b655218fde2e207a4f19290e7f.ctex"]
 
 [params]
 

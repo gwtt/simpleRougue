@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwbwfo46knq0b"
-path="res://.godot/imported/Suit-Falling.png-8c33ad96e5294c018bb0a084d95a3014.ctex"
+path="res://.godot/imported/Suit-Falling.png-b398ed93e18fe9d0dbb9952e591b2052.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Suit/Suit-Falling.png"
-dest_files=["res://.godot/imported/Suit-Falling.png-8c33ad96e5294c018bb0a084d95a3014.ctex"]
+source_file="res://entities/people/player/art/Accessories/Suit/Suit-Falling.png"
+dest_files=["res://.godot/imported/Suit-Falling.png-b398ed93e18fe9d0dbb9952e591b2052.ctex"]
 
 [params]
 

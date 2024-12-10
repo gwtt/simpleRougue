@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4syqft83j30j"
-path="res://.godot/imported/Female Hair-Sleeping Front.png-4f9474064de5e2edf0ff433b28dc5703.ctex"
+path="res://.godot/imported/Female Hair-Sleeping Front.png-47c8a235df1add2d9ff146c0463d6ce4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Female Hair/Red/Female Hair-Sleeping Front.png"
-dest_files=["res://.godot/imported/Female Hair-Sleeping Front.png-4f9474064de5e2edf0ff433b28dc5703.ctex"]
+source_file="res://entities/people/player/art/Accessories/Female Hair/Red/Female Hair-Sleeping Front.png"
+dest_files=["res://.godot/imported/Female Hair-Sleeping Front.png-47c8a235df1add2d9ff146c0463d6ce4.ctex"]
 
 [params]
 

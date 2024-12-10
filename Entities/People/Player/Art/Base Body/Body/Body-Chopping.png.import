@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bitctto07dgup"
-path="res://.godot/imported/Body-Chopping.png-8f02f190e4abe1096b6e82c5f28dac4b.ctex"
+path="res://.godot/imported/Body-Chopping.png-2f9d4cb1d46d69e9b4a1d3f783843e0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Body/Body-Chopping.png"
-dest_files=["res://.godot/imported/Body-Chopping.png-8f02f190e4abe1096b6e82c5f28dac4b.ctex"]
+source_file="res://entities/people/player/art/Base Body/Body/Body-Chopping.png"
+dest_files=["res://.godot/imported/Body-Chopping.png-2f9d4cb1d46d69e9b4a1d3f783843e0e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbn01eraw8fgy"
-path="res://.godot/imported/Hand Front-Jumping.png-c9fbe0d13585400441970f65cbffc1cf.ctex"
+path="res://.godot/imported/Hand Front-Jumping.png-e7832ba86783a6335f4954563f837ebd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Front/Hand Front-Jumping.png"
-dest_files=["res://.godot/imported/Hand Front-Jumping.png-c9fbe0d13585400441970f65cbffc1cf.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Front/Hand Front-Jumping.png"
+dest_files=["res://.godot/imported/Hand Front-Jumping.png-e7832ba86783a6335f4954563f837ebd.ctex"]
 
 [params]
 

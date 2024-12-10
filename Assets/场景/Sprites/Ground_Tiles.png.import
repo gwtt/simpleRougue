@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk307nhldfpxd"
-path="res://.godot/imported/Ground_Tiles.png-7a7d5567175848e82f3c6fb588a613dc.ctex"
+path="res://.godot/imported/Ground_Tiles.png-04749696663f67222e2d5eee2a24d3b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/场景/Sprites/Ground_Tiles.png"
-dest_files=["res://.godot/imported/Ground_Tiles.png-7a7d5567175848e82f3c6fb588a613dc.ctex"]
+source_file="res://assets/场景/Sprites/Ground_Tiles.png"
+dest_files=["res://.godot/imported/Ground_Tiles.png-04749696663f67222e2d5eee2a24d3b1.ctex"]
 
 [params]
 

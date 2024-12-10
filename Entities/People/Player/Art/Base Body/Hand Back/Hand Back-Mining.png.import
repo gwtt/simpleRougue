@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bafklduxbg60u"
-path="res://.godot/imported/Hand Back-Mining.png-4d85ae53c26b82dea891159a795cd08d.ctex"
+path="res://.godot/imported/Hand Back-Mining.png-d092aae7c5b87efabcf809f6c30e5f82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Back/Hand Back-Mining.png"
-dest_files=["res://.godot/imported/Hand Back-Mining.png-4d85ae53c26b82dea891159a795cd08d.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Back/Hand Back-Mining.png"
+dest_files=["res://.godot/imported/Hand Back-Mining.png-d092aae7c5b87efabcf809f6c30e5f82.ctex"]
 
 [params]
 

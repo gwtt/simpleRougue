@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7dn4w6cj7qbv"
-path="res://.godot/imported/Head-Run.png-526295a1aca950a9e949760c6a0fbe48.ctex"
+path="res://.godot/imported/Head-Run.png-1ba112468141fef9c3b89742125cebb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Head/Head-Run.png"
-dest_files=["res://.godot/imported/Head-Run.png-526295a1aca950a9e949760c6a0fbe48.ctex"]
+source_file="res://entities/people/player/art/Base Body/Head/Head-Run.png"
+dest_files=["res://.godot/imported/Head-Run.png-1ba112468141fef9c3b89742125cebb0.ctex"]
 
 [params]
 

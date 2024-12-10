@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7clm488knyml"
-path="res://.godot/imported/Male Hair-Sleeping Front.png-cb278ab2fdba3daf07d31bd64aabe4ba.ctex"
+path="res://.godot/imported/Male Hair-Sleeping Front.png-4a131394e81bf61728a76387bdf97014.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Base/Male Hair-Sleeping Front.png"
-dest_files=["res://.godot/imported/Male Hair-Sleeping Front.png-cb278ab2fdba3daf07d31bd64aabe4ba.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Base/Male Hair-Sleeping Front.png"
+dest_files=["res://.godot/imported/Male Hair-Sleeping Front.png-4a131394e81bf61728a76387bdf97014.ctex"]
 
 [params]
 

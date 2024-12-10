@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddpfsd8fof4bp"
-path="res://.godot/imported/Male Hair-Building.png-efea1a5a51ebeaf23efc7812ae3bc4fc.ctex"
+path="res://.godot/imported/Male Hair-Building.png-981e60ede11400ef1cf31c8a0ef268ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Yellow/Male Hair-Building.png"
-dest_files=["res://.godot/imported/Male Hair-Building.png-efea1a5a51ebeaf23efc7812ae3bc4fc.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Yellow/Male Hair-Building.png"
+dest_files=["res://.godot/imported/Male Hair-Building.png-981e60ede11400ef1cf31c8a0ef268ac.ctex"]
 
 [params]
 

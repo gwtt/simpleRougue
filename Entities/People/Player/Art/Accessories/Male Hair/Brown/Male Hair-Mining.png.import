@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b35o1dluis6in"
-path="res://.godot/imported/Male Hair-Mining.png-d42a3eb219c26a1816c9d086d24d540f.ctex"
+path="res://.godot/imported/Male Hair-Mining.png-d303d7d357154f778be30beb687f1ef8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Brown/Male Hair-Mining.png"
-dest_files=["res://.godot/imported/Male Hair-Mining.png-d42a3eb219c26a1816c9d086d24d540f.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Brown/Male Hair-Mining.png"
+dest_files=["res://.godot/imported/Male Hair-Mining.png-d303d7d357154f778be30beb687f1ef8.ctex"]
 
 [params]
 

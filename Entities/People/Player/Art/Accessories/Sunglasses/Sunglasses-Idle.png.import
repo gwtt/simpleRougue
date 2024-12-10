@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fol6uevov4eh"
-path="res://.godot/imported/Sunglasses-Idle.png-d2c424d15647d8493a0d23440f3609b0.ctex"
+path="res://.godot/imported/Sunglasses-Idle.png-6287151f2811e8148e55f7edaf3b60f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Sunglasses/Sunglasses-Idle.png"
-dest_files=["res://.godot/imported/Sunglasses-Idle.png-d2c424d15647d8493a0d23440f3609b0.ctex"]
+source_file="res://entities/people/player/art/Accessories/Sunglasses/Sunglasses-Idle.png"
+dest_files=["res://.godot/imported/Sunglasses-Idle.png-6287151f2811e8148e55f7edaf3b60f3.ctex"]
 
 [params]
 

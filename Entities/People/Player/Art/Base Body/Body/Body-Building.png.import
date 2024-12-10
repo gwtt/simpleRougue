@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyv45v47y1kt3"
-path="res://.godot/imported/Body-Building.png-afb212753a1d94f5cad9734be13e3954.ctex"
+path="res://.godot/imported/Body-Building.png-2840638d0aa29165dfc2aac7a918eb0d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Body/Body-Building.png"
-dest_files=["res://.godot/imported/Body-Building.png-afb212753a1d94f5cad9734be13e3954.ctex"]
+source_file="res://entities/people/player/art/Base Body/Body/Body-Building.png"
+dest_files=["res://.godot/imported/Body-Building.png-2840638d0aa29165dfc2aac7a918eb0d.ctex"]
 
 [params]
 

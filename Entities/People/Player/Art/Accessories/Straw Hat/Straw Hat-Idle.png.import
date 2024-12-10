@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uyvfy3cc71iv"
-path="res://.godot/imported/Straw Hat-Idle.png-2486ef23d3f269a47e28a04642e6a31b.ctex"
+path="res://.godot/imported/Straw Hat-Idle.png-ad0c90637b0aa71df83013bf31ee6372.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Straw Hat/Straw Hat-Idle.png"
-dest_files=["res://.godot/imported/Straw Hat-Idle.png-2486ef23d3f269a47e28a04642e6a31b.ctex"]
+source_file="res://entities/people/player/art/Accessories/Straw Hat/Straw Hat-Idle.png"
+dest_files=["res://.godot/imported/Straw Hat-Idle.png-ad0c90637b0aa71df83013bf31ee6372.ctex"]
 
 [params]
 

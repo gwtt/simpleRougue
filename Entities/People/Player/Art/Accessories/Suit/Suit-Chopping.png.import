@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuy4xkbj3exms"
-path="res://.godot/imported/Suit-Chopping.png-283c41fd6f83962a5eb22cc2327bfead.ctex"
+path="res://.godot/imported/Suit-Chopping.png-43655f8995f73f1397c05cace06a26e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Suit/Suit-Chopping.png"
-dest_files=["res://.godot/imported/Suit-Chopping.png-283c41fd6f83962a5eb22cc2327bfead.ctex"]
+source_file="res://entities/people/player/art/Accessories/Suit/Suit-Chopping.png"
+dest_files=["res://.godot/imported/Suit-Chopping.png-43655f8995f73f1397c05cace06a26e6.ctex"]
 
 [params]
 

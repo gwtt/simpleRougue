@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1cyndp5ow7j1"
-path="res://.godot/imported/Head-Chopping.png-5ccc07bfefec93835364f3334ce244bc.ctex"
+path="res://.godot/imported/Head-Chopping.png-e3bdb23299d9d72186201a4d652b888d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Head/Head-Chopping.png"
-dest_files=["res://.godot/imported/Head-Chopping.png-5ccc07bfefec93835364f3334ce244bc.ctex"]
+source_file="res://entities/people/player/art/Base Body/Head/Head-Chopping.png"
+dest_files=["res://.godot/imported/Head-Chopping.png-e3bdb23299d9d72186201a4d652b888d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pulbc5jj26it"
-path="res://.godot/imported/Male Hair-Chopping.png-cbe13be48b96a8d8b986e49ff68eb635.ctex"
+path="res://.godot/imported/Male Hair-Chopping.png-ae5e06f30060732ea167503c11c5590c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Yellow/Male Hair-Chopping.png"
-dest_files=["res://.godot/imported/Male Hair-Chopping.png-cbe13be48b96a8d8b986e49ff68eb635.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Yellow/Male Hair-Chopping.png"
+dest_files=["res://.godot/imported/Male Hair-Chopping.png-ae5e06f30060732ea167503c11c5590c.ctex"]
 
 [params]
 

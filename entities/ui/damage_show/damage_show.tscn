@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://byed74nvgf2cs"]
+
+[ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_kqygc"]
+[ext_resource type="Script" path="res://entities/ui/damage_show/damage_show.gd" id="2_lti8s"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kvv43"]
+blend_mode = 1
+
+[node name="伤害显示" type="Label"]
+material = SubResource("CanvasItemMaterial_kvv43")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -972.0
+offset_top = -548.5
+offset_right = -948.0
+offset_bottom = -531.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(12, 8.5)
+theme_override_fonts/font = ExtResource("1_kqygc")
+theme_override_font_sizes/font_size = 0
+text = "-10"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_lti8s")

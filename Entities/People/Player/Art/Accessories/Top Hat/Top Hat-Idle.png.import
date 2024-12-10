@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6ek0erbcnc6d"
-path="res://.godot/imported/Top Hat-Idle.png-87a1d8e5d50f66c98861b48d9dd8cfbb.ctex"
+path="res://.godot/imported/Top Hat-Idle.png-c4857f60b12ba72448dd9936ebdebd6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Top Hat/Top Hat-Idle.png"
-dest_files=["res://.godot/imported/Top Hat-Idle.png-87a1d8e5d50f66c98861b48d9dd8cfbb.ctex"]
+source_file="res://entities/people/player/art/Accessories/Top Hat/Top Hat-Idle.png"
+dest_files=["res://.godot/imported/Top Hat-Idle.png-c4857f60b12ba72448dd9936ebdebd6b.ctex"]
 
 [params]
 

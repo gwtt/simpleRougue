@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgajpboohvufd"
-path="res://.godot/imported/Female Hair-Walk.png-00c94d77c8289fdd081ebaf68e403270.ctex"
+path="res://.godot/imported/Female Hair-Walk.png-b1b42c8917f2125764447c7d09ca638b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Female Hair/Base/Female Hair-Walk.png"
-dest_files=["res://.godot/imported/Female Hair-Walk.png-00c94d77c8289fdd081ebaf68e403270.ctex"]
+source_file="res://entities/people/player/art/Accessories/Female Hair/Base/Female Hair-Walk.png"
+dest_files=["res://.godot/imported/Female Hair-Walk.png-b1b42c8917f2125764447c7d09ca638b.ctex"]
 
 [params]
 

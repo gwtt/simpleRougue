@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7bakkhky6ymc"
-path="res://.godot/imported/fire_spell_2.png-c89932c6187eb1624502d8b861e8bff7.ctex"
+path="res://.godot/imported/fire_spell_2.png-af77c893cc7f16f8a91f57736aeceea0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spells/fire_spell_2.png"
-dest_files=["res://.godot/imported/fire_spell_2.png-c89932c6187eb1624502d8b861e8bff7.ctex"]
+source_file="res://assets/Spells/fire_spell_2.png"
+dest_files=["res://.godot/imported/fire_spell_2.png-af77c893cc7f16f8a91f57736aeceea0.ctex"]
 
 [params]
 

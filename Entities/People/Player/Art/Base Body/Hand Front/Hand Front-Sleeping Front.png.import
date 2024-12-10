@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pu17qbgunc0o"
-path="res://.godot/imported/Hand Front-Sleeping Front.png-b806e1cf384a685329dd7bf5203172d5.ctex"
+path="res://.godot/imported/Hand Front-Sleeping Front.png-0387b5ff66a47007ac08b25cbe7e2807.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Front/Hand Front-Sleeping Front.png"
-dest_files=["res://.godot/imported/Hand Front-Sleeping Front.png-b806e1cf384a685329dd7bf5203172d5.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Front/Hand Front-Sleeping Front.png"
+dest_files=["res://.godot/imported/Hand Front-Sleeping Front.png-0387b5ff66a47007ac08b25cbe7e2807.ctex"]
 
 [params]
 

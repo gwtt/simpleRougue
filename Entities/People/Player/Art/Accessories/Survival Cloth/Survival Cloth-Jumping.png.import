@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3u1ys8612683"
-path="res://.godot/imported/Survival Cloth-Jumping.png-433749799c9d2c6d77a6ad1eb16ab222.ctex"
+path="res://.godot/imported/Survival Cloth-Jumping.png-0f71b8807cfd5d654d1370d047c05aff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Survival Cloth/Survival Cloth-Jumping.png"
-dest_files=["res://.godot/imported/Survival Cloth-Jumping.png-433749799c9d2c6d77a6ad1eb16ab222.ctex"]
+source_file="res://entities/people/player/art/Accessories/Survival Cloth/Survival Cloth-Jumping.png"
+dest_files=["res://.godot/imported/Survival Cloth-Jumping.png-0f71b8807cfd5d654d1370d047c05aff.ctex"]
 
 [params]
 

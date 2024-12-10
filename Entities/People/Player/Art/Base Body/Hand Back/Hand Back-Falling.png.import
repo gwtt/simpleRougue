@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jtca4f6s0te"
-path="res://.godot/imported/Hand Back-Falling.png-a1f3061d03cba1449e48643b1936993d.ctex"
+path="res://.godot/imported/Hand Back-Falling.png-029ff2401d57edf17b22d454d9d65e5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Back/Hand Back-Falling.png"
-dest_files=["res://.godot/imported/Hand Back-Falling.png-a1f3061d03cba1449e48643b1936993d.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Back/Hand Back-Falling.png"
+dest_files=["res://.godot/imported/Hand Back-Falling.png-029ff2401d57edf17b22d454d9d65e5f.ctex"]
 
 [params]
 

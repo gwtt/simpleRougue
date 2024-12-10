@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uipf1s7axca3"
-path="res://.godot/imported/Male Hair-Death.png-f76f99b8c4b72191f5bf9a67625f5ba2.ctex"
+path="res://.godot/imported/Male Hair-Death.png-7b87044b44156dff86f927719434451e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Yellow/Male Hair-Death.png"
-dest_files=["res://.godot/imported/Male Hair-Death.png-f76f99b8c4b72191f5bf9a67625f5ba2.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Yellow/Male Hair-Death.png"
+dest_files=["res://.godot/imported/Male Hair-Death.png-7b87044b44156dff86f927719434451e.ctex"]
 
 [params]
 

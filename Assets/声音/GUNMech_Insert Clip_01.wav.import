@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://da87clv8adms2"
-path="res://.godot/imported/GUNMech_Insert Clip_01.wav-09e1fbd8b7274842e2df80ff3c229628.sample"
+path="res://.godot/imported/GUNMech_Insert Clip_01.wav-fbecaebf14ec4a80ec67518047f3ddf2.sample"
 
 [deps]
 
-source_file="res://Assets/声音/GUNMech_Insert Clip_01.wav"
-dest_files=["res://.godot/imported/GUNMech_Insert Clip_01.wav-09e1fbd8b7274842e2df80ff3c229628.sample"]
+source_file="res://assets/声音/GUNMech_Insert Clip_01.wav"
+dest_files=["res://.godot/imported/GUNMech_Insert Clip_01.wav-fbecaebf14ec4a80ec67518047f3ddf2.sample"]
 
 [params]
 

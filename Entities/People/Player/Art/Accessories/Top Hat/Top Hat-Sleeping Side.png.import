@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhgmea3olx6hl"
-path="res://.godot/imported/Top Hat-Sleeping Side.png-f10a906bafb55cad5a0038e72c380639.ctex"
+path="res://.godot/imported/Top Hat-Sleeping Side.png-b06f40c32d2c94cbc4d9757769ce7d6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Top Hat/Top Hat-Sleeping Side.png"
-dest_files=["res://.godot/imported/Top Hat-Sleeping Side.png-f10a906bafb55cad5a0038e72c380639.ctex"]
+source_file="res://entities/people/player/art/Accessories/Top Hat/Top Hat-Sleeping Side.png"
+dest_files=["res://.godot/imported/Top Hat-Sleeping Side.png-b06f40c32d2c94cbc4d9757769ce7d6c.ctex"]
 
 [params]
 

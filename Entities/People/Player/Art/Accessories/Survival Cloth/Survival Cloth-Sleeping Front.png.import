@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpgykai0144kd"
-path="res://.godot/imported/Survival Cloth-Sleeping Front.png-81928cc369cbc88b16a0f8b8feb24313.ctex"
+path="res://.godot/imported/Survival Cloth-Sleeping Front.png-fda338f60c831f5e777cb74f797275b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Survival Cloth/Survival Cloth-Sleeping Front.png"
-dest_files=["res://.godot/imported/Survival Cloth-Sleeping Front.png-81928cc369cbc88b16a0f8b8feb24313.ctex"]
+source_file="res://entities/people/player/art/Accessories/Survival Cloth/Survival Cloth-Sleeping Front.png"
+dest_files=["res://.godot/imported/Survival Cloth-Sleeping Front.png-fda338f60c831f5e777cb74f797275b3.ctex"]
 
 [params]
 

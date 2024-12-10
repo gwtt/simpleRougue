@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdrrerf81vx0e"
-path="res://.godot/imported/Hand Front-Building.png-656354530ff639af78fe901b02cff4a5.ctex"
+path="res://.godot/imported/Hand Front-Building.png-a52a3020176788c1bed9e2578ac3d419.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Front/Hand Front-Building.png"
-dest_files=["res://.godot/imported/Hand Front-Building.png-656354530ff639af78fe901b02cff4a5.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Front/Hand Front-Building.png"
+dest_files=["res://.godot/imported/Hand Front-Building.png-a52a3020176788c1bed9e2578ac3d419.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4qealmusddap"
-path="res://.godot/imported/Hand Back-Walk.png-df247cadf623b6384dcf9e9fe03d805e.ctex"
+path="res://.godot/imported/Hand Back-Walk.png-6411badc3054bfad734a55001c6b963b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Hand Back/Hand Back-Walk.png"
-dest_files=["res://.godot/imported/Hand Back-Walk.png-df247cadf623b6384dcf9e9fe03d805e.ctex"]
+source_file="res://entities/people/player/art/Base Body/Hand Back/Hand Back-Walk.png"
+dest_files=["res://.godot/imported/Hand Back-Walk.png-6411badc3054bfad734a55001c6b963b.ctex"]
 
 [params]
 

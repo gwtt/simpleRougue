@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dk6qdij1go1jc"
-path="res://.godot/imported/Straw Hat-Chopping.png-b6c0a20f825b45ba0fd041ae8235d6fd.ctex"
+path="res://.godot/imported/Straw Hat-Chopping.png-593e60932272597f99d874e8773ead2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Straw Hat/Straw Hat-Chopping.png"
-dest_files=["res://.godot/imported/Straw Hat-Chopping.png-b6c0a20f825b45ba0fd041ae8235d6fd.ctex"]
+source_file="res://entities/people/player/art/Accessories/Straw Hat/Straw Hat-Chopping.png"
+dest_files=["res://.godot/imported/Straw Hat-Chopping.png-593e60932272597f99d874e8773ead2d.ctex"]
 
 [params]
 

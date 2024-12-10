@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4586fiqxq67k"
-path="res://.godot/imported/Archer-Attack02_Effect.png-1e3f43a51de404d1e9d74869b74760d0.ctex"
+path="res://.godot/imported/Archer-Attack02_Effect.png-a08ec55752bd52a7e98c9cb366c3775e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Enemy/Archer/Art/Archer-Attack02_Effect.png"
-dest_files=["res://.godot/imported/Archer-Attack02_Effect.png-1e3f43a51de404d1e9d74869b74760d0.ctex"]
+source_file="res://entities/people/enemy/archer/art/Archer-Attack02_Effect.png"
+dest_files=["res://.godot/imported/Archer-Attack02_Effect.png-a08ec55752bd52a7e98c9cb366c3775e.ctex"]
 
 [params]
 

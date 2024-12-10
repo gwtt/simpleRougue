@@ -16,14 +16,14 @@ enum GUN_CHANGE_TYPE { #切枪类型
 	CHANGE, #切换枪械
 	RELOAD #切换子弹
 }
-var store = preload("res://Entities/UI/store/选择界面.tscn")
+var store = preload("res://entities/ui/store/store.tscn")
 
 var weapon_list = {
-	"0" = preload("res://Entities/Gun/CustomGun/CustomGun.tscn"),
+	"0" = preload("res://entities/gun/custom_gun/custom_gun.tscn"),
 }
 var temp_am_list = []
 
-const hitlabel = preload("res://Entities/UI/DamageShow/伤害显示.tscn")
+const hitlabel = preload("res://entities/ui/damage_show/damage_show.tscn")
 	
 func gameStart():
 	is_game_start = true

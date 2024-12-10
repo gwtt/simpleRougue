@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjjonrns4d76w"
-path="res://.godot/imported/Male Hair-Falling.png-d52026465d00cc94bc0d457f92b1786c.ctex"
+path="res://.godot/imported/Male Hair-Falling.png-1f3a6d2bca7005eca9bec34b1c442946.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Brown/Male Hair-Falling.png"
-dest_files=["res://.godot/imported/Male Hair-Falling.png-d52026465d00cc94bc0d457f92b1786c.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Brown/Male Hair-Falling.png"
+dest_files=["res://.godot/imported/Male Hair-Falling.png-1f3a6d2bca7005eca9bec34b1c442946.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btemctegvgsc4"
-path="res://.godot/imported/Top Hat-Death.png-7108b3e306bf00ede6eb6485759d1634.ctex"
+path="res://.godot/imported/Top Hat-Death.png-d9b6d4e5e22fc2e8699646a2fea7c3b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Top Hat/Top Hat-Death.png"
-dest_files=["res://.godot/imported/Top Hat-Death.png-7108b3e306bf00ede6eb6485759d1634.ctex"]
+source_file="res://entities/people/player/art/Accessories/Top Hat/Top Hat-Death.png"
+dest_files=["res://.godot/imported/Top Hat-Death.png-d9b6d4e5e22fc2e8699646a2fea7c3b5.ctex"]
 
 [params]
 

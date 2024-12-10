@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyr7280ehamn3"
-path="res://.godot/imported/teleportation_spell.png-caa89a100275345f8824239d09a5f98e.ctex"
+path="res://.godot/imported/teleportation_spell.png-7be1d9b7c495f510e7dafc09ce8708c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spells/teleportation_spell.png"
-dest_files=["res://.godot/imported/teleportation_spell.png-caa89a100275345f8824239d09a5f98e.ctex"]
+source_file="res://assets/Spells/teleportation_spell.png"
+dest_files=["res://.godot/imported/teleportation_spell.png-7be1d9b7c495f510e7dafc09ce8708c6.ctex"]
 
 [params]
 

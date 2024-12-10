@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gjt4eorqx2ym"
-path="res://.godot/imported/Female Hair-Falling.png-4fffd39c5f27807a0b60ca57e0ff9606.ctex"
+path="res://.godot/imported/Female Hair-Falling.png-b3d35080daba69a19b6808e8116da798.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Female Hair/Base/Female Hair-Falling.png"
-dest_files=["res://.godot/imported/Female Hair-Falling.png-4fffd39c5f27807a0b60ca57e0ff9606.ctex"]
+source_file="res://entities/people/player/art/Accessories/Female Hair/Base/Female Hair-Falling.png"
+dest_files=["res://.godot/imported/Female Hair-Falling.png-b3d35080daba69a19b6808e8116da798.ctex"]
 
 [params]
 

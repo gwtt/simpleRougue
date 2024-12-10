@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lqkcaoiwtgah"
-path="res://.godot/imported/defense_boost.png-ee08089890113f8b1ef2b192b51c821b.ctex"
+path="res://.godot/imported/defense_boost.png-1fecec853ca77097162afb594f1e6f2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buffs/defense_boost.png"
-dest_files=["res://.godot/imported/defense_boost.png-ee08089890113f8b1ef2b192b51c821b.ctex"]
+source_file="res://assets/Buffs/defense_boost.png"
+dest_files=["res://.godot/imported/defense_boost.png-1fecec853ca77097162afb594f1e6f2c.ctex"]
 
 [params]
 

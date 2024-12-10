@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt0pwcwq5kikr"
-path="res://.godot/imported/Head-Mining.png-7c42c9fcfb6f15a1a2230075235a4b60.ctex"
+path="res://.godot/imported/Head-Mining.png-dd70e658fabd5aef82b887c14c7b1a52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Head/Head-Mining.png"
-dest_files=["res://.godot/imported/Head-Mining.png-7c42c9fcfb6f15a1a2230075235a4b60.ctex"]
+source_file="res://entities/people/player/art/Base Body/Head/Head-Mining.png"
+dest_files=["res://.godot/imported/Head-Mining.png-dd70e658fabd5aef82b887c14c7b1a52.ctex"]
 
 [params]
 

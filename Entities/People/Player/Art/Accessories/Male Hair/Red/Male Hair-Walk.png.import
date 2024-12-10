@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d26phgqgi2l3"
-path="res://.godot/imported/Male Hair-Walk.png-c16e2089444b8e55c81f1404dcaab728.ctex"
+path="res://.godot/imported/Male Hair-Walk.png-484ac783f1f001a308a4cf9671e0ff04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Male Hair/Red/Male Hair-Walk.png"
-dest_files=["res://.godot/imported/Male Hair-Walk.png-c16e2089444b8e55c81f1404dcaab728.ctex"]
+source_file="res://entities/people/player/art/Accessories/Male Hair/Red/Male Hair-Walk.png"
+dest_files=["res://.godot/imported/Male Hair-Walk.png-484ac783f1f001a308a4cf9671e0ff04.ctex"]
 
 [params]
 

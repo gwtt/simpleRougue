@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kg0o831q06r1"
-path="res://.godot/imported/lights1.png-029a7c2b3130882848e3f4ee962eb350.ctex"
+path="res://.godot/imported/lights1.png-ddf7242f12c0debafc8d6f20268e421d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/鼠标光标/lights1.png"
-dest_files=["res://.godot/imported/lights1.png-029a7c2b3130882848e3f4ee962eb350.ctex"]
+source_file="res://assets/鼠标光标/lights1.png"
+dest_files=["res://.godot/imported/lights1.png-ddf7242f12c0debafc8d6f20268e421d.ctex"]
 
 [params]
 

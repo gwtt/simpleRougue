@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg5agqgwewtqu"
-path="res://.godot/imported/Survival Cloth-Hurt.png-28550166dd61cfe714c1cad118a44382.ctex"
+path="res://.godot/imported/Survival Cloth-Hurt.png-daefe632e0460002f762eadc50acdc49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Survival Cloth/Survival Cloth-Hurt.png"
-dest_files=["res://.godot/imported/Survival Cloth-Hurt.png-28550166dd61cfe714c1cad118a44382.ctex"]
+source_file="res://entities/people/player/art/Accessories/Survival Cloth/Survival Cloth-Hurt.png"
+dest_files=["res://.godot/imported/Survival Cloth-Hurt.png-daefe632e0460002f762eadc50acdc49.ctex"]
 
 [params]
 

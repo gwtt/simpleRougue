@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfuvbq43gm03p"
-path="res://.godot/imported/Survival Cloth-Chopping.png-16a9be894a7515ab44d2b74de18f14cb.ctex"
+path="res://.godot/imported/Survival Cloth-Chopping.png-178147cb571cbb24c653386f406cbd9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Survival Cloth/Survival Cloth-Chopping.png"
-dest_files=["res://.godot/imported/Survival Cloth-Chopping.png-16a9be894a7515ab44d2b74de18f14cb.ctex"]
+source_file="res://entities/people/player/art/Accessories/Survival Cloth/Survival Cloth-Chopping.png"
+dest_files=["res://.godot/imported/Survival Cloth-Chopping.png-178147cb571cbb24c653386f406cbd9b.ctex"]
 
 [params]
 

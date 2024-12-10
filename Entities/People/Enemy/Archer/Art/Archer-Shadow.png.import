@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boo25jm02pr7o"
-path="res://.godot/imported/Archer-Shadow.png-53b6e35ba53054c06ceca37f5a645928.ctex"
+path="res://.godot/imported/Archer-Shadow.png-cdf2dbe74e13d5b30e426cbb8cdc2674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Enemy/Archer/Art/Archer-Shadow.png"
-dest_files=["res://.godot/imported/Archer-Shadow.png-53b6e35ba53054c06ceca37f5a645928.ctex"]
+source_file="res://entities/people/enemy/archer/art/Archer-Shadow.png"
+dest_files=["res://.godot/imported/Archer-Shadow.png-cdf2dbe74e13d5b30e426cbb8cdc2674.ctex"]
 
 [params]
 

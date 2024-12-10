@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bflipt5hqgwyd"
-path="res://.godot/imported/Head-Falling.png-f48855bec56abacd72283299ed2c7832.ctex"
+path="res://.godot/imported/Head-Falling.png-8576542dd75a879130be4dbd4afb14b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Base Body/Head/Head-Falling.png"
-dest_files=["res://.godot/imported/Head-Falling.png-f48855bec56abacd72283299ed2c7832.ctex"]
+source_file="res://entities/people/player/art/Base Body/Head/Head-Falling.png"
+dest_files=["res://.godot/imported/Head-Falling.png-8576542dd75a879130be4dbd4afb14b3.ctex"]
 
 [params]
 

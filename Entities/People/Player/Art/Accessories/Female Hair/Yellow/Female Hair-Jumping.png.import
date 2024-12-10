@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brwe2m376s02c"
-path="res://.godot/imported/Female Hair-Jumping.png-f21ce888bf0038dc51981231fc62c59e.ctex"
+path="res://.godot/imported/Female Hair-Jumping.png-292ecc888a6a7d46fcb6521df12b1e5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Female Hair/Yellow/Female Hair-Jumping.png"
-dest_files=["res://.godot/imported/Female Hair-Jumping.png-f21ce888bf0038dc51981231fc62c59e.ctex"]
+source_file="res://entities/people/player/art/Accessories/Female Hair/Yellow/Female Hair-Jumping.png"
+dest_files=["res://.godot/imported/Female Hair-Jumping.png-292ecc888a6a7d46fcb6521df12b1e5c.ctex"]
 
 [params]
 

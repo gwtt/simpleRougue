@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhu00m07w16hh"
-path="res://.godot/imported/Suit-Jumping.png-89c38776be3296c6d9dee9253c1bef05.ctex"
+path="res://.godot/imported/Suit-Jumping.png-4339713d877f521ecf3608747729de5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Suit/Suit-Jumping.png"
-dest_files=["res://.godot/imported/Suit-Jumping.png-89c38776be3296c6d9dee9253c1bef05.ctex"]
+source_file="res://entities/people/player/art/Accessories/Suit/Suit-Jumping.png"
+dest_files=["res://.godot/imported/Suit-Jumping.png-4339713d877f521ecf3608747729de5d.ctex"]
 
 [params]
 

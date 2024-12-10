@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lgr6m3d7pkvh"
-path="res://.godot/imported/Arrow03(100x100).png-e91a82235ba6729edd99e9f37a739ca7.ctex"
+path="res://.godot/imported/Arrow03(100x100).png-611b00fbae45c2b269ba7be5cdf73cb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Enemy/Archer/Arrow/Art/Arrow03(100x100).png"
-dest_files=["res://.godot/imported/Arrow03(100x100).png-e91a82235ba6729edd99e9f37a739ca7.ctex"]
+source_file="res://entities/people/enemy/archer/arrow/Art/Arrow03(100x100).png"
+dest_files=["res://.godot/imported/Arrow03(100x100).png-611b00fbae45c2b269ba7be5cdf73cb3.ctex"]
 
 [params]
 

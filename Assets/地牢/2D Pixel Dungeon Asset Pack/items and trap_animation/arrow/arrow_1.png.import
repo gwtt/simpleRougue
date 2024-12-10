@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ij4m5g4dsk3"
-path="res://.godot/imported/arrow_1.png-61a636d816d54a527918588c37fb319f.ctex"
+path="res://.godot/imported/arrow_1.png-17c0bc7c95ffe0b7db7d1dfb60da7d21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/地牢/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_1.png"
-dest_files=["res://.godot/imported/arrow_1.png-61a636d816d54a527918588c37fb319f.ctex"]
+source_file="res://assets/地牢/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_1.png"
+dest_files=["res://.godot/imported/arrow_1.png-17c0bc7c95ffe0b7db7d1dfb60da7d21.ctex"]
 
 [params]
 

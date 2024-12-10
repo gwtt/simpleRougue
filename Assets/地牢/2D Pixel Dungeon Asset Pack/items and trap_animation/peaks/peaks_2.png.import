@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qswmhad55pax"
-path="res://.godot/imported/peaks_2.png-a6936f3eb3a0c2c566dcf8232a9748ed.ctex"
+path="res://.godot/imported/peaks_2.png-5248691b06ff658fd570e3471a1010ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/地牢/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_2.png"
-dest_files=["res://.godot/imported/peaks_2.png-a6936f3eb3a0c2c566dcf8232a9748ed.ctex"]
+source_file="res://assets/地牢/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_2.png"
+dest_files=["res://.godot/imported/peaks_2.png-5248691b06ff658fd570e3471a1010ec.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1jh47iuiyxpg"
-path="res://.godot/imported/Top Hat-Hurt.png-55a2e35a6c62e42bcdf2121b82a60506.ctex"
+path="res://.godot/imported/Top Hat-Hurt.png-f7877d0c03d7379103d5c31e61e8e6b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/People/Player/Art/Accessories/Top Hat/Top Hat-Hurt.png"
-dest_files=["res://.godot/imported/Top Hat-Hurt.png-55a2e35a6c62e42bcdf2121b82a60506.ctex"]
+source_file="res://entities/people/player/art/Accessories/Top Hat/Top Hat-Hurt.png"
+dest_files=["res://.godot/imported/Top Hat-Hurt.png-f7877d0c03d7379103d5c31e61e8e6b8.ctex"]
 
 [params]
 
