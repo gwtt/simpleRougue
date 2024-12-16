@@ -13,6 +13,9 @@ class_name Player
 @onready var health_component: HealthComponent = $HealthComponent
 @onready var hurt_box_component: HurtBoxComponent = $HurtBoxComponent
 
+
+var controller: AbstractController = AbstractController.new()
+
 var look_dir = null
 var gun = null
 var SPEED = 200
@@ -20,13 +23,16 @@ var is_dead = false # 是否死亡
 var is_knockback = false # 后坐力
 var knockback_speed = 0 # 后坐力速度
 var direction: Vector2
-func _init() -> void:
-	PlayerDataManager.playerWeaponListChange.connect(self.playerWeaponListChange)
-	SkillDataManager.onDash.connect(self.onDashChange)
+
 func _ready():
+	controller.set_architecture(SimpleArchitecture.interface(SimpleArchitecture))
+	
+	controller.register_event("change_player_weapon_list", self.playerWeaponListChange)
+	controller.register_event("player_on_dash_change", self.onDashChange)
+	
+	controller.get_model(PlayerModel).player_weapon_list.value = Utils.weapon_list["0"].instantiate()
 	Utils.player = self
-	var temp = Utils.weapon_list["0"].instantiate()
-	PlayerDataManager.add_weapon(Utils.weapon_list["0"].instantiate())
+
 	health_component.onDie.connect(onDie)
 
 func onDie():
@@ -36,11 +42,7 @@ func _physics_process(delta):
 	if is_dead:
 		return
 	direction = Input.get_vector("left", "right", "up", "down")
-	#if is_knockback:
-		#if direction != Vector2.ZERO && SPEED < knockback_speed:
-			#velocity = (SPEED - knockback_speed) * global_position.direction_to(get_global_mouse_position())
-		#else:
-			#velocity = -knockback_speed * global_position.direction_to(get_global_mouse_position())
+
 	changeAnim(direction)
 	if gun:
 		gun.look_at(get_global_mouse_position())
@@ -184,8 +186,8 @@ func _on_die_state_processing(_delta: float) -> void:
 	is_dead = true
 	animPlay("die")
 
-
 func _on_hurt_state_entered() -> void:
 	animPlay("hurt")
 	await 头.animation_looped
 	stateSendEvent("hurt_to_idle")
+

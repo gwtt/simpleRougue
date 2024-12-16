@@ -17,7 +17,7 @@ func set_architecture(architecture: Architecture):
 func get_system(type):
 	return m_architecture.get_system(type)
 
-func get_model(type):
+func get_model(type) -> Variant:
 	return m_architecture.get_model(type) 
 	
 func send_command(type):

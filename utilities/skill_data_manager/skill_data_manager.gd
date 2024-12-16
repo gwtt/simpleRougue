@@ -10,5 +10,3 @@ const dash = preload("res://entities/skill/dash_skill/dash_skill.tscn")
 func _ready() -> void:
 	skillList.append(dash.instantiate())
 
-func _input(event: InputEvent) -> void:
-	pass

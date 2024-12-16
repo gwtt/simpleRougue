@@ -5,7 +5,6 @@ signal onWeaponChangeAnim()
 signal onWeaponChanged()
 signal onHpChange()
 signal onMagicChange()
-signal playerWeaponListChange() # 武器列表改变
 signal onPlayerDiedChange() # 玩家死亡信号
 signal onPlayerFireRateChange(player_fire_rate) # 玩家复活信号
 signal onRewardChange(reward) # 奖励变化
@@ -80,14 +79,6 @@ func add_item(item: Item):
 func remove_item(item: Item):
 	if !player_item_list.has(item.item_name):
 		player_item_list.erase(item)
-
-#添加一把武器
-func add_weapon(weapon: BaseGun):
-	if !player_weapon_list.has(weapon.weapon_id):
-		player_weapon_list[weapon.weapon_id] = weapon
-		emit_signal("playerWeaponListChange")
-		return true
-	return false
 
 func onAttack() -> void:
 	if randf() <= add_attack_probability:

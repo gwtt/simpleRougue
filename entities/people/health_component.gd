@@ -3,6 +3,8 @@ class_name HealthComponent
 signal onDie()
 signal onHpChange(hp,max_hp)#血量变化
 @export var MAX_HEALTH:float = 4.0
+
+var controller: AbstractController = AbstractController.new()
 var health:float = 4:
 	set(value):
 		onHpChange.emit(value,MAX_HEALTH)
@@ -11,6 +13,7 @@ var health:float = 4:
 		health = value
 
 func _ready() -> void:
+	controller.set_architecture(SimpleArchitecture.interface(SimpleArchitecture))
 	health = MAX_HEALTH
 	onHpChange.connect(get_parent().onHpChange)
 	
