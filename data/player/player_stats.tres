@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://bbhliqy6udgco"]
+
+[ext_resource type="Script" uid="uid://p7dt04qibhbr" path="res://data/player/player_stats.gd" id="1_o1dyv"]
+
+[resource]
+script = ExtResource("1_o1dyv")
+gold = 0
+xp = 0
+level = 0
+move_speed = 200
+attack_speed = 0
+base_damage = 0.3
+luck = 0
+metadata/_custom_type_script = "uid://p7dt04qibhbr"

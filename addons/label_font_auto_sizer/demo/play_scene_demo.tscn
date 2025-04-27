@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqk1bel28xqov"]
+[gd_scene load_steps=9 format=3 uid="uid://cqk1bel28xqov"]
 
-[ext_resource type="FontFile" uid="uid://cxqub0sfewm4v" path="res://demo/Anta-Regular.ttf" id="1_wd48m"]
-[ext_resource type="Theme" uid="uid://cifdhwluyikjx" path="res://demo/demo_label_theme.tres" id="2_x0fsq"]
-[ext_resource type="Script" path="res://addons/label_font_auto_sizer/label_auto_sizer.gd" id="3_bwkhl"]
-[ext_resource type="Script" path="res://demo/set_numbers_button.gd" id="4_hu8nr"]
+[ext_resource type="FontFile" uid="uid://cxqub0sfewm4v" path="res://addons/label_font_auto_sizer/demo/Anta-Regular.ttf" id="1_wd48m"]
+[ext_resource type="Theme" uid="uid://cifdhwluyikjx" path="res://addons/label_font_auto_sizer/demo/demo_label_theme.tres" id="2_x0fsq"]
+[ext_resource type="Script" uid="uid://dno7r6881l4yn" path="res://addons/label_font_auto_sizer/label_auto_sizer.gd" id="3_bwkhl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mh8qh"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -49,6 +48,12 @@ corner_radius_bottom_left = 3
 shadow_size = 6
 shadow_offset = Vector2(5, 5)
 anti_aliasing = false
+
+[sub_resource type="Resource" id="Resource_lmq72"]
+metadata/__load_path__ = "res://demo/set_numbers_button.gd"
+
+[sub_resource type="Resource" id="Resource_3rajx"]
+metadata/__load_path__ = "res://demo/set_numbers_button.gd"
 
 [node name="PlaySceneDemo" type="Control"]
 layout_mode = 3
@@ -212,7 +217,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_mh8qh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pkevp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5mxln")
 text = "ADD NUMBERS"
-script = ExtResource("4_hu8nr")
+script = SubResource("Resource_lmq72")
 _labels = [NodePath("../LabelNoScript"), NodePath("../LabelWithScript"), NodePath("../LabelWithScript2"), NodePath("../LabelNoScript2")]
 
 [node name="DeleteButton" type="Button" parent="." node_paths=PackedStringArray("_labels")]
@@ -239,7 +244,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_mh8qh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pkevp")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5mxln")
 text = "DELETE NUMBERS"
-script = ExtResource("4_hu8nr")
+script = SubResource("Resource_3rajx")
 _labels = [NodePath("../LabelNoScript"), NodePath("../LabelWithScript"), NodePath("../LabelWithScript2"), NodePath("../LabelNoScript2")]
 
 [connection signal="pressed" from="AddButton" to="AddButton" method="_on_button_clicked" binds= [true]]

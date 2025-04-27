@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3ohc6jcps3l7"]
 
-[ext_resource type="Script" path="res://entities/ui/camera/camera.gd" id="1_w7c0b"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_yo22p"]
+[ext_resource type="Script" uid="uid://dm0ke5ra3qt3k" path="res://entities/ui/camera/camera.gd" id="1_w7c0b"]
+[ext_resource type="Script" uid="uid://dah8ojncuwx0j" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_yo22p"]
 
 [node name="Camera" type="Camera2D"]
 physics_interpolation_mode = 1

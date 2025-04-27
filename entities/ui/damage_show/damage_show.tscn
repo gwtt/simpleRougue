@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://byed74nvgf2cs"]
 
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_kqygc"]
-[ext_resource type="Script" path="res://entities/ui/damage_show/damage_show.gd" id="2_lti8s"]
+[ext_resource type="Script" uid="uid://dmj07lg607apd" path="res://entities/ui/damage_show/damage_show.gd" id="2_lti8s"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kvv43"]
 blend_mode = 1

@@ -1,6 +1,6 @@
 extends CanvasLayer
 @onready var show = $show
-@onready var next_stage = preload("res://stages/first_scene/first_scene.tscn")
+@onready var next_stage = preload("res://scenes/stages/first_scene/first_scene.tscn")
 
 var choose_id = null
 var item_list_index

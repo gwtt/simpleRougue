@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bx01oq36swnyt"
+path="res://.godot/imported/Cut and Run.mp3-36f7caa681e0a1de09614f776fd2f923.mp3str"
+
+[deps]
+
+source_file="res://scenes/stages/main_scene/sound/Cut and Run.mp3"
+dest_files=["res://.godot/imported/Cut and Run.mp3-36f7caa681e0a1de09614f776fd2f923.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

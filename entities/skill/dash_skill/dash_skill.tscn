@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cvjh7h2w8jqia"]
 
-[ext_resource type="Script" path="res://entities/skill/dash_skill/dash_skill.gd" id="1_fg1qv"]
+[ext_resource type="Script" uid="uid://doyw5qlnakre" path="res://entities/skill/dash_skill/dash_skill.gd" id="1_fg1qv"]
 [ext_resource type="Texture2D" uid="uid://cebg01jae2afq" path="res://entities/skill/dash_skill/art/1bit 16px icons part-2 outlines.png" id="2_bsgof"]
 [ext_resource type="Texture2D" uid="uid://bhditdcqem2cj" path="res://entities/skill/dash_skill/art/精灵-0001.png" id="3_lc8mj"]
 [ext_resource type="FontFile" uid="uid://cxvrsyb0x3s1c" path="res://assets/字体/鸿蒙.ttf" id="4_8dvth"]

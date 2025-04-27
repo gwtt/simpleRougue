@@ -59,8 +59,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bixs0"]
 _data = {
-"RESET": SubResource("Animation_iaho4"),
-"new_animation": SubResource("Animation_mtdxt")
+&"RESET": SubResource("Animation_iaho4"),
+&"new_animation": SubResource("Animation_mtdxt")
 }
 
 [node name="BulletImpact" type="Sprite2D"]

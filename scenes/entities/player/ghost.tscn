@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw86ntwlxqf3f"]
+
+[ext_resource type="Script" uid="uid://c0v6siird1iae" path="res://scenes/entities/player/ghost.gd" id="1_atkiq"]
+
+[node name="Ghost" type="Sprite2D"]
+z_index = 35
+script = ExtResource("1_atkiq")

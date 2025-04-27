@@ -1,10 +1,10 @@
 [gd_scene load_steps=20 format=3 uid="uid://bniaqlyuyi5c4"]
 
-[ext_resource type="Script" path="res://entities/ui/equipment_item/equipment_item.gd" id="1_tlh64"]
+[ext_resource type="Script" uid="uid://dvyjcyl6xd3lt" path="res://entities/ui/equipment_item/equipment_item.gd" id="1_tlh64"]
 [ext_resource type="Texture2D" uid="uid://4jf4yhmfexu7" path="res://entities/ui/equipment_item/art/target_a.png" id="2_gexvl"]
-[ext_resource type="Script" path="res://addons/label_font_auto_sizer/label_auto_sizer.gd" id="3_rapod"]
+[ext_resource type="Script" uid="uid://dno7r6881l4yn" path="res://addons/label_font_auto_sizer/label_auto_sizer.gd" id="3_rapod"]
 [ext_resource type="Texture2D" uid="uid://cjqcirysdsap4" path="res://entities/ui/equipment_item/art/item_box_no_shader.png" id="3_ykc2x"]
-[ext_resource type="Script" path="res://addons/animatedbutton/AnimatedButton.gd" id="4_koq8o"]
+[ext_resource type="Script" uid="uid://bie7o5mrdngdj" path="res://addons/animatedbutton/AnimatedButton.gd" id="4_koq8o"]
 [ext_resource type="FontFile" uid="uid://cxvrsyb0x3s1c" path="res://assets/字体/鸿蒙.ttf" id="5_d83ht"]
 [ext_resource type="Texture2D" uid="uid://dbkk6npuf4ynl" path="res://assets/金币/Coin Sheet.png" id="6_jehvc"]
 

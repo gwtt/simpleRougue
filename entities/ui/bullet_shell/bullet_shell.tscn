@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://by5o3pik6wpun"]
 
 [ext_resource type="Texture2D" uid="uid://d2loefim8mns0" path="res://entities/ui/bullet_shell/art/shell_case.png" id="1_pfovg"]
-[ext_resource type="Script" path="res://entities/ui/bullet_shell/bullet_shell.gd" id="2_dxxeh"]
+[ext_resource type="Script" uid="uid://bry7bir3ffho5" path="res://entities/ui/bullet_shell/bullet_shell.gd" id="2_dxxeh"]
 
 [node name="子弹壳" type="TextureRect"]
 custom_minimum_size = Vector2(5, 0)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c8th54fejhpec"]
 
-[ext_resource type="Script" path="res://addons/animatedbutton/AnimatedButton.gd" id="1_voms5"]
+[ext_resource type="Script" uid="uid://bie7o5mrdngdj" path="res://addons/animatedbutton/AnimatedButton.gd" id="1_voms5"]
 
 [node name="Demo" type="Control"]
 layout_mode = 3

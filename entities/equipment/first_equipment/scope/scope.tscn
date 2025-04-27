@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpvdt4gulefl0"]
 
-[ext_resource type="Script" path="res://entities/equipment/first_equipment/scope/scope.gd" id="1_0yyw8"]
+[ext_resource type="Script" uid="uid://cvonirecc30l8" path="res://entities/equipment/first_equipment/scope/scope.gd" id="1_0yyw8"]
 [ext_resource type="Texture2D" uid="uid://jpt2xatvd7dd" path="res://entities/equipment/first_equipment/scope/art/瞄准镜.png" id="2_fp7a3"]
 
 [node name="瞄准镜" type="Node2D"]

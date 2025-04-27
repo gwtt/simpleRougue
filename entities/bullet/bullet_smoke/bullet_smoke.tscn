@@ -59,7 +59,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xx0x8"]
 _data = {
-"new_animation": SubResource("Animation_tsu4p")
+&"new_animation": SubResource("Animation_tsu4p")
 }
 
 [node name="子弹烟雾" type="Node2D"]

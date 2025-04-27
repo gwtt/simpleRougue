@@ -60,7 +60,7 @@ var player_exp = 0:
 			player_exp = value
 		emit_signal("onPlayerExpChange", player_exp, max_exp)
 
-var player = preload("res://Entities/People/Player/player.tscn")
+var player = preload("res://scenes/entities/player/player.tscn")
 func _ready() -> void:
 	buy.connect(add_item)
 	attack.connect(onAttack)

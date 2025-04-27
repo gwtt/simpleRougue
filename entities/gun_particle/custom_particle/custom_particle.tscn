@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://5a25ci854ybo"]
 
-[ext_resource type="Script" path="res://entities/gun_particle/custom_particle/custom_particle.gd" id="1_r6bkc"]
+[ext_resource type="Script" uid="uid://brj3uysmlga0" path="res://entities/gun_particle/custom_particle/custom_particle.gd" id="1_r6bkc"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gshiv"]
 blend_mode = 1
@@ -13,7 +13,7 @@ colors = PackedColorArray(1, 0, 0, 1, 1, 0.0420561, 0.0420561, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_uvmjb")
 
 [sub_resource type="Curve" id="Curve_l1oco"]
-max_value = 2.0
+_limits = [0.0, 2.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.764463, 1.95604), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 3
 
@@ -37,11 +37,11 @@ color_ramp = SubResource("GradientTexture1D_gj166")
 material = SubResource("CanvasItemMaterial_gshiv")
 emitting = false
 amount = 15
-process_material = SubResource("ParticleProcessMaterial_41ul6")
 lifetime = 0.2
 one_shot = true
 explosiveness = 1.0
 randomness = 1.0
 fixed_fps = 60
 local_coords = true
+process_material = SubResource("ParticleProcessMaterial_41ul6")
 script = ExtResource("1_r6bkc")

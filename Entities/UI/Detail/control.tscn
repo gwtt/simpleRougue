@@ -1,12 +1,12 @@
 [gd_scene load_steps=25 format=3 uid="uid://cp7ei4p08hsst"]
 
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_g8ke5"]
-[ext_resource type="Script" path="res://entities/ui/detail/control.gd" id="1_i5f8j"]
+[ext_resource type="Script" uid="uid://cnvjakj70r0q7" path="res://entities/ui/detail/control.gd" id="1_i5f8j"]
 [ext_resource type="Texture2D" uid="uid://dbkk6npuf4ynl" path="res://assets/金币/Coin Sheet.png" id="2_ha81v"]
-[ext_resource type="Script" path="res://entities/ui/detail/game_ui.gd" id="2_te4ue"]
+[ext_resource type="Script" uid="uid://od6k76gj8daa" path="res://entities/ui/detail/game_ui.gd" id="2_te4ue"]
 [ext_resource type="AudioStream" uid="uid://diq1hlkbgn6nx" path="res://entities/ui/detail/sound/CLOTHMvmt_Clothing Rustle Arm_01.wav" id="5_0fvn0"]
 [ext_resource type="Texture2D" uid="uid://62glx2elo8d5" path="res://entities/ui/detail/art/control.tres" id="6_gqxnh"]
-[ext_resource type="Script" path="res://entities/ui/detail/cross_hair.gd" id="6_oix4d"]
+[ext_resource type="Script" uid="uid://c4tsv1rhng2le" path="res://entities/ui/detail/cross_hair.gd" id="6_oix4d"]
 [ext_resource type="PackedScene" uid="uid://cvjh7h2w8jqia" path="res://entities/skill/dash_skill/dash_skill.tscn" id="6_t5k0j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vyk5s"]

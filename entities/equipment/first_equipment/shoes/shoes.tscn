@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dglibu5c5qp3j"]
 
-[ext_resource type="Script" path="res://entities/equipment/first_equipment/shoes/shoes.gd" id="1_bes8v"]
+[ext_resource type="Script" uid="uid://biq2d3pmij4w5" path="res://entities/equipment/first_equipment/shoes/shoes.gd" id="1_bes8v"]
 [ext_resource type="Texture2D" uid="uid://dkc4kh1l7it4e" path="res://entities/equipment/first_equipment/shoes/art/boot.png" id="2_fhxca"]
 
 [node name="速度之靴" type="Node2D"]

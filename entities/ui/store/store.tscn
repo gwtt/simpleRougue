@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dqhoj71t80ksq"]
 
-[ext_resource type="Script" path="res://entities/ui/store/store.gd" id="1_tdhcc"]
+[ext_resource type="Script" uid="uid://coytv36yj1y50" path="res://entities/ui/store/store.gd" id="1_tdhcc"]
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="2_3g2h1"]
-[ext_resource type="Script" path="res://addons/animatedbutton/AnimatedButton.gd" id="3_4ugka"]
+[ext_resource type="Script" uid="uid://bie7o5mrdngdj" path="res://addons/animatedbutton/AnimatedButton.gd" id="3_4ugka"]
 [ext_resource type="PackedScene" uid="uid://bniaqlyuyi5c4" path="res://entities/ui/equipment_item/equipment_item.tscn" id="4_bbs5b"]
 [ext_resource type="AudioStream" uid="uid://b6yx7bp3e6gg" path="res://entities/ui/store/sound/BLLTShel_Reload Ammo_01.wav" id="5_rkm23"]
 

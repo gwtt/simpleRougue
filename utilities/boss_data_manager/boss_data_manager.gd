@@ -6,10 +6,10 @@ signal onDie()
 # 装备列表
 var Boss_list = {
 	"1" = {
-		"orc" = preload("res://Entities/People/Enemy/Orc/Orc.tscn"),
+		"orc" = preload("res://scenes/entities/orc/orc.tscn"),
 	},
 	"2" = {
-		"Archer" = preload("res://Entities/People/Enemy/Archer/Archer.tscn"),
+		"Archer" = preload("res://scenes/entities/archer/archer.tscn"),
 	}
 }
 
