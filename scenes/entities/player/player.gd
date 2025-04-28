@@ -2,9 +2,9 @@ extends CharacterBody2D
 class_name Player
 
 @onready var weapon = $"WeaponRoot"
-@onready var state_chart: StateChart = $StateChart
 @onready var player_animations: PlayerAnimations = %PlayerAnimations
 @onready var player_skill: PlayerSkill = %PlayerSkill
+@onready var player_state: PlayerState = %PlayerState
 
 var controller: AbstractController = AbstractController.new()
 var gun = null
@@ -15,32 +15,18 @@ var direction: Vector2
 
 func _ready():
 	controller.set_architecture(SimpleArchitecture.interface(SimpleArchitecture))
-	
 	controller.register_event("change_player_weapon_list", self.playerWeaponListChange)
-	controller.register_event("player_on_dash_change", self.onDashChange)
-	
 	controller.get_model(PlayerModel).player_weapon_list.value = Utils.weapon_list["0"].instantiate()
 	Utils.player = self
 
-	
 func _physics_process(delta):
 	direction = Input.get_vector("left", "right", "up", "down")
-	changeAnim(direction)
+	player_state.changeAnim(direction)
+	player_animations.set_look_at(get_global_mouse_position())
 	if gun:
-		gun.look_at(get_global_mouse_position())
-		
-func changeAnim(move_direction):
-	if move_direction != Vector2.ZERO:
-		stateSendEvent("idle_to_run")
-	else:
-		stateSendEvent("run_to_idle")
-
-
-func stateSendEvent(name: String):
-	state_chart.send_event(name)
+		gun.look_at(get_global_mouse_position())	
 		
 func playerWeaponListChange(_new_value):
-	return
 	for weapon_id in PlayerDataManager.player_weapon_list:
 		if !weapon.has_node(str(weapon_id)):
 			var local_gun = PlayerDataManager.player_weapon_list[weapon_id] as BaseGun
@@ -77,10 +63,7 @@ func onHit(hurt):
 func onHpChange(hp, max_hp):
 	PlayerDataManager.onHpChange.emit(hp, max_hp)
 	if hp <= 0:
-		stateSendEvent("to_die")
-		
-func onDashChange():
-	stateSendEvent("to_dash")
+		player_state.stateSendEvent("to_die")
 
 func onSpeedChange(speed):
 	SPEED = speed
@@ -116,30 +99,3 @@ func _on_检测遮挡_body_shape_exited(body_rid, body, body_shape_index, local_
 		var shader = 材质 as ShaderMaterial
 		shader.set_shader_parameter("alpha", 0)
 	pass
-
-
-func _on_idle_state_processing(_delta: float) -> void:
-	player_animations.anim_play("idle")
-	
-func _on_run_state_processing(_delta: float) -> void:
-	velocity = direction * (SPEED + PlayerDataManager.移速加成)
-	changeAnim(direction)
-	player_animations.anim_play("run")
-	move_and_slide()
-	
-func _on_dash_state_processing(_delta: float) -> void:
-	velocity = direction * (SPEED + PlayerDataManager.移速加成)
-	velocity = direction * 1200
-	changeAnim(direction)
-	move_and_slide()
-
-func _on_dash_state_entered() -> void:
-	player_skill.dash()
-
-func _on_die_state_processing(_delta: float) -> void:
-	player_animations.anim_play("die")
-
-func _on_hurt_state_entered() -> void:
-	player_animations.anim_play("hurt")
-	player_animations.anim_finished.connect(func():stateSendEvent("hurt_to_idle"))
-

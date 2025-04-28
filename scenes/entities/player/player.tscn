@@ -1,4 +1,4 @@
-[gd_scene load_steps=153 format=3 uid="uid://dhg8xbngla50n"]
+[gd_scene load_steps=154 format=3 uid="uid://dhg8xbngla50n"]
 
 [ext_resource type="Texture2D" uid="uid://cekoqlwfe4vc2" path="res://scenes/entities/player/art/Base Body/Head/Head-Idle.png" id="1_62kaq"]
 [ext_resource type="Script" uid="uid://wqwobf52fnkq" path="res://scenes/entities/player/player.gd" id="1_nbg82"]
@@ -30,6 +30,7 @@
 [ext_resource type="Script" uid="uid://vpy5rq1shcr2" path="res://components/player/player_animation.gd" id="29_7nfft"]
 [ext_resource type="Script" uid="uid://kuafcoqpmx25" path="res://components/player/player_skill.gd" id="29_brjyi"]
 [ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://scenes/entities/player/ghost.tscn" id="30_brjyi"]
+[ext_resource type="Script" uid="uid://b5mb5vtymfysk" path="res://components/player/player_state.gd" id="31_bnv2y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbtsq"]
 atlas = ExtResource("3_he1b4")
@@ -1024,6 +1025,7 @@ shape = SubResource("RectangleShape2D_gjkue")
 position = Vector2(-1, 1)
 
 [node name="StateChart" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("15_lbb20")
 
 [node name="并行状态" type="Node" parent="StateChart"]
@@ -1034,6 +1036,7 @@ script = ExtResource("16_xr65y")
 initial_state = NodePath("idle")
 
 [node name="idle" type="Node" parent="StateChart/并行状态/root"]
+unique_name_in_owner = true
 script = ExtResource("17_8kn7u")
 
 [node name="idleTorun" type="Node" parent="StateChart/并行状态/root/idle"]
@@ -1055,6 +1058,7 @@ event = &"to_hurt"
 delay_in_seconds = "0.0"
 
 [node name="run" type="Node" parent="StateChart/并行状态/root"]
+unique_name_in_owner = true
 script = ExtResource("17_8kn7u")
 
 [node name="runToIdle" type="Node" parent="StateChart/并行状态/root/run"]
@@ -1076,9 +1080,11 @@ event = &"to_hurt"
 delay_in_seconds = "0.0"
 
 [node name="die" type="Node" parent="StateChart/并行状态/root"]
+unique_name_in_owner = true
 script = ExtResource("17_8kn7u")
 
 [node name="hurt" type="Node" parent="StateChart/并行状态/root"]
+unique_name_in_owner = true
 script = ExtResource("17_8kn7u")
 
 [node name="hurtToIdle" type="Node" parent="StateChart/并行状态/root/hurt"]
@@ -1092,6 +1098,7 @@ script = ExtResource("16_xr65y")
 initial_state = NodePath("notDash")
 
 [node name="dash" type="Node" parent="StateChart/并行状态/dash"]
+unique_name_in_owner = true
 script = ExtResource("17_8kn7u")
 
 [node name="toNotDash" type="Node" parent="StateChart/并行状态/dash/dash"]
@@ -1101,6 +1108,7 @@ event = &"to_not_dash"
 delay_in_seconds = "0.0"
 
 [node name="notDash" type="Node" parent="StateChart/并行状态/dash"]
+unique_name_in_owner = true
 script = ExtResource("17_8kn7u")
 
 [node name="toDash" type="Node" parent="StateChart/并行状态/dash/notDash"]
@@ -1122,10 +1130,9 @@ player = NodePath("..")
 ghost_node = ExtResource("30_brjyi")
 visuals = NodePath("../Visuals")
 
+[node name="PlayerState" type="Node" parent="." node_paths=PackedStringArray("player")]
+unique_name_in_owner = true
+script = ExtResource("31_bnv2y")
+player = NodePath("..")
+
 [connection signal="area_entered" from="HurtBoxComponent" to="HurtBoxComponent" method="_on_area_entered"]
-[connection signal="state_processing" from="StateChart/并行状态/root/idle" to="." method="_on_idle_state_processing"]
-[connection signal="state_processing" from="StateChart/并行状态/root/run" to="." method="_on_run_state_processing"]
-[connection signal="state_processing" from="StateChart/并行状态/root/die" to="." method="_on_die_state_processing"]
-[connection signal="state_entered" from="StateChart/并行状态/root/hurt" to="." method="_on_hurt_state_entered"]
-[connection signal="state_entered" from="StateChart/并行状态/dash" to="." method="_on_dash_state_entered"]
-[connection signal="state_processing" from="StateChart/并行状态/dash" to="." method="_on_dash_state_processing"]

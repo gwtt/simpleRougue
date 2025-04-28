@@ -1,16 +1,16 @@
 class_name Ghost
-extends Sprite2D
+extends Node2D
 
 func _ready() -> void:
 	ghosting()
 
 func set_property(tx_pos:Vector2,tx_node:Node2D,tx_sacle:Vector2,_modulate:Color=Color(1,1,1))->void:
-	global_position = tx_pos
+	position = tx_pos
 	self.add_child(tx_node.duplicate())
 	self.scale = tx_sacle
 	self.modulate = _modulate
-	
-func ghosting()->void:
+
+func ghosting() -> void:
 	var tween_fade = get_tree().create_tween()
 	tween_fade.tween_property(self,"modulate",Color(1,1,1,0),0.75)
 	await tween_fade.finished

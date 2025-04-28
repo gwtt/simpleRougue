@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" uid="uid://c0v6siird1iae" path="res://scenes/entities/player/ghost.gd" id="1_atkiq"]
 
-[node name="Ghost" type="Sprite2D"]
-z_index = 35
+[node name="Ghost" type="Node2D"]
 script = ExtResource("1_atkiq")
