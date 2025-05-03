@@ -1,12 +1,13 @@
-[gd_scene load_steps=154 format=3 uid="uid://dhg8xbngla50n"]
+[gd_scene load_steps=155 format=3 uid="uid://dhg8xbngla50n"]
 
 [ext_resource type="Texture2D" uid="uid://cekoqlwfe4vc2" path="res://scenes/entities/player/art/Base Body/Head/Head-Idle.png" id="1_62kaq"]
 [ext_resource type="Script" uid="uid://wqwobf52fnkq" path="res://scenes/entities/player/player.gd" id="1_nbg82"]
+[ext_resource type="Resource" uid="uid://bbhliqy6udgco" path="res://data/player/player_stats.tres" id="2_0xxfp"]
 [ext_resource type="Texture2D" uid="uid://c7dn4w6cj7qbv" path="res://scenes/entities/player/art/Base Body/Head/Head-Run.png" id="2_r0hjg"]
 [ext_resource type="Texture2D" uid="uid://bi0vgog5swue2" path="res://scenes/entities/player/art/Base Body/Head/Head-Walk.png" id="3_2bgfk"]
 [ext_resource type="Texture2D" uid="uid://cmakhbad0u50e" path="res://scenes/entities/player/art/Base Body/Head/Head-Death.png" id="3_he1b4"]
 [ext_resource type="Texture2D" uid="uid://j230a0y88mx8" path="res://scenes/entities/player/art/Base Body/Body/Body-Idle.png" id="4_nyqxh"]
-[ext_resource type="Script" uid="uid://dofif1lmtr3mw" path="res://entities/people/hurt_component.gd" id="5_oiqmo"]
+[ext_resource type="Script" uid="uid://dofif1lmtr3mw" path="res://Entities/people/hurt_component.gd" id="5_oiqmo"]
 [ext_resource type="Texture2D" uid="uid://dkaincs2x7fwh" path="res://scenes/entities/player/art/Base Body/Body/Body-Run.png" id="5_w55xk"]
 [ext_resource type="Texture2D" uid="uid://lsgcjdypqh1p" path="res://scenes/entities/player/art/Base Body/Body/Body-Walk.png" id="6_7socv"]
 [ext_resource type="Texture2D" uid="uid://wdmprxbsexro" path="res://scenes/entities/player/art/Base Body/Head/Head-Hurt.png" id="6_r5uvo"]
@@ -928,10 +929,6 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r6ath"]
-radius = 4.5
-height = 15.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r2pu7"]
 size = Vector2(12, 18)
 
@@ -959,11 +956,15 @@ color = Color(0.956863, 0.956863, 0.956863, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjkue"]
 size = Vector2(15, 9)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r6ath"]
+radius = 4.5
+height = 15.0
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 40
-position = Vector2(751, 386)
 scale = Vector2(2, 2)
 script = ExtResource("1_nbg82")
+player_stats = ExtResource("2_0xxfp")
 
 [node name="Visuals" type="CanvasGroup" parent="."]
 
@@ -991,19 +992,11 @@ sprite_frames = SubResource("SpriteFrames_5dwks")
 animation = &"die"
 offset = Vector2(0, -6)
 
-[node name="HurtBoxComponent" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 0
-script = ExtResource("5_oiqmo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
-shape = SubResource("CapsuleShape2D_r6ath")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_r2pu7")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="walk_particle" type="GPUParticles2D" parent="."]
 position = Vector2(0, 6)
 scale = Vector2(2, 2)
 emitting = false
@@ -1134,5 +1127,15 @@ visuals = NodePath("../Visuals")
 unique_name_in_owner = true
 script = ExtResource("31_bnv2y")
 player = NodePath("..")
+
+[node name="HurtBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("player", "player_state")]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("5_oiqmo")
+player = NodePath("..")
+player_state = NodePath("../PlayerState")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
+shape = SubResource("CapsuleShape2D_r6ath")
 
 [connection signal="area_entered" from="HurtBoxComponent" to="HurtBoxComponent" method="_on_area_entered"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqqpoaul6edo2"
-path="res://.godot/imported/Free_Tilemap.png-70a3708ae6a6b625e89a4b2d80721a4f.ctex"
+path="res://.godot/imported/Free_Tilemap.png-e1a146615b40262000b8f6ee7a033e3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/场景/Sprites/Free_Tilemap.png"
-dest_files=["res://.godot/imported/Free_Tilemap.png-70a3708ae6a6b625e89a4b2d80721a4f.ctex"]
+source_file="res://Assets/场景/Sprites/Free_Tilemap.png"
+dest_files=["res://.godot/imported/Free_Tilemap.png-e1a146615b40262000b8f6ee7a033e3b.ctex"]
 
 [params]
 

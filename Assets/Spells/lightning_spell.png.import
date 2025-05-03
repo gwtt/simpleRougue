@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bicl1msim2wp1"
-path="res://.godot/imported/lightning_spell.png-2383f17178880bb168a5c85d94dceaa1.ctex"
+path="res://.godot/imported/lightning_spell.png-aeb30e9813e5c5531e85b1aec1947a14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spells/lightning_spell.png"
-dest_files=["res://.godot/imported/lightning_spell.png-2383f17178880bb168a5c85d94dceaa1.ctex"]
+source_file="res://Assets/Spells/lightning_spell.png"
+dest_files=["res://.godot/imported/lightning_spell.png-aeb30e9813e5c5531e85b1aec1947a14.ctex"]
 
 [params]
 

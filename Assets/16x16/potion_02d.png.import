@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duuukgrfyjkd5"
-path="res://.godot/imported/potion_02d.png-3f1e6eb8c0b93f5371d12d64231c8892.ctex"
+path="res://.godot/imported/potion_02d.png-3d79dc26ec378e2934f459a35fe3230a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/16x16/potion_02d.png"
-dest_files=["res://.godot/imported/potion_02d.png-3f1e6eb8c0b93f5371d12d64231c8892.ctex"]
+source_file="res://Assets/16x16/potion_02d.png"
+dest_files=["res://.godot/imported/potion_02d.png-3d79dc26ec378e2934f459a35fe3230a.ctex"]
 
 [params]
 

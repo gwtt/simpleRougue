@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jpt2xatvd7dd"
-path="res://.godot/imported/瞄准镜.png-942d19391efe3ca59fada19e290a7fc6.ctex"
+path="res://.godot/imported/瞄准镜.png-3d76202bd74380c96010a5b35ccdf518.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/equipment/first_equipment/scope/art/瞄准镜.png"
-dest_files=["res://.godot/imported/瞄准镜.png-942d19391efe3ca59fada19e290a7fc6.ctex"]
+source_file="res://Entities/equipment/first_equipment/scope/art/瞄准镜.png"
+dest_files=["res://.godot/imported/瞄准镜.png-3d76202bd74380c96010a5b35ccdf518.ctex"]
 
 [params]
 

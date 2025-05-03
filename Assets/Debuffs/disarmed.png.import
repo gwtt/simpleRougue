@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://o86581wapx88"
-path="res://.godot/imported/disarmed.png-ee51010cdd4fd0ae32c7acdba1aa67a1.ctex"
+path="res://.godot/imported/disarmed.png-d7f2dd216367b8a35baa6b23ba38afae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Debuffs/disarmed.png"
-dest_files=["res://.godot/imported/disarmed.png-ee51010cdd4fd0ae32c7acdba1aa67a1.ctex"]
+source_file="res://Assets/Debuffs/disarmed.png"
+dest_files=["res://.godot/imported/disarmed.png-d7f2dd216367b8a35baa6b23ba38afae.ctex"]
 
 [params]
 

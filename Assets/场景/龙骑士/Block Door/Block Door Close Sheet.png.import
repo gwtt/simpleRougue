@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di0l4tj45t8wl"
-path="res://.godot/imported/Block Door Close Sheet.png-48a1527bfe210422f49e63d8fc3e47f4.ctex"
+path="res://.godot/imported/Block Door Close Sheet.png-76613fd18fa2522116a73d9f94caa0ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/场景/龙骑士/Block Door/Block Door Close Sheet.png"
-dest_files=["res://.godot/imported/Block Door Close Sheet.png-48a1527bfe210422f49e63d8fc3e47f4.ctex"]
+source_file="res://Assets/场景/龙骑士/Block Door/Block Door Close Sheet.png"
+dest_files=["res://.godot/imported/Block Door Close Sheet.png-76613fd18fa2522116a73d9f94caa0ed.ctex"]
 
 [params]
 

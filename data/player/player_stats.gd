@@ -1,7 +1,6 @@
 class_name PlayerStats
 extends Resource
 
-
 ## 金币
 @export_range(0, 100000) var gold: int : set = _set_gold
 ## 经验
@@ -16,6 +15,10 @@ extends Resource
 @export_range(0, 10000) var base_damage: float = 0.3 : set = _set_base_damage
 ## 幸运值
 @export_range(0, 100000) var luck: int = 0 : set = _set_luck
+## 最大血量
+@export_range(0, 10000) var max_hp: int = 0: set = _set_max_hp
+## 当前血量
+@export_range(0, 10000) var current_hp: int = 0: set = _set_current_hp
 func get_current_xp_requirement() -> int:
 	var next_level = clampi(level+1, 1, 1000)
 	return next_level * 100
@@ -60,4 +63,12 @@ func _set_base_damage(value: float) -> void:
 
 func _set_luck(value: int) -> void:
 	luck = value
+	emit_changed()
+
+func _set_max_hp(value: int) -> void:
+	max_hp = value
+	emit_changed()
+
+func _set_current_hp(value: int) -> void:
+	current_hp = value
 	emit_changed()

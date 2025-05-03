@@ -1,12 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://csajreh0577ui"]
 
-[ext_resource type="Script" uid="uid://flayg3x0mfe7" path="res://entities/gun/custom_gun/custom_gun.gd" id="1_5noaw"]
-[ext_resource type="Texture2D" uid="uid://j4k14r7sfa3n" path="res://entities/gun/custom_gun/art/gun.png" id="2_3ncw8"]
-[ext_resource type="PackedScene" uid="uid://clctv28x4gpc5" path="res://entities/bullet/custom_bullet/custom_bullet.tscn" id="2_n2o5x"]
-[ext_resource type="AudioStream" uid="uid://dmaulb5v3y1h8" path="res://entities/gun/custom_gun/sound/GUNPis_Pistol Fire_01.wav" id="4_uweru"]
+[ext_resource type="Script" uid="uid://flayg3x0mfe7" path="res://Entities/gun/custom_gun/custom_gun.gd" id="1_5noaw"]
+[ext_resource type="Texture2D" uid="uid://j4k14r7sfa3n" path="res://Entities/gun/custom_gun/art/gun.png" id="2_3ncw8"]
+[ext_resource type="PackedScene" uid="uid://clctv28x4gpc5" path="res://Entities/Bullet/custom_bullet/custom_bullet.tscn" id="2_n2o5x"]
+[ext_resource type="AudioStream" uid="uid://dmaulb5v3y1h8" path="res://Entities/gun/custom_gun/sound/GUNPis_Pistol Fire_01.wav" id="4_uweru"]
 
 [node name="宝宝枪" type="Node2D"]
-position = Vector2(3, 1)
 script = ExtResource("1_5noaw")
 image = ExtResource("2_3ncw8")
 bullet_scene = ExtResource("2_n2o5x")

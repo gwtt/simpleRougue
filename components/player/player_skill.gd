@@ -6,7 +6,6 @@ extends Node
 @onready var player_state: PlayerState = %PlayerState
 @export var ghost_node: PackedScene
 @export var visuals: CanvasGroup
-## 调整玩家身体的动画
 
 func dash():
 	## 0.05秒造一个幻影
@@ -16,4 +15,3 @@ func dash():
 		ghost.set_property(player.global_position, visuals, player.scale)
 		add_child(ghost)
 	player_state.stateSendEvent("to_not_dash")
-

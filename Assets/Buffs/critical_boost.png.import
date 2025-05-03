@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx8e3y61vyj2t"
-path="res://.godot/imported/critical_boost.png-c55b8dbce0ecb805e1b488966cdb0b5f.ctex"
+path="res://.godot/imported/critical_boost.png-4d4b0a2c6fa012177645f5a418cc935e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buffs/critical_boost.png"
-dest_files=["res://.godot/imported/critical_boost.png-c55b8dbce0ecb805e1b488966cdb0b5f.ctex"]
+source_file="res://Assets/Buffs/critical_boost.png"
+dest_files=["res://.godot/imported/critical_boost.png-4d4b0a2c6fa012177645f5a418cc935e.ctex"]
 
 [params]
 

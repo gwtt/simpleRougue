@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cstjrrfhqvsmy"
-path="res://.godot/imported/paralyzed.png-84a2114d1301be9c6c9f28d04d6dfe55.ctex"
+path="res://.godot/imported/paralyzed.png-ea7c5ec08c35ba5961d69b3c48acf6b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Debuffs/paralyzed.png"
-dest_files=["res://.godot/imported/paralyzed.png-84a2114d1301be9c6c9f28d04d6dfe55.ctex"]
+source_file="res://Assets/Debuffs/paralyzed.png"
+dest_files=["res://.godot/imported/paralyzed.png-ea7c5ec08c35ba5961d69b3c48acf6b5.ctex"]
 
 [params]
 

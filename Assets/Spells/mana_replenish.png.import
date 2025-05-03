@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbmmw4xrp1fqi"
-path="res://.godot/imported/mana_replenish.png-555c582b347937b644831b58c7b8c67a.ctex"
+path="res://.godot/imported/mana_replenish.png-c5164fc52e66fe76f1df9a4c6b42df5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spells/mana_replenish.png"
-dest_files=["res://.godot/imported/mana_replenish.png-555c582b347937b644831b58c7b8c67a.ctex"]
+source_file="res://Assets/Spells/mana_replenish.png"
+dest_files=["res://.godot/imported/mana_replenish.png-c5164fc52e66fe76f1df9a4c6b42df5c.ctex"]
 
 [params]
 

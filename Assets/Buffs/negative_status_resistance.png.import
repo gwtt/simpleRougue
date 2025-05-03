@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://x2qtflo3n1k0"
-path="res://.godot/imported/negative_status_resistance.png-1f1e406173e9da204e643864a4cbe90a.ctex"
+path="res://.godot/imported/negative_status_resistance.png-1a8faf00d0f2be77c46361cf77ea44b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buffs/negative_status_resistance.png"
-dest_files=["res://.godot/imported/negative_status_resistance.png-1f1e406173e9da204e643864a4cbe90a.ctex"]
+source_file="res://Assets/Buffs/negative_status_resistance.png"
+dest_files=["res://.godot/imported/negative_status_resistance.png-1a8faf00d0f2be77c46361cf77ea44b9.ctex"]
 
 [params]
 

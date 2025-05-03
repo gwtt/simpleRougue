@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwi1nssishl1l"
-path="res://.godot/imported/ghost_form_(physical_damage_immunity).png-b7da565a3751b708c6e8a3e5ac30776a.ctex"
+path="res://.godot/imported/ghost_form_(physical_damage_immunity).png-bdbf303f3e62c3864c8f12f103a7971f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buffs/ghost_form_(physical_damage_immunity).png"
-dest_files=["res://.godot/imported/ghost_form_(physical_damage_immunity).png-b7da565a3751b708c6e8a3e5ac30776a.ctex"]
+source_file="res://Assets/Buffs/ghost_form_(physical_damage_immunity).png"
+dest_files=["res://.godot/imported/ghost_form_(physical_damage_immunity).png-bdbf303f3e62c3864c8f12f103a7971f.ctex"]
 
 [params]
 

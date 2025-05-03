@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckk5mj0rae8to"
-path="res://.godot/imported/divine_protection_spell.png-8b47293a178af4621a1ea285cc62a739.ctex"
+path="res://.godot/imported/divine_protection_spell.png-da46975396ea608feb2be92bdd980233.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spells/divine_protection_spell.png"
-dest_files=["res://.godot/imported/divine_protection_spell.png-8b47293a178af4621a1ea285cc62a739.ctex"]
+source_file="res://Assets/Spells/divine_protection_spell.png"
+dest_files=["res://.godot/imported/divine_protection_spell.png-da46975396ea608feb2be92bdd980233.ctex"]
 
 [params]
 

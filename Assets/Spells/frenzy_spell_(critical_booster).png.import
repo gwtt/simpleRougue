@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0rg5w5and8d5"
-path="res://.godot/imported/frenzy_spell_(critical_booster).png-0851a75f6b664c32d8b60374de5fd2a9.ctex"
+path="res://.godot/imported/frenzy_spell_(critical_booster).png-a8569dc000682081cc6ad1ae74e84a92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spells/frenzy_spell_(critical_booster).png"
-dest_files=["res://.godot/imported/frenzy_spell_(critical_booster).png-0851a75f6b664c32d8b60374de5fd2a9.ctex"]
+source_file="res://Assets/Spells/frenzy_spell_(critical_booster).png"
+dest_files=["res://.godot/imported/frenzy_spell_(critical_booster).png-a8569dc000682081cc6ad1ae74e84a92.ctex"]
 
 [params]
 

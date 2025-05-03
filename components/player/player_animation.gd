@@ -7,6 +7,7 @@ signal anim_finished
 @export var player: Player
 @export var visual: CanvasGroup
 var look_dir = null
+
 ## 调整玩家身体的动画
 func anim_play(anim_name, speed = 1.0, is_back = false):
 	var playing_animations = []

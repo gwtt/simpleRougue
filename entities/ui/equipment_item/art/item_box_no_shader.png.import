@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjqcirysdsap4"
-path="res://.godot/imported/item_box_no_shader.png-097b35c3af93d4f6749d8d33bdb58857.ctex"
+path="res://.godot/imported/item_box_no_shader.png-d7a58613eb6b5c7e10697d479da097c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/ui/equipment_item/art/item_box_no_shader.png"
-dest_files=["res://.godot/imported/item_box_no_shader.png-097b35c3af93d4f6749d8d33bdb58857.ctex"]
+source_file="res://Entities/UI/equipment_item/art/item_box_no_shader.png"
+dest_files=["res://.godot/imported/item_box_no_shader.png-d7a58613eb6b5c7e10697d479da097c2.ctex"]
 
 [params]
 

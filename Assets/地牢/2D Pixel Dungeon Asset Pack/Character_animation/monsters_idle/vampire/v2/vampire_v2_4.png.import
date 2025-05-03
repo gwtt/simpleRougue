@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3apmwjeyhk1m"
-path="res://.godot/imported/vampire_v2_4.png-17e25f22c9c1ece2bcb789310c46d9f1.ctex"
+path="res://.godot/imported/vampire_v2_4.png-77f93459c4f83a9929e798817b3193e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/地牢/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_4.png"
-dest_files=["res://.godot/imported/vampire_v2_4.png-17e25f22c9c1ece2bcb789310c46d9f1.ctex"]
+source_file="res://Assets/地牢/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_4.png"
+dest_files=["res://.godot/imported/vampire_v2_4.png-77f93459c4f83a9929e798817b3193e3.ctex"]
 
 [params]
 

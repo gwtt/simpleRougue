@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://n3cqjqpw5mnp"]
 
-[ext_resource type="Script" uid="uid://dc10vg8wphe50" path="res://entities/ui/first_store/first_store.gd" id="1_14syn"]
-[ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="2_nb31f"]
+[ext_resource type="Script" uid="uid://dc10vg8wphe50" path="res://Entities/UI/first_store/first_store.gd" id="1_14syn"]
+[ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://Assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="2_nb31f"]
 [ext_resource type="Script" uid="uid://bie7o5mrdngdj" path="res://addons/animatedbutton/AnimatedButton.gd" id="3_siyc7"]
-[ext_resource type="PackedScene" uid="uid://bniaqlyuyi5c4" path="res://entities/ui/equipment_item/equipment_item.tscn" id="4_ryxn6"]
-[ext_resource type="AudioStream" uid="uid://b6yx7bp3e6gg" path="res://entities/ui/store/sound/BLLTShel_Reload Ammo_01.wav" id="5_ajy3f"]
+[ext_resource type="PackedScene" uid="uid://bniaqlyuyi5c4" path="res://Entities/UI/equipment_item/equipment_item.tscn" id="4_ryxn6"]
+[ext_resource type="AudioStream" uid="uid://b6yx7bp3e6gg" path="res://Entities/UI/store/Sound/BLLTShel_Reload Ammo_01.wav" id="5_ajy3f"]
 
 [sub_resource type="GDScript" id="GDScript_hiurv"]
 script/source = "extends HBoxContainer

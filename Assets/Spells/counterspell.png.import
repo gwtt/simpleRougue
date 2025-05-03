@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuolygtfbaumx"
-path="res://.godot/imported/counterspell.png-04d9a60b1be41e9dcae469673b92de64.ctex"
+path="res://.godot/imported/counterspell.png-0fba09649e90e9218d720fd117e7a501.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spells/counterspell.png"
-dest_files=["res://.godot/imported/counterspell.png-04d9a60b1be41e9dcae469673b92de64.ctex"]
+source_file="res://Assets/Spells/counterspell.png"
+dest_files=["res://.godot/imported/counterspell.png-0fba09649e90e9218d720fd117e7a501.ctex"]
 
 [params]
 

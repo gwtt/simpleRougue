@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gk3c7aoak066"
-path="res://.godot/imported/candlestick_1_2.png-c4d31a23a45b93a7ec22dee6e1be17f0.ctex"
+path="res://.godot/imported/candlestick_1_2.png-88affadce3f54d2abe9159f4f1c61004.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/地牢/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_1_2.png"
-dest_files=["res://.godot/imported/candlestick_1_2.png-c4d31a23a45b93a7ec22dee6e1be17f0.ctex"]
+source_file="res://Assets/地牢/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_1_2.png"
+dest_files=["res://.godot/imported/candlestick_1_2.png-88affadce3f54d2abe9159f4f1c61004.ctex"]
 
 [params]
 

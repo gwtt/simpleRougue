@@ -25,4 +25,3 @@ func damage(attack:float) -> void:
 	if health < MAX_HEALTH / 2 and not first_half_hp:
 		onFirstHalfHp.emit()
 		first_half_hp = true
-

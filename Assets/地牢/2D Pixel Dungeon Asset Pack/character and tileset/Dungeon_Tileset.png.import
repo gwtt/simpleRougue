@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cta1dgup21453"
-path="res://.godot/imported/Dungeon_Tileset.png-38ec78dd36d3e0a67f557b08b48f182a.ctex"
+path="res://.godot/imported/Dungeon_Tileset.png-19fbae62e1b2a84d058b1537f83e0abc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/地牢/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png"
-dest_files=["res://.godot/imported/Dungeon_Tileset.png-38ec78dd36d3e0a67f557b08b48f182a.ctex"]
+source_file="res://Assets/地牢/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png"
+dest_files=["res://.godot/imported/Dungeon_Tileset.png-19fbae62e1b2a84d058b1537f83e0abc.ctex"]
 
 [params]
 

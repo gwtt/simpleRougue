@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wsa0gvelqbn2"
-path="res://.godot/imported/bow_01cc.png-d9aa506efcf7830c60e520d8a9d57c5a.ctex"
+path="res://.godot/imported/bow_01cc.png-702f4888c428ae772a578c61aefff71d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/16x16/bow_01cc.png"
-dest_files=["res://.godot/imported/bow_01cc.png-d9aa506efcf7830c60e520d8a9d57c5a.ctex"]
+source_file="res://Assets/16x16/bow_01cc.png"
+dest_files=["res://.godot/imported/bow_01cc.png-702f4888c428ae772a578c61aefff71d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dn7l4pcsylbo0"
-path="res://.godot/imported/defense_down.png-f190ebf2d54534b6af35c6812c888fc4.ctex"
+path="res://.godot/imported/defense_down.png-f72bc1a7d3e3d6f021ed4480cb15af9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Debuffs/defense_down.png"
-dest_files=["res://.godot/imported/defense_down.png-f190ebf2d54534b6af35c6812c888fc4.ctex"]
+source_file="res://Assets/Debuffs/defense_down.png"
+dest_files=["res://.godot/imported/defense_down.png-f72bc1a7d3e3d6f021ed4480cb15af9d.ctex"]
 
 [params]
 

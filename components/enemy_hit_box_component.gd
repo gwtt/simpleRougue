@@ -6,7 +6,7 @@ signal hit(hurtbox)
 @export var Length:int = 20
 @export var RangeAngle:int = 200
 @export var Speed:int = 10
-@export var Hit_body_record:Array[HurtBoxComponent] = []
+@export var Hit_body_record:Array[PlayerHurtBoxComponent] = []
 #攻击前摇时间
 @export var beforeAttackTime:float = 0.15
 @export var damage = 20
@@ -14,14 +14,15 @@ func _init() -> void:
 	area_entered.connect(_on_area_entered)
 
 
-func _on_area_entered(hurtbox:HurtBoxComponent) -> void:
+func _on_area_entered(hurtbox:PlayerHurtBoxComponent) -> void:
 	if !Hit_body_record.has(hurtbox):
 		Hit_body_record.append(hurtbox)
 	else:
 		return
 	print("[Hit] %s => %s" % [self.owner.name, hurtbox.owner.name])
 	#hit.emit(hurtbox)
-	#hurtbox.hurt.emit(self,damage)
+	# 使对方受伤
+	hurtbox.hurt(self, damage)
 
 #近战攻击
 func meleeAttack(attack_speed: int)->void:

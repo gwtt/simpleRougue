@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dm2o70qyssys5"
-path="res://.godot/imported/Water_Tiles.png-9176ad818a50aaaf6e1339ecbbba8a29.ctex"
+path="res://.godot/imported/Water_Tiles.png-14acd17e467f6b0d1332d54cd49a1118.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/场景/Sprites/Water_Tiles.png"
-dest_files=["res://.godot/imported/Water_Tiles.png-9176ad818a50aaaf6e1339ecbbba8a29.ctex"]
+source_file="res://Assets/场景/Sprites/Water_Tiles.png"
+dest_files=["res://.godot/imported/Water_Tiles.png-14acd17e467f6b0d1332d54cd49a1118.ctex"]
 
 [params]
 

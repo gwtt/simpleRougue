@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8kxcjaa1cf85"
-path="res://.godot/imported/Structure.png-31405aa43aa4abdb952b244f98c6e8fc.ctex"
+path="res://.godot/imported/Structure.png-b7cd3b137c3f50716e3cff7422c661aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/场景/龙骑士/Structure.png"
-dest_files=["res://.godot/imported/Structure.png-31405aa43aa4abdb952b244f98c6e8fc.ctex"]
+source_file="res://Assets/场景/龙骑士/Structure.png"
+dest_files=["res://.godot/imported/Structure.png-b7cd3b137c3f50716e3cff7422c661aa.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbm21rq3n4oj1"
-path="res://.godot/imported/confused.png-8d256e0d2b040d2057c3479a3cbd33a7.ctex"
+path="res://.godot/imported/confused.png-882a018189e6ccae3ae8a19e170ffde5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Debuffs/confused.png"
-dest_files=["res://.godot/imported/confused.png-8d256e0d2b040d2057c3479a3cbd33a7.ctex"]
+source_file="res://Assets/Debuffs/confused.png"
+dest_files=["res://.godot/imported/confused.png-882a018189e6ccae3ae8a19e170ffde5.ctex"]
 
 [params]
 

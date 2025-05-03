@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sxsm27jpkvby"
-path="res://.godot/imported/knockback_resistance.png-f890a886934f80a08ac18e962c0f1dd1.ctex"
+path="res://.godot/imported/knockback_resistance.png-09b29a3a5cc6403304ec87ee2d0d104d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buffs/knockback_resistance.png"
-dest_files=["res://.godot/imported/knockback_resistance.png-f890a886934f80a08ac18e962c0f1dd1.ctex"]
+source_file="res://Assets/Buffs/knockback_resistance.png"
+dest_files=["res://.godot/imported/knockback_resistance.png-09b29a3a5cc6403304ec87ee2d0d104d.ctex"]
 
 [params]
 

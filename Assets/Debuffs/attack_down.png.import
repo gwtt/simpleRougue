@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nk1808ga3ldw"
-path="res://.godot/imported/attack_down.png-bde3cd2bb4eac2500831b45bc721e952.ctex"
+path="res://.godot/imported/attack_down.png-f9634543ecbcec204d9c802b712e187d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Debuffs/attack_down.png"
-dest_files=["res://.godot/imported/attack_down.png-bde3cd2bb4eac2500831b45bc721e952.ctex"]
+source_file="res://Assets/Debuffs/attack_down.png"
+dest_files=["res://.godot/imported/attack_down.png-f9634543ecbcec204d9c802b712e187d.ctex"]
 
 [params]
 

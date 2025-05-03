@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://evjr3hpjkoil"
-path="res://.godot/imported/armor_01c.png-a4b9044eb017e2daf5f294fd11780709.ctex"
+path="res://.godot/imported/armor_01c.png-67abd0658d4c69ce1d323a796b91f5fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/16x16/armor_01c.png"
-dest_files=["res://.godot/imported/armor_01c.png-a4b9044eb017e2daf5f294fd11780709.ctex"]
+source_file="res://Assets/16x16/armor_01c.png"
+dest_files=["res://.godot/imported/armor_01c.png-67abd0658d4c69ce1d323a796b91f5fc.ctex"]
 
 [params]
 
