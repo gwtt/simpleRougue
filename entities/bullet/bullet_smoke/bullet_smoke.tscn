@@ -64,21 +64,20 @@ _data = {
 
 [node name="子弹烟雾" type="Node2D"]
 z_index = 40
-position = Vector2(575, 359)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_llt7q")
 emitting = false
 amount = 12
-process_material = SubResource("ParticleProcessMaterial_7flqo")
 texture = ExtResource("1_t6o54")
 lifetime = 0.4
 one_shot = true
 explosiveness = 0.9
 fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_7flqo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_xx0x8")
+&"": SubResource("AnimationLibrary_xx0x8")
 }
 autoplay = "new_animation"

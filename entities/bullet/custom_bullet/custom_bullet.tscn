@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://clctv28x4gpc5"]
 
-[ext_resource type="Script" uid="uid://ds7vbsjbyqwby" path="res://Entities/Bullet/custom_bullet/custom_bullet.gd" id="1_l6l60"]
-[ext_resource type="PackedScene" uid="uid://cmqexl0md85ud" path="res://Entities/Bullet/bullet_impact/bullet_impact.tscn" id="2_sm4rk"]
-[ext_resource type="PackedScene" uid="uid://byocsbwpd2q2c" path="res://Entities/Bullet/bullet_smoke/bullet_smoke.tscn" id="3_8yvyx"]
-[ext_resource type="Texture2D" uid="uid://bmktx4keu4o00" path="res://Entities/Bullet/custom_bullet/art/CustomBullet.png" id="4_ncwqd"]
-[ext_resource type="Script" uid="uid://g2ubl65rjte1" path="res://Entities/Bullet/hit_box_component.gd" id="5_uxf32"]
+[ext_resource type="Script" uid="uid://ds7vbsjbyqwby" path="res://entities/bullet/custom_bullet/custom_bullet.gd" id="1_l6l60"]
+[ext_resource type="PackedScene" uid="uid://cmqexl0md85ud" path="res://entities/bullet/bullet_impact/bullet_impact.tscn" id="2_sm4rk"]
+[ext_resource type="PackedScene" uid="uid://byocsbwpd2q2c" path="res://entities/bullet/bullet_smoke/bullet_smoke.tscn" id="3_8yvyx"]
+[ext_resource type="Texture2D" uid="uid://bmktx4keu4o00" path="res://entities/bullet/custom_bullet/art/CustomBullet.png" id="4_ncwqd"]
+[ext_resource type="Script" uid="uid://g2ubl65rjte1" path="res://entities/bullet/hit_box_component.gd" id="5_uxf32"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4no6r"]
 

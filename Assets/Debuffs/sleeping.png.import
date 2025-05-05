@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bq3ywbpulfi34"
-path="res://.godot/imported/sleeping.png-f4aad7b29ff2188e396773bfa0f89ffd.ctex"
+path="res://.godot/imported/sleeping.png-1cf2f449d7dd8179f2d2243af6cf05ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Debuffs/sleeping.png"
-dest_files=["res://.godot/imported/sleeping.png-f4aad7b29ff2188e396773bfa0f89ffd.ctex"]
+source_file="res://assets/Debuffs/sleeping.png"
+dest_files=["res://.godot/imported/sleeping.png-1cf2f449d7dd8179f2d2243af6cf05ad.ctex"]
 
 [params]
 

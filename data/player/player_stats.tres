@@ -4,11 +4,24 @@
 
 [resource]
 script = ExtResource("1_o1dyv")
-gold = 0
+gold = 100
 xp = 0
-level = 0
+level = 1
 move_speed = 200
 attack_speed = 0
 base_damage = 0.3
 luck = 0
+max_hp = 0
+current_hp = 0
+max_xp = 0
+current_xp = 0
+add_attack_probability = 0.0
+add_hp_probability = 0.0
+add_mp_probability = 0.0
+add_coin_probability = 0.0
+add_exp_probability = 0.0
+add_attack_rate_probability = 0.0
+add_range_probability = 0.0
+add_speed_probability = 0.0
+add_armor_probability = 0.0
 metadata/_custom_type_script = "uid://p7dt04qibhbr"

@@ -1,14 +1,16 @@
 extends Node
 
 signal onGameStart()
+# UI
 var now_level = 1 #当前关卡
 var shake = 1.0 #振动幅度
 var canvasLayer:CanvasLayer
+# 光标
+var cursor: TextureRect
 var pause_state = false #暂停状态
 var is_game_start = false #游戏是否开始
 var player:Player
 var boss:BaseEnemy
-var store_ins
 var freeze_frame = false
 var player_init_postion = Vector2.ZERO
 var boss_init_postion = Vector2.ZERO
@@ -16,7 +18,6 @@ enum GUN_CHANGE_TYPE { #切枪类型
 	CHANGE, #切换枪械
 	RELOAD #切换子弹
 }
-var store = preload("res://entities/ui/store/store.tscn")
 
 var weapon_list = {
 	"0" = preload("res://entities/gun/custom_gun/custom_gun.tscn"),
@@ -59,19 +60,11 @@ func showToast(msg,time = 1):
 	if canvasLayer:
 		canvasLayer.showToast(msg,time)
 
-func crosshairChange(is_change):
-	if canvasLayer:
-		canvasLayer.crosshairChange(is_change)
-
-func open_store() -> void:
-	store_ins = Utils.store.instantiate()
-	get_tree().paused = true
-	get_tree().current_scene.add_child(store_ins)
-
-func close_store() -> void:
-	get_tree().paused = false
-	store_ins.queue_free()
-
+func cross_hair_change(is_change: bool):
+	if !cursor:
+		cursor = get_tree().get_first_node_in_group("cursor")
+	cursor.visible = is_change
+	
 func nextLevel():
 	now_level += 1
 	
@@ -82,7 +75,7 @@ func initPlayer():
 	
 func initBoss():
 	boss = BossDataManager.getBoss().instantiate()
-	get_tree().current_scene.add_child(boss)
+	get_tree().current_scene.call_deferred("add_child", boss)
 	boss.global_position = boss_init_postion
 
 func initGame():

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dkcnig0jpqe2o"
-path="res://.godot/imported/ark-pixel-10px-monospaced-zh_tw.ttf-058aaf757b63fbe1768b108a08161570.fontdata"
+path="res://.godot/imported/ark-pixel-10px-monospaced-zh_tw.ttf-6c34166fa9d3bbfa033e962187978c40.fontdata"
 
 [deps]
 
-source_file="res://Assets/字体/ark-pixel-10px-monospaced-zh_tw.ttf"
-dest_files=["res://.godot/imported/ark-pixel-10px-monospaced-zh_tw.ttf-058aaf757b63fbe1768b108a08161570.fontdata"]
+source_file="res://assets/字体/ark-pixel-10px-monospaced-zh_tw.ttf"
+dest_files=["res://.godot/imported/ark-pixel-10px-monospaced-zh_tw.ttf-6c34166fa9d3bbfa033e962187978c40.fontdata"]
 
 [params]
 

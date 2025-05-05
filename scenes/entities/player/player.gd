@@ -25,7 +25,7 @@ func _ready():
 
 	Utils.player = self
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# 移动
 	direction = Input.get_vector("left", "right", "up", "down")
 	player_state.changeAnim(direction)
@@ -55,7 +55,7 @@ func onSpeedChange(speed):
 func cameraSnake(step):
 	get_tree().call_group("camera", "shootShake", step)
 	
-func _on_检测遮挡_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+func _on_检测遮挡_body_shape_entered(body_rid, body, _body_shape_index, _local_shape_index):
 	#获取图块坐标
 	if body is BaseEnemy or body is Player:
 		return
@@ -73,7 +73,7 @@ func _on_检测遮挡_body_shape_entered(body_rid, body, body_shape_index, local
 		shader.set_shader_parameter("alpha", 0.65)
 	pass
 
-func _on_检测遮挡_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+func _on_检测遮挡_body_shape_exited(body_rid, body, _body_shape_index, _local_shape_index):
 	if body is BaseEnemy:
 		return
 	var cellCroods = body.get_coords_for_body_rid(body_rid)

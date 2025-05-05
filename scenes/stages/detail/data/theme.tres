@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bfgaj4x73v04f"]
+
+[ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_rewpy"]
+
+[resource]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_rewpy")
+Label/font_sizes/font_size = 48
+Label/fonts/font = ExtResource("1_rewpy")
+ProgressBar/font_sizes/font_size = 48
+ProgressBar/fonts/font = ExtResource("1_rewpy")
+RichTextLabel/font_sizes/mono_font_size = 48
+RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/fonts/mono_font = ExtResource("1_rewpy")
+RichTextLabel/fonts/normal_font = ExtResource("1_rewpy")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cw06x57xmy83r"
-path="res://.godot/imported/helmet_02e.png-c459fd6db853b7a3146ea1d0953d582a.ctex"
+path="res://.godot/imported/helmet_02e.png-77d21aba713491cda8441e6572704a7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/16x16/helmet_02e.png"
-dest_files=["res://.godot/imported/helmet_02e.png-c459fd6db853b7a3146ea1d0953d582a.ctex"]
+source_file="res://assets/16x16/helmet_02e.png"
+dest_files=["res://.godot/imported/helmet_02e.png-77d21aba713491cda8441e6572704a7d.ctex"]
 
 [params]
 

@@ -1,0 +1,223 @@
+[gd_scene load_steps=22 format=3 uid="uid://dqhoj71t80ksq"]
+
+[ext_resource type="Theme" uid="uid://bfgaj4x73v04f" path="res://scenes/stages/detail/data/theme.tres" id="1_hfl3a"]
+[ext_resource type="Script" uid="uid://coytv36yj1y50" path="res://scenes/stages/商店/shop.gd" id="2_l6vlj"]
+[ext_resource type="Resource" uid="uid://bbhliqy6udgco" path="res://data/player/player_stats.tres" id="3_8uk3a"]
+[ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="3_b18jt"]
+[ext_resource type="PackedScene" uid="uid://bniaqlyuyi5c4" path="res://scenes/stages/装备图标/item_icon.tscn" id="4_8uk3a"]
+[ext_resource type="Resource" uid="uid://mak054po2gbs" path="res://data/item_pool/item_pool.tres" id="4_tdfup"]
+[ext_resource type="Texture2D" uid="uid://dbkk6npuf4ynl" path="res://assets/金币/Coin Sheet.png" id="5_l6vlj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofwku"]
+bg_color = Color(0.6, 0.6, 0.6, 0.356863)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v70tv"]
+font = ExtResource("3_b18jt")
+font_size = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_74sr3"]
+font = ExtResource("3_b18jt")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t32lm"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_318q6"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejggi"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hqgq"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igbba"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ormi"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5b4u"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06bro"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjp7i"]
+atlas = ExtResource("5_l6vlj")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b18jt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t32lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_318q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejggi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hqgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igbba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ormi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5b4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06bro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjp7i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8uk3a"]
+font = ExtResource("3_b18jt")
+font_size = 48
+
+[node name="Shop" type="ColorRect"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_hfl3a")
+color = Color(0, 0, 0, 0.658824)
+script = ExtResource("2_l6vlj")
+player_stats = ExtResource("3_8uk3a")
+item_pool = ExtResource("4_tdfup")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 34.0
+offset_top = 23.0
+offset_right = 114.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("3_b18jt")
+theme_override_font_sizes/font_size = 40
+text = "商店"
+
+[node name="Refresh" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 1
+offset_left = 1118.0
+offset_top = 592.0
+offset_right = 1218.0
+offset_bottom = 652.0
+text = "刷新"
+
+[node name="Close" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 1
+offset_left = 1118.0
+offset_top = 23.0
+offset_right = 1218.0
+offset_bottom = 83.0
+text = "关闭"
+icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 105.0
+offset_right = 1215.0
+offset_bottom = 552.0
+theme_override_constants/separation = 10
+
+[node name="装备" type="HBoxContainer" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="装备图标" parent="HBoxContainer/装备" instance=ExtResource("4_8uk3a")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="装备图标2" parent="HBoxContainer/装备" instance=ExtResource("4_8uk3a")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="装备图标3" parent="HBoxContainer/装备" instance=ExtResource("4_8uk3a")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="装备图标4" parent="HBoxContainer/装备" instance=ExtResource("4_8uk3a")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ofwku")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "攻击力:5"
+label_settings = SubResource("LabelSettings_v70tv")
+
+[node name="Label2" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "攻击速度:10"
+label_settings = SubResource("LabelSettings_74sr3")
+
+[node name="coin" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(475, 57)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_b18jt")
+autoplay = "default"
+
+[node name="当前金币" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 507.0
+offset_top = 30.0
+offset_right = 579.0
+offset_bottom = 79.0
+text = "100"
+label_settings = SubResource("LabelSettings_8uk3a")
+
+[connection signal="pressed" from="Refresh" to="." method="_on_refresh_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_next_pressed"]

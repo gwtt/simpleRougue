@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cax7abk5ksxuw"
-path="res://.godot/imported/frozen.png-aa6300a47d3add3de24f41b6d21966d8.ctex"
+path="res://.godot/imported/frozen.png-44b15a459ad7cea8c57f5e7163190f9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Debuffs/frozen.png"
-dest_files=["res://.godot/imported/frozen.png-aa6300a47d3add3de24f41b6d21966d8.ctex"]
+source_file="res://assets/Debuffs/frozen.png"
+dest_files=["res://.godot/imported/frozen.png-44b15a459ad7cea8c57f5e7163190f9f.ctex"]
 
 [params]
 

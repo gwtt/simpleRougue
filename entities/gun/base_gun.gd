@@ -96,16 +96,15 @@ func reload_over():
 	is_reloading = false
 
 #设置枪械所属
-func setOwner(player):
-	self.player = player
+func setOwner(_player):
+	self.player = _player
 
 func _process(_delta):
 	if Utils.freeze_frame:
 		_delta = 0.0
 	var mouse_pos = get_global_mouse_position()
 	direction = (mouse_pos - tip.global_position).normalized()
-	#Input.mouse_mode == Input.MOUSE_MODE_CONFINED_HIDDEN && 
-	if Input.is_action_pressed("shoot") and can_shoot and !is_reloading:
+	if Input.mouse_mode == Input.MOUSE_MODE_CONFINED_HIDDEN && Input.is_action_pressed("shoot") and can_shoot and !is_reloading:
 		can_shoot = false
 		timer.start()
 		if bullets_count > 0:

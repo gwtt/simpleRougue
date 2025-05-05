@@ -1,7 +1,5 @@
 extends Node
 
-#冲锋信号触发
-signal onDash()
 
 var skillList:Array[BaseSkill]
 

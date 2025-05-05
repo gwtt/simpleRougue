@@ -3,8 +3,7 @@ extends BaseGun
 func _shoot():
 	super._shoot()
 	var mouse_pos = get_global_mouse_position()
-	var direction = (mouse_pos - tip.global_position).normalized()
-	tip.rotation = direction.angle()
+	tip.rotation = (mouse_pos - tip.global_position).normalized().angle()
 	createBullet()
 
 func createBullet():

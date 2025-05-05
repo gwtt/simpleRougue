@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bi0vgog5swue2" path="res://scenes/entities/player/art/Base Body/Head/Head-Walk.png" id="3_2bgfk"]
 [ext_resource type="Texture2D" uid="uid://cmakhbad0u50e" path="res://scenes/entities/player/art/Base Body/Head/Head-Death.png" id="3_he1b4"]
 [ext_resource type="Texture2D" uid="uid://j230a0y88mx8" path="res://scenes/entities/player/art/Base Body/Body/Body-Idle.png" id="4_nyqxh"]
-[ext_resource type="Script" uid="uid://dofif1lmtr3mw" path="res://Entities/people/hurt_component.gd" id="5_oiqmo"]
+[ext_resource type="Script" uid="uid://dofif1lmtr3mw" path="res://components/player/player_hurt_box_component.gd" id="5_oiqmo"]
 [ext_resource type="Texture2D" uid="uid://dkaincs2x7fwh" path="res://scenes/entities/player/art/Base Body/Body/Body-Run.png" id="5_w55xk"]
 [ext_resource type="Texture2D" uid="uid://lsgcjdypqh1p" path="res://scenes/entities/player/art/Base Body/Body/Body-Walk.png" id="6_7socv"]
 [ext_resource type="Texture2D" uid="uid://wdmprxbsexro" path="res://scenes/entities/player/art/Base Body/Head/Head-Hurt.png" id="6_r5uvo"]
@@ -971,7 +971,7 @@ player_stats = ExtResource("2_0xxfp")
 [node name="head" type="AnimatedSprite2D" parent="Visuals"]
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_refuv")
-animation = &"die"
+animation = &"hurt"
 offset = Vector2(0, -6)
 
 [node name="body" type="AnimatedSprite2D" parent="Visuals"]
@@ -1137,5 +1137,8 @@ player_state = NodePath("../PlayerState")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
 shape = SubResource("CapsuleShape2D_r6ath")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
 
 [connection signal="area_entered" from="HurtBoxComponent" to="HurtBoxComponent" method="_on_area_entered"]

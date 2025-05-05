@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="ItemStats" load_steps=3 format=3 uid="uid://dpbppab02urha"]
+
+[ext_resource type="Texture2D" uid="uid://dkc4kh1l7it4e" path="res://data/item/assets/鞋子.png" id="1_3xhso"]
+[ext_resource type="Script" uid="uid://cv3jy1lihbhpq" path="res://data/item/item_stats.gd" id="1_vc2jr"]
+
+[resource]
+script = ExtResource("1_vc2jr")
+item = ExtResource("1_3xhso")
+item_name = "靴子"
+type = "装备"
+description = "10%的几率攻击永久增加 [color=green]+0.1[/color] 速度"
+pool_count = 10
+cost = 100
+level = 1
+move_speed = 50
+attack_speed = 0
+base_damage = 0.0
+luck = 0
+hp = 0
+defense = 0
+critical_chance = 0.0
+critical_damage = 0.0
+life_steal = 0.0
+health_regen = 0
+cooldown_reduction = 0.0
+exp_bonus = 0.0
+armor_penetration = 0.0
+range = 0
+metadata/_custom_type_script = "uid://cv3jy1lihbhpq"

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kqr3dc76wqlk"
-path="res://.godot/imported/ice_spell.png-11951fde13121faf766a799ce0eaa049.ctex"
+path="res://.godot/imported/ice_spell.png-f84ecc448a14eb0a78ca6096d07108ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spells/ice_spell.png"
-dest_files=["res://.godot/imported/ice_spell.png-11951fde13121faf766a799ce0eaa049.ctex"]
+source_file="res://assets/Spells/ice_spell.png"
+dest_files=["res://.godot/imported/ice_spell.png-f84ecc448a14eb0a78ca6096d07108ea.ctex"]
 
 [params]
 

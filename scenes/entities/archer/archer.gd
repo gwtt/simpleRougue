@@ -72,7 +72,7 @@ func _get_safe_velocity() -> Vector2:
 func _on_walk_state_entered() -> void:
 	anim.play("walk")
 
-func _on_walk_state_processing(delta: float) -> void:
+func _on_walk_state_processing(_delta: float) -> void:
 	if target_player != null: # 添加hit检查
 		var distance = global_position.distance_to(target_player.global_position)
 		if distance <= safe_distance:
@@ -96,7 +96,7 @@ func _on_attack_state_entered() -> void:
 	can_attack = true
 	stateSendEvent("to_walk")
 
-func _on_attack_state_processing(delta: float) -> void:
+func _on_attack_state_processing(_delta: float) -> void:
 	pass
 
 # 状态：隐身技能（狂暴）
@@ -126,7 +126,7 @@ func _on_rage_state_entered() -> void:
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
-func _on_rage_state_processing(delta: float) -> void:
+func _on_rage_state_processing(_delta: float) -> void:
 	pass
 
 # 发射普通箭矢

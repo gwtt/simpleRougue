@@ -3,7 +3,6 @@ extends Node
 
 ## 用来控制玩家外表的功能
 
-signal anim_finished
 @export var player: Player
 @export var visual: CanvasGroup
 var look_dir = null
@@ -16,16 +15,6 @@ func anim_play(anim_name, speed = 1.0, is_back = false):
 	for child: AnimatedSprite2D in visual.get_children():
 		child.play(anim_name, speed, is_back)
 		playing_animations.append(child)
-	
-	## 如果有动画正在播放，等待它们完成
-	#if playing_animations.size() > 0:
-		#await get_tree().create_timer(0.1).timeout
-		#for anim in playing_animations:
-			#if anim.is_playing():
-				#await anim.animation_finished
-		
-		## 所有动画完成后发射信号
-		#anim_finished.emit()
 
 ## 控制角色朝向，朝向鼠标位置看
 func set_look_at(target: Vector2):

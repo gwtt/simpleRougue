@@ -41,7 +41,7 @@ func _ready():
 	Utils.boss = self
 	#audio_hit.stream = load("res://audio/body_hit_finisher_52.wav")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	attack_timer += 1
 
 func setData(data):
@@ -50,7 +50,7 @@ func setData(data):
 	HP = data['hp']
 	knockback_def = 5
 
-func hurted(bullet:Bullet)->void:
+func hurted(_bullet:Bullet)->void:
 	# var speed = bullet.knockback_speed - knockback_def
 	# if speed > 0:
 	# 	velocity = -(global_position.direction_to(Utils.player.global_position)) * speed
@@ -70,7 +70,6 @@ func onDie(is_death_effect = true):
 	if death_callback:
 		death_callback.call(self)
 	var nodes = get_tree().get_nodes_in_group("reward")
-	var temp_hurt = 0
 	if is_death_effect:
 		for node in nodes:
 			if node.connect_kill:
@@ -84,14 +83,14 @@ func onDie(is_death_effect = true):
 	var tween = create_tween()
 	tween.tween_property(self,"modulate",Color(1,1,1,0),2)
 	await tween.finished
-	Utils.open_store()
+	#Utils.open_store()
 	queue_free()
 	
-func setDeathCallBack(death_callback:Callable):
-	self.death_callback = death_callback
+func setDeathCallBack(_death_callback:Callable):
+	self.death_callback = _death_callback
 
 func addEffect(node):
 	get_node("EffectRoot").add_child(node)
 
-func stateSendEvent(name:String):
-	state_chart.send_event(name)
+func stateSendEvent(_name:String):
+	state_chart.send_event(_name)

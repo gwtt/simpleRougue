@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5lfqgkn6d8nc"
-path="res://.godot/imported/on_fire_(burning).png-a720a1fee539570d8726ba0c07bd23e7.ctex"
+path="res://.godot/imported/on_fire_(burning).png-e3e7259073e52ae9f2bb36c4bff792f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Debuffs/on_fire_(burning).png"
-dest_files=["res://.godot/imported/on_fire_(burning).png-a720a1fee539570d8726ba0c07bd23e7.ctex"]
+source_file="res://assets/Debuffs/on_fire_(burning).png"
+dest_files=["res://.godot/imported/on_fire_(burning).png-e3e7259073e52ae9f2bb36c4bff792f9.ctex"]
 
 [params]
 

@@ -3,17 +3,17 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cgx2cpo0iwjb6"
-path="res://.godot/imported/ark-pixel-10px-monospaced-zh_cn.ttf-67ebc42b582f43eb4a6e6980e63cd973.fontdata"
+path="res://.godot/imported/ark-pixel-10px-monospaced-zh_cn.ttf-76e3389ca2c729b56ec3a7c1ba5ed2b4.fontdata"
 
 [deps]
 
-source_file="res://Assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf"
-dest_files=["res://.godot/imported/ark-pixel-10px-monospaced-zh_cn.ttf-67ebc42b582f43eb4a6e6980e63cd973.fontdata"]
+source_file="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf"
+dest_files=["res://.godot/imported/ark-pixel-10px-monospaced-zh_cn.ttf-76e3389ca2c729b56ec3a7c1ba5ed2b4.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=1
+antialiasing=2
 generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
@@ -28,8 +28,13 @@ oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
-compress=true
-preload=[]
+compress=false
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "新建配置",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}

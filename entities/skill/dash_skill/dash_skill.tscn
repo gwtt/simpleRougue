@@ -1,74 +1,86 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvjh7h2w8jqia"]
+[gd_scene load_steps=8 format=3 uid="uid://cvjh7h2w8jqia"]
 
 [ext_resource type="Script" uid="uid://doyw5qlnakre" path="res://entities/skill/dash_skill/dash_skill.gd" id="1_fg1qv"]
+[ext_resource type="Theme" uid="uid://bfgaj4x73v04f" path="res://scenes/stages/detail/data/theme.tres" id="1_ggwm6"]
 [ext_resource type="Texture2D" uid="uid://cebg01jae2afq" path="res://entities/skill/dash_skill/art/1bit 16px icons part-2 outlines.png" id="2_bsgof"]
 [ext_resource type="Texture2D" uid="uid://bhditdcqem2cj" path="res://entities/skill/dash_skill/art/精灵-0001.png" id="3_lc8mj"]
 [ext_resource type="FontFile" uid="uid://cxvrsyb0x3s1c" path="res://assets/字体/鸿蒙.ttf" id="4_8dvth"]
+[ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="6_ggwm6"]
 
-[sub_resource type="Shortcut" id="Shortcut_exrap"]
+[sub_resource type="LabelSettings" id="LabelSettings_lryok"]
+font = ExtResource("6_ggwm6")
+font_size = 24
 
 [node name="SkillButton" type="TextureButton"]
-shortcut = SubResource("Shortcut_exrap")
-ignore_texture_size = true
+custom_minimum_size = Vector2(48, 48)
+offset_right = 32.0
+offset_bottom = 32.0
+theme = ExtResource("1_ggwm6")
 script = ExtResource("1_fg1qv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 0
-offset_left = -36.0
-offset_top = -28.0
-offset_right = -18.0
-offset_bottom = -10.0
-scale = Vector2(4, 4)
+offset_right = 32.0
+offset_bottom = 32.0
 texture = ExtResource("3_lc8mj")
 
 [node name="image" type="Sprite2D" parent="."]
-scale = Vector2(4, 4)
+position = Vector2(24, 24)
+scale = Vector2(3, 3)
 texture = ExtResource("2_bsgof")
 region_enabled = true
 region_rect = Rect2(344, 200, 16, 16)
 
 [node name="coolDown" type="TextureProgressBar" parent="."]
 modulate = Color(0, 0, 0, 0.737255)
-layout_mode = 0
-offset_left = -36.0
-offset_top = -28.0
-offset_right = -24.0
-offset_bottom = -16.0
-scale = Vector2(6, 6)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
 max_value = 1.0
 value = 1.0
 fill_mode = 5
 texture_progress = ExtResource("3_lc8mj")
 
-[node name="Key" type="Label" parent="."]
-layout_mode = 0
-offset_left = -36.0
-offset_top = 11.0
-offset_right = 33.0
-offset_bottom = 136.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_8dvth")
-theme_override_font_sizes/font_size = 24
-text = "sp
-
-
-
-"
-
 [node name="Time" type="Label" parent="."]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 28.0
-offset_right = 58.0
-offset_bottom = 47.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -7.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_8dvth")
-theme_override_font_sizes/font_size = 12
-text = "
-"
+theme_override_font_sizes/font_size = 8
+text = "1"
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Key" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 59.0
+offset_bottom = 16.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+text = "space"
+label_settings = SubResource("LabelSettings_lryok")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

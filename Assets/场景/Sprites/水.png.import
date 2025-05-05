@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di6kfkarl54ol"
-path="res://.godot/imported/水.png-d21d0023611e61790ee49e9a5f0b448d.ctex"
+path="res://.godot/imported/水.png-1ec324b713b07b684a42ae5e1d69be73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/场景/Sprites/水.png"
-dest_files=["res://.godot/imported/水.png-d21d0023611e61790ee49e9a5f0b448d.ctex"]
+source_file="res://assets/场景/Sprites/水.png"
+dest_files=["res://.godot/imported/水.png-1ec324b713b07b684a42ae5e1d69be73.ctex"]
 
 [params]
 

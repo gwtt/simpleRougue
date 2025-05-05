@@ -13,6 +13,7 @@ var change_key = " ":
 		var input_key = InputEventKey.new()
 		input_key.keycode = change_key
 		shortcut.events = [input_key]
+		
 func _ready() -> void:
 	change_key = KEY_SHIFT
 	change_key = KEY_SPACE
@@ -20,13 +21,14 @@ func _ready() -> void:
 	cool_down.value = 0
 	set_process(false)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	time.text = "%3.1f" % timer.time_left
 	cool_down.value = timer.time_left * 100
 	
 #获取技能触发的效果
 func apply()->void:
-	SkillDataManager.emit_signal("onDash")
+	pass
+	#SkillDataManager.emit_signal("onDash")
 
 func _on_pressed() -> void:
 	self.apply()

@@ -30,21 +30,21 @@ func _get_safe_velocity() -> Vector2:
 	else:
 		return Vector2.ZERO
 		
-func _on_walk_state_processing(delta: float) -> void:
+func _on_walk_state_processing(_delta: float) -> void:
 	anim.play("walk")
 	velocity = _get_safe_velocity()
 	move_and_slide()
 	
-func _on_attack_area_area_entered(area: Area2D) -> void:
+func _on_attack_area_area_entered(_area: Area2D) -> void:
 	if anim.animation.begins_with("attack"):
 		await anim.animation_finished
 	stateSendEvent("to_attack")
 
-func _on_attack_area_area_exited(area: Area2D) -> void:
+func _on_attack_area_area_exited(_area: Area2D) -> void:
 	await anim.animation_finished
 	stateSendEvent("to_walk")
 	
-func _on_attack_state_processing(delta: float) -> void:
+func _on_attack_state_processing(_delta: float) -> void:
 	# 如果正在攻击，并且动画在播放就直接返回
 	if anim.animation.begins_with("attack") && anim.is_playing():
 		return

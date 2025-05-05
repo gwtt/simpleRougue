@@ -4,7 +4,7 @@ class_name EnemyHitBoxComponent
 signal hit(hurtbox)
 @export var Density:int = 10
 @export var Length:int = 20
-@export var RangeAngle:int = 200
+@export var RangeAngle:float = 200
 @export var Speed:int = 10
 @export var Hit_body_record:Array[PlayerHurtBoxComponent] = []
 #攻击前摇时间
@@ -23,7 +23,7 @@ func _on_area_entered(hurtbox:PlayerHurtBoxComponent) -> void:
 	#hit.emit(hurtbox)
 	# 使对方受伤
 	hurtbox.hurt(self, damage)
-
+	hit.emit(hurtbox)
 #近战攻击
 func meleeAttack(attack_speed: int)->void:
 	await get_tree().create_timer(beforeAttackTime).timeout

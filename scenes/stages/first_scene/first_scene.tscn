@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://evvls8qecx4g"]
+[gd_scene load_steps=24 format=4 uid="uid://evvls8qecx4g"]
 
 [ext_resource type="Script" uid="uid://bvmll8pudgvhi" path="res://scenes/stages/first_scene/first_scene.gd" id="1_5ptuk"]
 [ext_resource type="Shader" uid="uid://dl7xcynbwr1we" path="res://scenes/stages/main_scene/data/地图.gdshader" id="2_lqssm"]
@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://di6kfkarl54ol" path="res://assets/场景/Sprites/水.png" id="5_rqfvy"]
 [ext_resource type="Texture2D" uid="uid://cta1dgup21453" path="res://assets/地牢/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png" id="6_d7ksw"]
 [ext_resource type="Texture2D" uid="uid://bafmuvtuj4ut" path="res://assets/场景/龙骑士/Set 1.2.png" id="7_3m5mo"]
-[ext_resource type="PackedScene" uid="uid://c3ohc6jcps3l7" path="res://entities/ui/camera/camera.tscn" id="8_1sg8x"]
-[ext_resource type="Script" uid="uid://dj0fdyykiig18" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="9_yg61d"]
-[ext_resource type="Resource" uid="uid://euybd2w0bax" path="res://addons/phantom_camera/examples/resources/tween/player_phantom_camera_2d_tween.tres" id="10_1jbjl"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_3cmtx"]
 tile_data = PackedInt32Array(0, 3, 0, 65536, 3, 1, 131072, 3, 2, 196608, 3, 3, 262144, 3, 4, 1, 65539, 0, 65537, 65539, 1, 131073, 65539, 2, 196609, 65539, 3, 262145, 65539, 4, 2, 131075, 0, 65538, 131075, 1, 131074, 131075, 2, 196610, 131075, 3, 262146, 131075, 4, 3, 196611, 0, 65539, 196611, 1, 131075, 196611, 2, 196611, 196611, 3, 262147, 196611, 4, 4, 262147, 0, 65540, 262147, 1, 131076, 262147, 2, 196612, 262147, 3, 262148, 262147, 4, 5, 327683, 0, 65541, 327683, 1, 131077, 327683, 2, 196613, 327683, 3, 262149, 327683, 4)
@@ -868,19 +865,6 @@ position = Vector2(201, 489)
 
 [node name="Boss出生地" type="Node2D" parent="."]
 position = Vector2(1708, 520)
-
-[node name="Camera" parent="." instance=ExtResource("8_1sg8x")]
-physics_interpolation_mode = 0
-position = Vector2(307, 478)
-
-[node name="PhantomCamera2D" type="Node2D" parent="."]
-position = Vector2(307, 478)
-script = ExtResource("9_yg61d")
-follow_mode = 2
-zoom = Vector2(1.5, 1.5)
-tween_resource = ExtResource("10_1jbjl")
-follow_damping = true
-draw_limits = true
 
 [node name="player_init_position" type="Node2D" parent="."]
 position = Vector2(307, 478)

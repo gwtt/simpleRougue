@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp2wu8f5iuga2"
-path="res://.godot/imported/slowed.png-8dba4ee7812dda5519f8327e5e084101.ctex"
+path="res://.godot/imported/slowed.png-ba58527feab7a212ac842a80de9cbda8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Debuffs/slowed.png"
-dest_files=["res://.godot/imported/slowed.png-8dba4ee7812dda5519f8327e5e084101.ctex"]
+source_file="res://assets/Debuffs/slowed.png"
+dest_files=["res://.godot/imported/slowed.png-ba58527feab7a212ac842a80de9cbda8.ctex"]
 
 [params]
 

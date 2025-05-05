@@ -19,6 +19,21 @@ extends Resource
 @export_range(0, 10000) var max_hp: int = 0: set = _set_max_hp
 ## 当前血量
 @export_range(0, 10000) var current_hp: int = 0: set = _set_current_hp
+## 最大蓝量
+@export_range(0, 10000) var max_xp: int = 0: set = _set_max_xp
+## 当前蓝量
+@export_range(0, 10000) var current_xp: int = 0: set = _set_current_xp
+
+
+@export var add_attack_probability = 0.0 # 增加攻击力概率
+@export var add_hp_probability = 0.0 # 增加血量概率
+@export var add_mp_probability = 0.0 # 增加魔法概率
+@export var add_coin_probability = 0.0 # 增加金币概率
+@export var add_exp_probability = 0.0 # 增加经验概率
+@export var add_attack_rate_probability = 0.0 # 增加攻速概率
+@export var add_range_probability = 0.0 # 增加范围概率
+@export var add_speed_probability = 0.0 # 增加速度概率
+@export var add_armor_probability = 0.0 # 增加护甲概率
 func get_current_xp_requirement() -> int:
 	var next_level = clampi(level+1, 1, 1000)
 	return next_level * 100
@@ -72,3 +87,44 @@ func _set_max_hp(value: int) -> void:
 func _set_current_hp(value: int) -> void:
 	current_hp = value
 	emit_changed()
+
+func _set_max_xp(value: int) -> void:
+	max_xp = value
+	emit_changed()
+	
+func _set_current_xp(value: int) -> void:
+	current_xp = value
+	emit_changed()
+
+
+const ROLL_RARITIES := {
+	1:  [ItemStats.Rarity.COMMON],
+	2:  [ItemStats.Rarity.COMMON],
+	3:  [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON],
+	4:  [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON, ItemStats.Rarity.RARE],
+	5:  [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON, ItemStats.Rarity.RARE],
+	6:  [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON, ItemStats.Rarity.RARE],
+	7:  [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON, ItemStats.Rarity.RARE, ItemStats.Rarity.LEGENDARY],
+	8:  [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON, ItemStats.Rarity.RARE, ItemStats.Rarity.LEGENDARY],
+	9:  [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON, ItemStats.Rarity.RARE, ItemStats.Rarity.LEGENDARY],
+	10: [ItemStats.Rarity.COMMON, ItemStats.Rarity.UNCOMMON, ItemStats.Rarity.RARE, ItemStats.Rarity.LEGENDARY],
+}
+const ROLL_CHANCES := {
+	1: [1],
+	2: [1],
+	3: [7.5, 2.5],
+	4: [6.5, 3.0, 0.5],
+	5: [5.0, 3.5, 1.5],
+	6: [4.0, 4.0, 2.0],
+	7: [2.75, 4.0, 3.24, 0.1],
+	8: [2.5, 3.75, 3.45, 0.3],
+	9: [1.75, 2.75, 4.5, 1.0],
+	10: [1.0, 2.0, 4.5, 2.5],
+}
+
+## 根据等级来获取稀有度
+func get_random_rarity_for_level() -> ItemStats.Rarity:
+	var rng = RandomNumberGenerator.new()
+	var array: Array = ROLL_RARITIES[level]
+	var weights: PackedFloat32Array = PackedFloat32Array(ROLL_CHANCES[level])
+	return array[rng.rand_weighted(weights)]

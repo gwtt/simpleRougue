@@ -18,11 +18,12 @@ func _ready() -> void:
 	run.state_physics_processing.connect(on_run_physics_processing)
 	die.state_entered.connect(on_die_entered)
 	hurt.state_entered.connect(on_hurt_entered)
+	hurt.state_physics_processing.connect(on_hurt_physics_processing)
 	dash.state_entered.connect(on_dash_entered)
 	dash.state_physics_processing.connect(on_dash_physics_processing)
 	
-func stateSendEvent(name: String):
-	state_chart.send_event(name)
+func stateSendEvent(_name: String):
+	state_chart.send_event(_name)
 
 func changeAnim(move_direction):
 	if move_direction != Vector2.ZERO:
@@ -48,7 +49,14 @@ func on_die_entered():
 ## 受伤状态进入
 func on_hurt_entered():
 	player_animations.anim_play("hurt")
-	player_animations.anim_finished.connect(func():stateSendEvent("hurt_to_idle"))
+	await get_tree().create_timer(0.2).timeout
+	stateSendEvent("hurt_to_idle")
+
+## 受伤也能跑
+func on_hurt_physics_processing(_delte):
+	player.velocity = player.direction * (player.SPEED + PlayerDataManager.移速加成)
+	changeAnim(player.direction)
+	player.move_and_slide()
 
 ## 冲锋状态进入
 func on_dash_entered():
@@ -56,7 +64,6 @@ func on_dash_entered():
 
 ## 冲锋状态
 func on_dash_physics_processing(_delte):
-	player.velocity = player.direction * (player.SPEED + PlayerDataManager.移速加成)
 	player.velocity = player.direction * 1200
 	changeAnim(player.direction)
 	player.move_and_slide()
@@ -64,4 +71,3 @@ func on_dash_physics_processing(_delte):
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("dash"):
 		stateSendEvent("to_dash")
-	

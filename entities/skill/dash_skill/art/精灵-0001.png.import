@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhditdcqem2cj"
-path="res://.godot/imported/精灵-0001.png-efa92b4f57ab3944eb106eab673f5900.ctex"
+path="res://.godot/imported/精灵-0001.png-ca3cc7d8d6a8f33a15a9b5ade21f874b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/skill/dash_skill/art/精灵-0001.png"
-dest_files=["res://.godot/imported/精灵-0001.png-efa92b4f57ab3944eb106eab673f5900.ctex"]
+source_file="res://entities/skill/dash_skill/art/精灵-0001.png"
+dest_files=["res://.godot/imported/精灵-0001.png-ca3cc7d8d6a8f33a15a9b5ade21f874b.ctex"]
 
 [params]
 
