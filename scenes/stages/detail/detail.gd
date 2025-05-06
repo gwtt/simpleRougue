@@ -8,8 +8,8 @@ extends Control
 func _ready() -> void:
 	## 绑定资源变化
 	player_stats.changed.connect(on_player_change)
-	
 	BossDataManager.onHpChange.connect(on_boss_hp_change)
+	on_player_change()
 	toast.visible = false
 	
 func showToast(msg,time):

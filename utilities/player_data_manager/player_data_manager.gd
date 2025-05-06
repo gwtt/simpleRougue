@@ -1,5 +1,4 @@
 extends Node
-signal buy(item)
 signal onWeaponBulletsChange()
 signal onWeaponChangeAnim()
 signal onWeaponChanged()
@@ -51,7 +50,6 @@ var player_exp = 0:
 
 var player = preload("res://scenes/entities/player/player.tscn")
 func _ready() -> void:
-	buy.connect(add_item)
 	BossDataManager.onDie.connect(onBossDie)
 
 func _process(_delta: float) -> void:
@@ -61,13 +59,6 @@ func _process(_delta: float) -> void:
 func getMaxExp():
 	return 1;
 	
-func add_item(item: Item):
-	if !player_item_list.has(item.item_name):
-		player_item_list.append(item)
-func remove_item(item: Item):
-	if !player_item_list.has(item.item_name):
-		player_item_list.erase(item)
-
 #func onAttack() -> void:
 	#if randf() <= add_attack_probability:
 		#print("伤害加成")

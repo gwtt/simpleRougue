@@ -6,6 +6,8 @@ extends ColorRect
 @onready var current_gold: Label = %当前金币
 @export var player_stats: PlayerStats
 @export var item_pool: ItemPool
+@onready var player_detail: RichTextLabel = %player_detail
+
 var choose_id = null
 var item_list_index
 
@@ -19,6 +21,7 @@ func _ready() -> void:
 		child.queue_free()
 	on_visibility_changed()	
 	refresh_shop()
+	_on_player_stats_changed()
 	
 func refresh_shop():
 	for i in 4:
@@ -40,16 +43,18 @@ func _on_refresh_pressed() -> void:
 		child.queue_free()
 	refresh_shop()
 
-# 关闭商店，并且初始化角色状态，开始下一波
+# 关闭商店
 func _on_next_pressed() -> void:
 	self.visible = false
-	pass
 
-
+## 当玩家属性改变的时候
 func _on_player_stats_changed() -> void:
+	# 获取玩家的细节文本
+	player_detail.text = player_stats._print_all()
+	
+	# 如果没有足够金币，将当前选择界面下的购买按钮和刷新按钮disabled
 	current_gold.text = str(player_stats.gold)
 	var has_enough_gold := player_stats.gold >= 100
-	## 如果没有足够金币，将当前选择界面下的购买按钮和刷新按钮disabled
 	refresh.disabled = !has_enough_gold
 	for child in item_list.get_children():
 		child.buy_button.disabled = !has_enough_gold
@@ -59,7 +64,7 @@ func on_visibility_changed() -> void:
 	if is_visible_in_tree():
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		Utils.cross_hair_change(false)
-		print("刷新一次商店")
+		print("打开商店")
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 		Utils.cross_hair_change(true)

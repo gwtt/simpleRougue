@@ -33,7 +33,6 @@ func hitFlash(bullet:Bullet):
 func onHit(hit_num,is_show_label = true,_is_death_effect = true):
 	if PlayerDataManager.子弹暴击率 > 0 && PlayerDataManager.子弹暴击率 > randi()%100:
 		hit_num *= 1.5
-	PlayerDataManager.attack.emit()
 	var nodes = get_tree().get_nodes_in_group("reward")
 	var temp_hurt = 0
 	for node in nodes:

@@ -11,12 +11,13 @@ var current_item:Item
 signal buy_item
 
 func _on_animated_button_pressed() -> void:
-	player_stats.gold -= current_item.cost
+	player_stats.gold -= item_stats.cost
+	player_stats.player_item_list.append(item_stats)
+	item_stats.add_to_player(player_stats)
 	buy_item.emit()
-	PlayerDataManager.buy.emit(current_item)
 	print("购买成功")
-	current_item.use()
-	current_item.now_use()
+	#current_item.use()
+	#current_item.now_use()
 	
 func set_item(item:Item) -> void:
 	item_icon.set_texture(item.item)

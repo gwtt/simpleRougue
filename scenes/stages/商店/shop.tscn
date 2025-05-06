@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dqhoj71t80ksq"]
+[gd_scene load_steps=20 format=3 uid="uid://dqhoj71t80ksq"]
 
 [ext_resource type="Theme" uid="uid://bfgaj4x73v04f" path="res://scenes/stages/detail/data/theme.tres" id="1_hfl3a"]
 [ext_resource type="Script" uid="uid://coytv36yj1y50" path="res://scenes/stages/商店/shop.gd" id="2_l6vlj"]
@@ -10,13 +10,6 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofwku"]
 bg_color = Color(0.6, 0.6, 0.6, 0.356863)
-
-[sub_resource type="LabelSettings" id="LabelSettings_v70tv"]
-font = ExtResource("3_b18jt")
-font_size = 12
-
-[sub_resource type="LabelSettings" id="LabelSettings_74sr3"]
-font = ExtResource("3_b18jt")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t32lm"]
 atlas = ExtResource("5_l6vlj")
@@ -188,24 +181,18 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Panel/MarginContainer"]
+[node name="player_detail" type="RichTextLabel" parent="HBoxContainer/Panel/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-theme_override_constants/separation = 5
-
-[node name="Label" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "攻击力:5"
-label_settings = SubResource("LabelSettings_v70tv")
-
-[node name="Label2" type="Label" parent="HBoxContainer/Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "攻击速度:10"
-label_settings = SubResource("LabelSettings_74sr3")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "当前等级:[color=yellow]
+"
 
 [node name="coin" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(475, 57)
-scale = Vector2(4, 4)
+position = Vector2(480, 56)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_b18jt")
 autoplay = "default"
 
