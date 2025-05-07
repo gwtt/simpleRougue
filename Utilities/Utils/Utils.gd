@@ -10,7 +10,7 @@ var cursor: TextureRect
 var pause_state = false #暂停状态
 var is_game_start = false #游戏是否开始
 var player:Player
-var boss:BaseEnemy
+var boss
 var freeze_frame = false
 var player_init_postion = Vector2.ZERO
 var boss_init_postion = Vector2.ZERO
@@ -84,5 +84,6 @@ func initGame():
 		initPlayer()
 	else:
 		player.global_position = player_init_postion
+		player.init_game()
 	initBoss()
 	

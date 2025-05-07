@@ -971,7 +971,9 @@ player_stats = ExtResource("2_0xxfp")
 [node name="head" type="AnimatedSprite2D" parent="Visuals"]
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_refuv")
-animation = &"hurt"
+animation = &"die"
+frame = 7
+frame_progress = 1.0
 offset = Vector2(0, -6)
 
 [node name="body" type="AnimatedSprite2D" parent="Visuals"]
@@ -1084,6 +1086,12 @@ script = ExtResource("17_8kn7u")
 script = ExtResource("18_iux58")
 to = NodePath("../../idle")
 event = &"hurt_to_idle"
+delay_in_seconds = "0.0"
+
+[node name="toDie" type="Node" parent="StateChart/并行状态/root/hurt"]
+script = ExtResource("18_iux58")
+to = NodePath("../../die")
+event = &"to_die"
 delay_in_seconds = "0.0"
 
 [node name="dash" type="Node" parent="StateChart/并行状态"]

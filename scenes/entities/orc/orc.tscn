@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://xu4ianhv1tl0"]
+[gd_scene load_steps=18 format=3 uid="uid://xu4ianhv1tl0"]
 
-[ext_resource type="Script" uid="uid://bhljjiw6nlkf5" path="res://scenes/entities/orc/orc.gd" id="1_sxws1"]
+[ext_resource type="Script" uid="uid://bsww1834n3rh7" path="res://scenes/entities/orc/orc.gd" id="1_sxws1"]
 [ext_resource type="SpriteFrames" uid="uid://kk8ifyc5d4kf" path="res://scenes/entities/orc/data/orc.tres" id="2_77e8p"]
+[ext_resource type="Resource" uid="uid://d0jdyjs1mbug7" path="res://data/orc/orc_stats.tres" id="2_jqnmo"]
 [ext_resource type="Script" uid="uid://drqwl4h286u12" path="res://components/enemy_health_component.gd" id="2_lr7qe"]
 [ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://scenes/entities/player/ghost.tscn" id="2_oot3s"]
 [ext_resource type="Script" uid="uid://cljvbcc60xl7b" path="res://components/enemy_hit_box_component.gd" id="3_5aasi"]
@@ -10,6 +11,9 @@
 [ext_resource type="Script" uid="uid://5agk02xspk7j" path="res://addons/godot_state_charts/compound_state.gd" id="7_1va5h"]
 [ext_resource type="Script" uid="uid://bmsajtbxc0ila" path="res://addons/godot_state_charts/atomic_state.gd" id="8_74pf7"]
 [ext_resource type="Script" uid="uid://c4gb71tfig047" path="res://addons/godot_state_charts/transition.gd" id="9_8bb4w"]
+[ext_resource type="Script" uid="uid://413jkijejw0r" path="res://components/orc/orc_animation.gd" id="11_68uhg"]
+[ext_resource type="Script" uid="uid://b2mfla165mlak" path="res://components/orc/orc_skill.gd" id="12_jqnmo"]
+[ext_resource type="Script" uid="uid://c02jjimwuaj2k" path="res://components/orc/orc_state.gd" id="13_ecwni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yngm"]
 size = Vector2(12, 17.25)
@@ -20,29 +24,26 @@ size = Vector2(12, 15.25)
 [sub_resource type="CircleShape2D" id="CircleShape2D_54hmr"]
 radius = 12.2729
 
-[node name="Orc" type="CharacterBody2D" node_paths=PackedStringArray("healthComponent", "hitBoxComponent", "hurtBoxComponent")]
+[node name="Orc" type="CharacterBody2D"]
 z_index = 40
 scale = Vector2(4, 4)
 script = ExtResource("1_sxws1")
-ghost_node = ExtResource("2_oot3s")
-healthComponent = NodePath("EnemyHealthComponent")
-hitBoxComponent = NodePath("EnemyHitBoxComponent")
-hurtBoxComponent = NodePath("EnemyHurtBoxComponent")
-SPEED = 200.0
-base_speed = 200.0
-hurt = 20
-HP = 120
+orc_stats = ExtResource("2_jqnmo")
 
 [node name="body" type="Node2D" parent="."]
+unique_name_in_owner = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="body"]
+[node name="sprite" type="AnimatedSprite2D" parent="body"]
+unique_name_in_owner = true
 sprite_frames = ExtResource("2_77e8p")
-animation = &"idle"
+animation = &"walk"
+frame_progress = 0.0400745
 
 [node name="EnemyHealthComponent" type="Node2D" parent="."]
 script = ExtResource("2_lr7qe")
 
 [node name="EnemyHitBoxComponent" type="Area2D" parent="."]
+unique_name_in_owner = true
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_5aasi")
@@ -72,6 +73,7 @@ collision_mask = 8
 shape = SubResource("CircleShape2D_54hmr")
 
 [node name="StateChart" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("6_l3us1")
 
 [node name="root" type="Node" parent="StateChart"]
@@ -79,6 +81,7 @@ script = ExtResource("7_1va5h")
 initial_state = NodePath("walk")
 
 [node name="walk" type="Node" parent="StateChart/root"]
+unique_name_in_owner = true
 script = ExtResource("8_74pf7")
 
 [node name="to_die" type="Node" parent="StateChart/root/walk"]
@@ -112,9 +115,11 @@ event = &"to_rage"
 delay_in_seconds = "0.0"
 
 [node name="die" type="Node" parent="StateChart/root"]
+unique_name_in_owner = true
 script = ExtResource("8_74pf7")
 
 [node name="attack" type="Node" parent="StateChart/root"]
+unique_name_in_owner = true
 script = ExtResource("8_74pf7")
 
 [node name="to_die" type="Node" parent="StateChart/root/attack"]
@@ -142,6 +147,7 @@ event = &"to_hit"
 delay_in_seconds = "0.0"
 
 [node name="runAway" type="Node" parent="StateChart/root"]
+unique_name_in_owner = true
 script = ExtResource("8_74pf7")
 
 [node name="to_die" type="Node" parent="StateChart/root/runAway"]
@@ -169,6 +175,7 @@ event = &"to_hit"
 delay_in_seconds = "0.0"
 
 [node name="hit" type="Node" parent="StateChart/root"]
+unique_name_in_owner = true
 script = ExtResource("8_74pf7")
 
 [node name="to_die" type="Node" parent="StateChart/root/hit"]
@@ -196,6 +203,7 @@ event = &"to_run_away"
 delay_in_seconds = "0.0"
 
 [node name="Rage" type="Node" parent="StateChart/root"]
+unique_name_in_owner = true
 script = ExtResource("8_74pf7")
 
 [node name="to_die" type="Node" parent="StateChart/root/Rage"]
@@ -217,9 +225,28 @@ wait_time = 0.1
 wait_time = 10.0
 autostart = true
 
+[node name="OrcAnimations" type="Node" parent="." node_paths=PackedStringArray("enemy", "visual")]
+unique_name_in_owner = true
+script = ExtResource("11_68uhg")
+enemy = NodePath("..")
+visual = NodePath("../body")
+
+[node name="OrcSkill" type="Node" parent="." node_paths=PackedStringArray("orc")]
+unique_name_in_owner = true
+script = ExtResource("12_jqnmo")
+orc = NodePath("..")
+ghost_node = ExtResource("2_oot3s")
+
+[node name="OrcState" type="Node" parent="." node_paths=PackedStringArray("orc")]
+unique_name_in_owner = true
+script = ExtResource("13_ecwni")
+orc = NodePath("..")
+
 [connection signal="body_entered" from="EnemyHurtBoxComponent" to="EnemyHurtBoxComponent" method="_on_body_entered"]
 [connection signal="area_entered" from="AttackArea" to="." method="_on_attack_area_area_entered"]
+[connection signal="area_entered" from="AttackArea" to="OrcState" method="_on_attack_area_area_entered"]
 [connection signal="area_exited" from="AttackArea" to="." method="_on_attack_area_area_exited"]
+[connection signal="area_exited" from="AttackArea" to="OrcState" method="_on_attack_area_area_exited"]
 [connection signal="state_entered" from="StateChart/root/walk" to="." method="_on_walk_state_entered"]
 [connection signal="state_processing" from="StateChart/root/walk" to="." method="_on_walk_state_processing"]
 [connection signal="state_entered" from="StateChart/root/attack" to="." method="_on_attack_state_entered"]

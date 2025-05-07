@@ -1,12 +1,11 @@
-class_name PlayerAnimations
+class_name OrcAnimations
 extends Node
 
-## 用来控制玩家外表的功能
+## 用来控制敌人外表的功能
+@export var enemy: Orc
+@export var visual: Node2D
 
-@export var player: Player
-@export var visual: CanvasGroup
-
-## 调整玩家身体的动画
+## 调整敌人身体的动画
 func anim_play(anim_name, speed = 1.0, is_back = false):
 	var playing_animations = []
 	
@@ -15,11 +14,11 @@ func anim_play(anim_name, speed = 1.0, is_back = false):
 		child.play(anim_name, speed, is_back)
 		playing_animations.append(child)
 
-## 控制角色朝向，朝向鼠标位置看
+## 控制敌人朝向，朝向目标位置看
 func set_look_at(target: Vector2):
 	if target != null:
-		if target.x > player.position.x && visual.scale.x != abs(visual.scale.x):
+		if target.x > enemy.position.x && visual.scale.x != abs(visual.scale.x):
 			visual.scale.x = abs(visual.scale.x)
-		elif target.x < player.position.x && visual.scale.x != -abs(visual.scale.x):
+		elif target.x < enemy.position.x && visual.scale.x != -abs(visual.scale.x):
 			visual.scale.x = -abs(visual.scale.x)
 	
