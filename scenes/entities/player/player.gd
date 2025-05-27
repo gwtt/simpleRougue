@@ -22,9 +22,9 @@ func _ready():
 	if gun == null:
 		gun = local_gun
 		gun.set_use(true)
-
 	Utils.player = self
-
+	init_game()
+	
 func _physics_process(_delta):
 	# 移动
 	direction = Input.get_vector("left", "right", "up", "down")

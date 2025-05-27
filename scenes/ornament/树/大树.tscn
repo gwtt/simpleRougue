@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://c53uwrtjokw3n"]
+
+[ext_resource type="Texture2D" uid="uid://cqqpoaul6edo2" path="res://assets/场景/Sprites/Free_Tilemap.png" id="1_f6mho"]
+[ext_resource type="Script" uid="uid://bdypxcp3bq7w6" path="res://scenes/ornament/树/大树.gd" id="2_6degg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6degg"]
+size = Vector2(11, 1.33333)
+
+[node name="大树" type="Sprite2D"]
+z_index = 30
+y_sort_enabled = true
+scale = Vector2(3, 3)
+texture = ExtResource("1_f6mho")
+offset = Vector2(0, -8)
+region_enabled = true
+region_rect = Rect2(72, 192, 32, 48)
+script = ExtResource("2_6degg")
+
+[node name="judge_area" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 512
+collision_mask = 512
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="judge_area"]
+polygon = PackedVector2Array(-0.333333, -31.6667, 1.66667, -32, 12.6667, -19.6667, 13.6667, -11, 14.6667, -8.66667, -13.3333, -8.33333, -10.3333, -13.3333, -12.3333, -20)
+
+[node name="block" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block"]
+position = Vector2(0.5, 9.66667)
+shape = SubResource("RectangleShape2D_6degg")
+
+[connection signal="body_entered" from="judge_area" to="." method="_on_area_2d_body_entered"]

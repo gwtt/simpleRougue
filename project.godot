@@ -52,6 +52,7 @@ folder_colors={
 "res://data/": "red",
 "res://entities/people/": "red",
 "res://scenes/entities/": "yellow",
+"res://scenes/ornament/": "purple",
 "res://scenes/stages/": "pink"
 }
 
