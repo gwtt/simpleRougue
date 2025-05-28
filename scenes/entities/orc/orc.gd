@@ -17,5 +17,5 @@ func _get_safe_velocity() -> Vector2:
 	else:
 		return Vector2.ZERO	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	orc_stats.attack_timer += 1

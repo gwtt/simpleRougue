@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://t00spyboxk4x"]
+[gd_scene load_steps=94 format=3 uid="uid://t00spyboxk4x"]
 
 [ext_resource type="Texture2D" uid="uid://cs72k1ilb0c6b" path="res://scenes/entities/archer/art/Archer-Attack01.png" id="1_4cc7i"]
 [ext_resource type="Script" uid="uid://c1a13fws3b27j" path="res://scenes/entities/archer/archer.gd" id="1_xyvlq"]
@@ -19,8 +19,6 @@
 [ext_resource type="Script" uid="uid://c4gb71tfig047" path="res://addons/godot_state_charts/transition.gd" id="15_d0fbi"]
 [ext_resource type="Script" uid="uid://drqwl4h286u12" path="res://components/enemy_health_component.gd" id="16_r0avq"]
 [ext_resource type="Script" uid="uid://babmo0lj6opev" path="res://components/enemy_hurt_box_component.gd" id="18_1wv74"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7kot0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_735hh"]
 atlas = ExtResource("1_yyjpj")
@@ -571,8 +569,8 @@ radius = 9.27695
 size = Vector2(12, 17.25)
 
 [node name="Archer" type="CharacterBody2D" node_paths=PackedStringArray("healthComponent", "hurtBoxComponent")]
-z_index = 35
-position = Vector2(617, 432)
+z_index = 30
+y_sort_enabled = true
 scale = Vector2(4, 4)
 collision_layer = 3
 collision_mask = 0
@@ -582,11 +580,6 @@ charged_arrow_scene = ExtResource("3_x7scg")
 healthComponent = NodePath("EnemyHealthComponent")
 hurtBoxComponent = NodePath("EnemyHurtBoxComponent")
 SPEED = 500.0
-
-[node name="角色阴影" type="Sprite2D" parent="."]
-position = Vector2(-0.276777, 6.99899)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("CompressedTexture2D_7kot0")
 
 [node name="body" type="Node2D" parent="."]
 
@@ -601,6 +594,7 @@ frame = 11
 frame_progress = 1.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="body"]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_8wyk5")
 animation = &"die"
 

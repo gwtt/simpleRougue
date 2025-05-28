@@ -1,5 +1,7 @@
 extends BaseEnemy
-@onready var sprite: AnimatedSprite2D = $body/AnimatedSprite2D
+class_name Archer
+@export var orc_stats: OrcStats
+@onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var shadow: AnimatedSprite2D = $body/shadow
 @onready var effect: AnimatedSprite2D = $body/effect
 @export var arrow_scene: PackedScene # 普通箭矢场景

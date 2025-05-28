@@ -6,7 +6,7 @@ var speed = 1000
 
 # 添加一个变量来引用粒子系统
 @onready var trail_particles: GPUParticles2D = $TrailParticles
-
+	
 func init_target(target_position: Vector2) -> void:
 	direction = global_position.direction_to(target_position)
 	look_at(target_position)
@@ -29,5 +29,5 @@ func disappear() -> void:
 
 
 func _on_area_2d_area_entered(hurtbox: Area2D) -> void:
-	hurtbox.hurt.emit(self, damage)
+	hurtbox.hurt(self, damage)
 	disappear()

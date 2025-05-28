@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="简单肉鸽"
-run/main_scene="uid://call3bghgxu1a"
+run/main_scene="uid://dyewhlh6h8w1l"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
