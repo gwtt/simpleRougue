@@ -1,8 +1,10 @@
 extends CharacterBody2D
 class_name Orc
+
 @export var orc_stats: OrcStats
 @onready var sprite: AnimatedSprite2D = %sprite
 
+## 获取速度
 func _get_safe_velocity() -> Vector2:
 	var target_player = Utils.player
 	if target_player != null:
@@ -17,5 +19,6 @@ func _get_safe_velocity() -> Vector2:
 	else:
 		return Vector2.ZERO	
 
+## 攻击时间计时
 func _process(_delta: float) -> void:
 	orc_stats.attack_timer += 1

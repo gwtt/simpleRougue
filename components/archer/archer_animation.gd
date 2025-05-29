@@ -1,24 +1,39 @@
 class_name ArcherAnimations
 extends Node
 
+signal animation_finished
 ## 用来控制敌人外表的功能
 @export var enemy: Archer
-@export var visual: Node2D
+@onready var effect: AnimatedSprite2D = %effect
+@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 
+var completed_count = 0
+var total = 0
 ## 调整敌人身体的动画
 func anim_play(anim_name, speed = 1.0, is_back = false):
-	var playing_animations = []
-	
-	# 收集所有需要播放动画的子节点
-	for child: AnimatedSprite2D in visual.get_children():
-		child.play(anim_name, speed, is_back)
-		playing_animations.append(child)
+	if effect.is_connected("animation_finished", _on_child_animation_finished):
+		effect.disconnect("animation_finished", _on_child_animation_finished)
+	if animated_sprite_2d.is_connected("animation_finished", _on_child_animation_finished):
+		animated_sprite_2d.disconnect("animation_finished", _on_child_animation_finished)
+	if ["attack1","attack2"].find(anim_name) != -1:
+		total = 2
+		effect.play(anim_name)
+		effect.connect("animation_finished", _on_child_animation_finished)
+		animated_sprite_2d.play(anim_name)
+		animated_sprite_2d.connect("animation_finished", _on_child_animation_finished)
+	else:
+		total = 1
+		animated_sprite_2d.play(anim_name)
+		animated_sprite_2d.connect("animation_finished", _on_child_animation_finished)
 
-## 控制敌人朝向，朝向目标位置看
-func set_look_at(target: Vector2):
-	if target != null:
-		if target.x > enemy.position.x && visual.scale.x != abs(visual.scale.x):
-			visual.scale.x = abs(visual.scale.x)
-		elif target.x < enemy.position.x && visual.scale.x != -abs(visual.scale.x):
-			visual.scale.x = -abs(visual.scale.x)
-	
+
+		
+func _on_child_animation_finished() -> void:
+	completed_count += 1
+	if completed_count >= total:
+		animation_finished.emit()
+		print("信号触发")
+		completed_count = 0  # 重置计数器
+
+
+

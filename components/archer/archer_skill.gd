@@ -3,42 +3,44 @@ class_name ArcherSkill
 
 @export var archer: Archer
 @onready var body: Node2D = %body
+@onready var state_chart: StateChart = %StateChart
 @export var ghost_node: PackedScene
-
+@export var charged_arrow_scene: PackedScene # 蓄力箭矢场景
+@onready var archer_animations: ArcherAnimations = %ArcherAnimations
+var target_player:Player:
+	get:
+		return Utils.player
 ## 不断狂暴
 func rage():
-	var timer = get_tree().create_timer(0.1)
-	timer.timeout.connect(_on_rage_timer_timeout)
-	archer.archer_stats.is_rage = true
-	archer.archer_stats.current_speed_multiplier = archer.archer_stats.rage_speed_multiplier
-	archer.archer_stats.current_attack_speed_multiplier = 1.5
-	_update_rage_stats()
-	archer.archer_stats.damage_reduction = 0.5
-	# 添加狂暴特效
-	body.modulate = Color(1.5, 0.5, 0.5)
-	# 1秒后解除狂暴
-	await get_tree().create_timer(3).timeout
-	_exit_rage_state()
-
-func _exit_rage_state() -> void:
-	archer.archer_stats.is_rage = false
-	archer.archer_stats.current_speed_multiplier = 1.0
-	archer.archer_stats.current_attack_speed_multiplier = 1.0
-	_update_rage_stats()
-	archer.archer_stats.damage_reduction = 0.0
-	body.modulate = Color(1, 1, 1)
-
-func _on_rage_timer_timeout() -> void:
-	var ghost = ghost_node.instantiate()
-	ghost.set_property(archer.global_position,body,archer.scale,body.modulate)
-	get_parent().add_child(ghost)
-	if archer.archer_stats.is_rage:
-		# 增加速度和攻击速度
-		archer.archer_stats.current_speed_multiplier = min(archer.archer_stats.current_speed_multiplier + archer.archer_stats.speed_increase_rate, archer.archer_stats.max_speed_multiplier)
-		archer.archer_stats.current_attack_speed_multiplier = min(archer.archer_stats.current_attack_speed_multiplier + archer.archer_stats.speed_increase_rate, archer.archer_stats.max_speed_multiplier)
-		_update_rage_stats()
+	## 隐身
+	archer.archer_stats.is_stealthed = true
+	owner.modulate.a = 0.5 # 半透明效果
+	# 计算玩家背后的位置
+	if target_player:
+		var player_direction = owner.global_position.direction_to(target_player.global_position)
+		var behind_position = target_player.global_position + player_direction * archer.archer_stats.safe_distance * 1.5
 		
-func _update_rage_stats() -> void:
-	archer.archer_stats.speed = archer.archer_stats.base_speed * archer.archer_stats.current_speed_multiplier  # 需要添加 base_speed 变量存储初始速度
-	archer.archer_stats.attack_speed = archer.archer_stats.current_attack_speed_multiplier
-	archer.archer_stats.attack_delay = archer.archer_stats.base_attack_delay / archer.archer_stats.current_attack_speed_multiplier
+		# 快速移动到玩家背后
+		owner.global_position = behind_position
+		# 确保面向玩家
+		owner.find_player_and_flip_h()	
+		
+	archer.archer_stats.can_attack = false
+	archer_animations.anim_play("attack2")
+	# 蓄力射击
+	await archer_animations.animation_finished
+	_shoot_charged_arrow()
+	archer.archer_stats.is_stealthed = false
+	owner.modulate.a = 1.0
+	state_chart.send_event("to_walk")
+	await get_tree().create_timer(archer.archer_stats.attack_cooldown).timeout
+	archer.archer_stats.can_attack = true
+
+# 发射蓄力箭矢
+func _shoot_charged_arrow() -> void:
+	if charged_arrow_scene and target_player:
+		var arrow = charged_arrow_scene.instantiate()
+		self.add_child(arrow)
+		arrow.global_position = owner.global_position
+		arrow.init_target(archer.archer_stats.target_player_postion)
+		arrow.damage = archer.archer_stats.damage

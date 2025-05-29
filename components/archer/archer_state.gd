@@ -2,7 +2,7 @@ extends Node
 class_name ArcherState
 ## 用来控制敌人状态和移动
 @export var archer: Archer
-@onready var sprite: AnimatedSprite2D = %sprite
+@onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var state_chart: StateChart = %StateChart
 @onready var walk: AtomicState = %walk
 @onready var die: AtomicState = %die
@@ -11,9 +11,13 @@ class_name ArcherState
 @onready var hit: AtomicState = %hit
 @onready var rage: AtomicState = %Rage
 @onready var archer_animations: ArcherAnimations = %ArcherAnimations
-@onready var enemy_hit_box_component: EnemyHitBoxComponent = %EnemyHitBoxComponent
 @onready var archer_skill: ArcherSkill = %ArcherSkill
+@export var arrow_scene: PackedScene # 普通箭矢场景
 
+var target_player:Player:
+	get:
+		return Utils.player
+		
 func _ready() -> void:
 	# 连接所有状态信号
 	walk.state_physics_processing.connect(on_walk_physics_processing)
@@ -30,7 +34,16 @@ func stateSendEvent(_name: String):
 ## 行走状态物理处理
 func on_walk_physics_processing(_delta):
 	archer_animations.anim_play("walk")
-	archer.velocity = archer._get_safe_velocity()
+	if target_player != null: # 添加hit检查
+		var distance = owner.global_position.distance_to(target_player.global_position)
+		if distance <= archer.archer_stats.safe_distance:
+			owner.velocity = _get_safe_velocity()
+			owner.move_and_slide()
+		elif distance <= archer.archer_stats.attack_range and archer.archer_stats.can_attack:
+			stateSendEvent("to_attack")
+		else:
+			owner.velocity = _get_safe_velocity()
+			owner.move_and_slide()
 	archer.move_and_slide()
 
 ## 死亡状态进入
@@ -62,30 +75,56 @@ func on_hurt_entered():
 	await get_tree().create_timer(0.3).timeout
 	stateSendEvent("to_walk")
 
-## 狂暴状态进入
+## 状态：隐身技能（狂暴）
 func on_rage_entered():
-	stateSendEvent("to_walk")
-	archer_skill.rage()
+	print("进入狂暴状态")
+
 #endregion
 
 
-func _on_attack_area_area_entered(_area: Area2D) -> void:
-	if sprite.animation.begins_with("attack"):
-		await sprite.animation_finished
-	stateSendEvent("to_attack")
-
-func _on_attack_area_area_exited(_area: Area2D) -> void:
-	await sprite.animation_finished
+func on_attack_physics_processing(_delta: float):
+	if archer.archer_stats.can_attack == false:
+		return
+	owner.find_player_and_flip_h()
+	archer.archer_stats.can_attack = false
+	archer_animations.anim_play("attack1")
+	archer.archer_stats.target_player_postion = target_player.global_position
+	await archer_animations.animation_finished
+	_shoot_arrow()
+	await get_tree().create_timer(archer.archer_stats.attack_cooldown).timeout
+	archer.archer_stats.can_attack = true
 	stateSendEvent("to_walk")
 
-func on_attack_physics_processing(_delta: float):
-		# 如果正在攻击，并且动画在播放就直接返回
-	if sprite.animation.begins_with("attack") && sprite.is_playing():
-		return
-	if archer.archer_stats.attack_timer > archer.archer_stats.attack_delay:
-		archer._get_safe_velocity()
-		archer.archer_stats.attack_timer = 0
-		var damage_multiplier = 1.0
-		var attack_item = randi_range(1,2)
-		sprite.play("attack%d" % attack_item)
-		enemy_hit_box_component.meleeAttack(archer.archer_stats.attack_speed * damage_multiplier)
+
+func _get_safe_velocity() -> Vector2:
+	var desired_velocity := Vector2.ZERO
+	var target_player = Utils.player
+	if target_player != null:
+		var distance = owner.global_position.distance_to(target_player.global_position)
+		var direction = owner.global_position.direction_to(target_player.global_position)
+		# 如果距离大于攻击范围，向玩家移动
+		if distance > archer.archer_stats.attack_range:
+			desired_velocity = direction * archer.archer_stats.speed
+		# 如果距离小于最小安全距离，远离玩家
+		elif distance < archer.archer_stats.safe_distance: # 使用攻击范围的70%作为最小安全距离
+			desired_velocity = -direction * archer.archer_stats.speed * 2
+		# 在理想范围内，尝试保持位置或进行小幅度移动
+		else:
+			# 可以添加小幅度的横向移动，使弓箭手的移动更自然
+			var perpendicular = Vector2(-direction.y, direction.x)
+			desired_velocity = perpendicular * archer.archer_stats.speed * 0.5 * sin(Time.get_ticks_msec() / 1000.0)
+		if direction.x < 0:
+			owner.flip_h(true)
+		elif direction.x > 0:
+			owner.flip_h(false)
+	return desired_velocity.limit_length(archer.archer_stats.speed)
+
+
+# 发射普通箭矢
+func _shoot_arrow() -> void:
+	if arrow_scene and target_player:
+		var arrow = arrow_scene.instantiate()
+		owner.add_child(arrow)
+		arrow.global_position = owner.global_position
+		arrow.init_target(archer.archer_stats.target_player_postion)
+		arrow.damage = archer.archer_stats.damage
