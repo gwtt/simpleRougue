@@ -8,7 +8,7 @@ extends Control
 func _ready() -> void:
 	## 绑定资源变化
 	player_stats.changed.connect(on_player_change)
-	BossDataManager.onHpChange.connect(on_boss_hp_change)
+	EventBus.subscribe("boss_hp_change", on_boss_hp_change)
 	on_player_change()
 	toast.visible = false
 	
@@ -33,6 +33,6 @@ func on_player_change():
 	magic_bar.max_value = player_stats.max_xp
 	magic_bar.value = player_stats.current_xp
 
-func on_boss_hp_change(hp,max_hp):
+func on_boss_hp_change(hp, max_hp):
 	boss_health_bar.max_value = max_hp
 	boss_health_bar.value = hp

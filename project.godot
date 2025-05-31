@@ -21,6 +21,8 @@ Utils="*res://utilities/utils/Utils.gd"
 BossDataManager="*res://utilities/boss_data_manager/boss_data_manager.gd"
 PlayerDataManager="*res://utilities/player_data_manager/player_data_manager.gd"
 SkillDataManager="*res://utilities/skill_data_manager/skill_data_manager.gd"
+Pandora="*res://addons/pandora/api.gd"
+EventBus="*res://utilities/utils/event_bus.gd"
 
 [display]
 
@@ -43,7 +45,7 @@ movie_writer/fps=144
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/animatedbutton/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/label_font_auto_sizer/plugin.cfg", "res://addons/qframework_godot/plugin.cfg")
+enabled=PackedStringArray("res://addons/animatedbutton/plugin.cfg", "res://addons/godot_state_charts/plugin.cfg", "res://addons/label_font_auto_sizer/plugin.cfg", "res://addons/pandora/plugin.cfg", "res://addons/qframework_godot/plugin.cfg")
 
 [file_customization]
 

@@ -17,7 +17,9 @@ func _ready() -> void:
 	PlayerDataManager.onGoldChange.connect(self.onGoldChange)
 	PlayerDataManager.onPlayerLevelChange.connect(self.onPlayerLevelChange)
 	PlayerDataManager.onWeaponChangeAnim.connect(self.onWeaponChangeAnim) #武器化监听
-	PlayerDataManager.onWeaponBulletsChange.connect(self.onWeaponBulletsChange) #武器化监听
+	EventBus.subscribe("weapon_change_anim", onWeaponChangeAnim) #武器化监听
+	EventBus.subscribe("weapon_bullets_change", onWeaponBulletsChange) #武器化监听
+
 	if Utils.player:
 		Utils.player.health_component.onHpChange.connect(
 			func hpChange(hp,max_hp): #血量变化监听

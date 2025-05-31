@@ -17,22 +17,19 @@ func anim_play(anim_name, speed = 1.0, is_back = false):
 		animated_sprite_2d.disconnect("animation_finished", _on_child_animation_finished)
 	if ["attack1","attack2"].find(anim_name) != -1:
 		total = 2
-		effect.play(anim_name)
+		effect.play(anim_name, speed, is_back)
 		effect.connect("animation_finished", _on_child_animation_finished)
-		animated_sprite_2d.play(anim_name)
+		animated_sprite_2d.play(anim_name, speed, is_back)
 		animated_sprite_2d.connect("animation_finished", _on_child_animation_finished)
 	else:
 		total = 1
-		animated_sprite_2d.play(anim_name)
+		animated_sprite_2d.play(anim_name, speed, is_back)
 		animated_sprite_2d.connect("animation_finished", _on_child_animation_finished)
 
-
-		
 func _on_child_animation_finished() -> void:
 	completed_count += 1
 	if completed_count >= total:
 		animation_finished.emit()
-		print("信号触发")
 		completed_count = 0  # 重置计数器
 
 

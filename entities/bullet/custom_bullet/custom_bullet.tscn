@@ -13,11 +13,12 @@
 [node name="宝宝枪子弹" type="CharacterBody2D" node_paths=PackedStringArray("hitBoxComponent")]
 z_index = 40
 collision_layer = 0
-collision_mask = 2147483664
+collision_mask = 16
 script = ExtResource("1_l6l60")
 hitBoxComponent = NodePath("HitBoxComponent")
 bullet_impact = ExtResource("2_sm4rk")
 bullet_smoke = ExtResource("3_8yvyx")
+speed = 5000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("4_ncwqd")

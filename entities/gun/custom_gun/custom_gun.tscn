@@ -10,6 +10,7 @@ script = ExtResource("1_5noaw")
 image = ExtResource("2_3ncw8")
 bullet_scene = ExtResource("2_n2o5x")
 damage = 1.0
+bullet_speed = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 offset = Vector2(6, -1)

@@ -20,7 +20,6 @@ func disappear() -> void:
 	await tween.finished
 	queue_free()
 
-
 func _on_area_2d_area_entered(hurtbox: Area2D) -> void:
-	hurtbox.hurt.emit(self, damage)
+	hurtbox.hurt(self, damage)
 	disappear()

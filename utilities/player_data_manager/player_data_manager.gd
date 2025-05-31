@@ -1,17 +1,7 @@
 extends Node
-signal onWeaponBulletsChange()
-signal onWeaponChangeAnim()
-signal onWeaponChanged()
-signal onHpChange()
-signal onMagicChange()
-signal onPlayerDiedChange() # 玩家死亡信号
-signal onPlayerFireRateChange(player_fire_rate) # 玩家复活信号
-signal onRewardChange(reward) # 奖励变化
-signal onSpeedChange(speed) # 速度变化
+
 signal onGoldChange(gold) # 金钱变化
 signal onPlayerLevelChange(level) # 玩家等级信号
-signal onPlayerExpChange(exp, max_exp) # 玩家经验信号
-signal onPlayerGoldChange(exp, max_exp) # 玩家金币信号
 signal onAmmoChange(ammo) # 备用子弹数量变化
 var player_ammo = 9999999: # 子弹数量
 	set(value):
@@ -46,11 +36,11 @@ var player_exp = 0:
 			player_level += 1
 		else:
 			player_exp = value
-		emit_signal("onPlayerExpChange", player_exp, max_exp)
+		EventBus.push_event("player_exp_change", [player_exp, max_exp])
 
 var player = preload("res://scenes/entities/player/player.tscn")
 func _ready() -> void:
-	BossDataManager.onDie.connect(onBossDie)
+	EventBus.subscribe("boss_die", on_boss_die)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("无敌"):
@@ -90,6 +80,6 @@ func getMaxExp():
 		#emit_signal("onSpeedChange", 移速加成)
 		#Utils.showStringLabel("移速+1",Utils.player)
 
-func onBossDie():
+func on_boss_die():
 	gold += 100 * Utils.now_level
 	Utils.now_level += 1

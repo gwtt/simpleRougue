@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://t00spyboxk4x"]
+[gd_scene load_steps=100 format=3 uid="uid://t00spyboxk4x"]
 
 [ext_resource type="Texture2D" uid="uid://cs72k1ilb0c6b" path="res://scenes/entities/archer/art/Archer-Attack01.png" id="1_4cc7i"]
 [ext_resource type="Script" uid="uid://c1a13fws3b27j" path="res://scenes/entities/archer/archer.gd" id="1_xyvlq"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dcd4khix0gn4v" path="res://scenes/entities/archer/art/Archer-Attack02.png" id="2_5421n"]
 [ext_resource type="Texture2D" uid="uid://d0wdq65i3jeo7" path="res://scenes/entities/archer/art/Archer-Shadow_death.png" id="2_brqxx"]
 [ext_resource type="PackedScene" uid="uid://yxsd0m7ijqbd" path="res://scenes/entities/archer/arrow/arrow.tscn" id="2_fgy34"]
-[ext_resource type="Resource" uid="uid://cht4jfv4w7fx5" path="res://data/archer/archer_stats.tres" id="2_spxme"]
+[ext_resource type="Script" uid="uid://8q73873xik7s" path="res://addons/pandora/model/entity.gd" id="2_spxme"]
 [ext_resource type="Texture2D" uid="uid://ckafngicjjvev" path="res://scenes/entities/archer/art/Archer-Idle.png" id="3_382hc"]
 [ext_resource type="Texture2D" uid="uid://cv38vagl1q8so" path="res://scenes/entities/archer/art/Archer-Hurt.png" id="3_vqkpj"]
 [ext_resource type="PackedScene" uid="uid://d3nnbj7awuje0" path="res://scenes/entities/archer/charged_arrow/chargedArrow.tscn" id="3_x7scg"]
@@ -24,6 +24,10 @@
 [ext_resource type="Script" uid="uid://bh4w2n4mc313o" path="res://components/archer/archer_skill.gd" id="21_iss7m"]
 [ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://scenes/entities/player/ghost.tscn" id="22_pc1md"]
 [ext_resource type="Script" uid="uid://2jnhi2k34bt2" path="res://components/archer/archer_state.gd" id="22_spxme"]
+
+[sub_resource type="Resource" id="Resource_pc1md"]
+script = ExtResource("2_spxme")
+_id = "32"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_735hh"]
 atlas = ExtResource("1_yyjpj")
@@ -573,17 +577,14 @@ size = Vector2(11.75, 3.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsg4r"]
 size = Vector2(12, 17.25)
 
-[node name="Archer" type="CharacterBody2D" node_paths=PackedStringArray("healthComponent", "hurtBoxComponent")]
+[node name="Archer" type="CharacterBody2D"]
 z_index = 30
 y_sort_enabled = true
 scale = Vector2(4, 4)
 collision_layer = 3
 collision_mask = 0
 script = ExtResource("1_xyvlq")
-archer_stats = ExtResource("2_spxme")
-healthComponent = NodePath("EnemyHealthComponent")
-hurtBoxComponent = NodePath("EnemyHurtBoxComponent")
-SPEED = 500.0
+stats = SubResource("Resource_pc1md")
 
 [node name="body" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -760,9 +761,10 @@ to = NodePath("../../walk")
 event = &"to_walk"
 delay_in_seconds = "0.0"
 
-[node name="EnemyHealthComponent" type="Node2D" parent="."]
+[node name="EnemyHealthComponent" type="Node2D" parent="." node_paths=PackedStringArray("archer")]
+unique_name_in_owner = true
 script = ExtResource("16_r0avq")
-MAX_HEALTH = 100.0
+archer = NodePath("..")
 
 [node name="EnemyHurtBoxComponent" type="Area2D" parent="." node_paths=PackedStringArray("healthComponent")]
 position = Vector2(0, -0.5)

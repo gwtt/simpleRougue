@@ -52,7 +52,7 @@ var bullets_count = 0: #剩余子弹
 	set(value):
 		bullets_count = value
 		if is_use:
-			PlayerDataManager.emit_signal("onWeaponBulletsChange",bullets_count,bullets_max_count) 
+			EventBus.push_event("weapon_bullets_change", [bullets_count,bullets_max_count])
 var is_reloading = false #是否正在换子弹
 var change_timer = Timer.new()
 var audio_reload_ammo = AudioStreamPlayer.new()
@@ -63,7 +63,7 @@ func _init():
 	
 func _ready() -> void:
 	add_to_group("guns")
-	PlayerDataManager.onPlayerFireRateChange.connect(self.onPlayerFireRateChange)
+	EventBus.subscribe("player_fire_rate_change", onPlayerFireRateChange)
 	add_child(attachments_node)
 	bullets_count = bullets_max_count
 	add_child(change_timer)
@@ -80,8 +80,7 @@ func onPlayerFireRateChange(rate):
 func updateGun():
 	bullets_max_count = int(bullets_max_count * (1+PlayerDataManager.base_magazine_count))
 	timer.wait_time = 1.0 / fire_rate
-	PlayerDataManager.emit_signal("onWeaponBulletsChange",bullets_count,bullets_max_count) 
-
+	EventBus.push_event("weapon_bullets_change", [bullets_count,bullets_max_count])
 
 #子弹装填完毕
 func reload_over():
@@ -92,7 +91,7 @@ func reload_over():
 	else:
 		PlayerDataManager.player_ammo -= ammo
 	bullets_count += ammo
-	PlayerDataManager.emit_signal("onWeaponChangeAnim",weapon_id,Utils.GUN_CHANGE_TYPE.RELOAD)
+	EventBus.push_event("weapon_change_anim", [weapon_id,Utils.GUN_CHANGE_TYPE.RELOAD])
 	is_reloading = false
 
 #设置枪械所属
@@ -125,10 +124,9 @@ func set_use(use:bool):
 	visible = is_use
 	if player && is_use:
 		player.gun = self
-		PlayerDataManager.emit_signal("onWeaponChangeAnim",weapon_id)
+		EventBus.push_event("weapon_change_anim", weapon_id)
 		if bullets_count == 0:
 			reload_ammo()
-	PlayerDataManager.emit_signal("onWeaponChanged")
 
 #开火
 func fire(bullet:Bullet,is_bullet = true,is_play = true):

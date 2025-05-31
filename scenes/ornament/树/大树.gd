@@ -9,12 +9,12 @@ func _ready() -> void:
 	judge_area.area_exited.connect(on_area_exited)
 
 # 自身半透明
-func on_area_entered(body: Node2D) -> void:
+func on_area_entered(_body: Node2D) -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 0.5, 0.2)
 
 
 # 自身不透明
-func on_area_exited(body: Node2D) -> void:
+func on_area_exited(_body: Node2D) -> void:
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 1, 0.2)

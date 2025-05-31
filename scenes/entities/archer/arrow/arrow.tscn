@@ -9,7 +9,7 @@ size = Vector2(20, 5)
 [sub_resource type="Gradient" id="Gradient_l1hrn"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.466667)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_dhfpy"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i0c3w"]
 gradient = SubResource("Gradient_l1hrn")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_246sk"]
@@ -21,7 +21,7 @@ initial_velocity_max = 400.0
 gravity = Vector3(0, 0, 0)
 scale_min = 2.0
 scale_max = 3.0
-color_ramp = SubResource("GradientTexture1D_dhfpy")
+color_ramp = SubResource("GradientTexture1D_i0c3w")
 
 [node name="Arrow" type="CharacterBody2D"]
 collision_layer = 0

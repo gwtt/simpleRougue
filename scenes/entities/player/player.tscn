@@ -1141,6 +1141,7 @@ player_state = NodePath("../PlayerState")
 shape = SubResource("CapsuleShape2D_r6ath")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
 position_smoothing_enabled = true
 
 [connection signal="area_entered" from="HurtBoxComponent" to="HurtBoxComponent" method="_on_area_entered"]

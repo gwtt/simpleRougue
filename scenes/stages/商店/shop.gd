@@ -31,7 +31,7 @@ func refresh_shop():
 		new_item.buy_item.connect(_on_buy_item)
 		item_list.add_child(new_item)
 	
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_viewport().set_input_as_handled()
 		queue_free()

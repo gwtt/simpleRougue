@@ -1,7 +1,5 @@
 extends Node
 
-signal onHpChange(hp,max_hp)
-signal onDie()
 
 # 装备列表
 var Boss_list = {

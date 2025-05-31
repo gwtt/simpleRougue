@@ -1,0 +1,148 @@
+{
+	"_entity_data": {
+		"_categories": [
+			{
+				"_category_id": "",
+				"_icon_color": "ff0000ff",
+				"_id": "1",
+				"_index": 0,
+				"_name": "Boss"
+			},
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_id": "15",
+				"_index": 0,
+				"_name": "Archer"
+			}
+		],
+		"_entities": [
+			{
+				"_category_id": "1",
+				"_icon_color": "ffffff00",
+				"_id": "12",
+				"_index": 0,
+				"_name": "archer",
+				"_property_overrides": {
+					"defense": {
+						"type": "float",
+						"value": 0.0
+					}
+				}
+			},
+			{
+				"_category_id": "15",
+				"_icon_color": "ffffff00",
+				"_id": "32",
+				"_index": 0,
+				"_name": "archer"
+			}
+		],
+		"_properties": [
+			{
+				"_category_id": "15",
+				"_default_value": 700.0,
+				"_id": "16",
+				"_name": "attack_range",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 200.0,
+				"_id": "17",
+				"_name": "safe_distance",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 150.0,
+				"_id": "18",
+				"_name": "stealth_move_range",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 0.5,
+				"_id": "19",
+				"_name": "attack_cooldown",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 100.0,
+				"_id": "20",
+				"_name": "max_health",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 0.0,
+				"_id": "21",
+				"_name": "defense",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": true,
+				"_id": "22",
+				"_name": "can_attack",
+				"_type": "bool"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": false,
+				"_id": "23",
+				"_name": "is_stealthed",
+				"_type": "bool"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": "(0.0,0.0)",
+				"_id": "24",
+				"_name": "target_player_postion",
+				"_type": "vector2"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 1.0,
+				"_id": "26",
+				"_name": "anim_speed",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 5.0,
+				"_id": "29",
+				"_name": "rage_time",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 1.5,
+				"_id": "30",
+				"_name": "damage",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": 50.0,
+				"_id": "34",
+				"_name": "speed",
+				"_type": "float"
+			},
+			{
+				"_category_id": "15",
+				"_default_value": false,
+				"_id": "35",
+				"_name": "is_half_health",
+				"_type": "bool"
+			}
+		]
+	},
+	"_id_generator": {
+		"_ids_by_context": {
+			"default": 35
+		}
+	}
+}

@@ -46,7 +46,7 @@ enum Rarity {COMMON, UNCOMMON, RARE, LEGENDARY}
 ## 护甲穿透（百分比）
 @export_range(0, 100) var armor_penetration: float
 ## 射程
-@export_range(0, 10000) var range: int
+@export_range(0, 10000) var attack_range: int
 
 @export_range(0, 100) var add_attack_probability = 0.0 # 增加攻击力概率
 @export_range(0, 100) var add_hp_probability = 0.0 # 增加血量概率

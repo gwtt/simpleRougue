@@ -43,7 +43,7 @@ func fire():
 	#ins.start(velocity / 2)
 	
 
-func _process(delta):
+func _physics_process(delta: float) -> void:
 	#if Utils.freeze_frame:
 	#	delta = 0.0
 	var collisionResult = move_and_collide(velocity * delta)

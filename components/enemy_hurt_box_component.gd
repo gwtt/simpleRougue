@@ -4,7 +4,6 @@ class_name  EnemyHurtBoxComponent
 signal hurt(hitbox)
 
 @export var healthComponent:EnemyHealthComponent
-var is_die:bool = false
 var audio_hit = AudioStreamPlayer2D.new() #受击音效
 var idle_frame_num = 0
 func _init() -> void:
@@ -12,19 +11,14 @@ func _init() -> void:
 
 func _ready() -> void:
 	add_child(audio_hit)
-	healthComponent.onDie.connect(toDie)
 	
 func _physics_process(_delta):
 	if idle_frame_num > 0:
 		Utils.showHitLabel(idle_frame_num,self)
 		idle_frame_num = 0
 
-func toDie()->void:
-	is_die = true
 
 func hitFlash(bullet:Bullet):
-	if is_die:
-		return
 	Utils.freezeFrame(bullet.gun.time_scale)
 	onHit(bullet.hurt)
 	audio_hit.play(0.17)

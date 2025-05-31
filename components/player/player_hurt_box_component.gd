@@ -7,7 +7,6 @@ extends Area2D
 @export var player_state: PlayerState
 
 signal on_die()
-signal on_hp_change()
 signal on_hurt()
 
 func hurt(_hitbox, damage: int) -> void:
