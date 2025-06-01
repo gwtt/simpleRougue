@@ -2,35 +2,57 @@
 	"_entity_data": {
 		"_categories": [
 			{
-				"_category_id": "",
-				"_icon_color": "ff0000ff",
-				"_id": "1",
-				"_index": 0,
-				"_name": "Boss"
+				"_category_id": "39.0",
+				"_generate_ids": true,
+				"_icon_color": "ff9500ff",
+				"_id": "15",
+				"_index": 2,
+				"_name": "Archer"
+			},
+			{
+				"_category_id": "39.0",
+				"_generate_ids": true,
+				"_icon_color": "3eff00ff",
+				"_id": "36.0",
+				"_index": 1,
+				"_name": "Orc"
 			},
 			{
 				"_category_id": "",
-				"_generate_ids": true,
-				"_icon_color": "ffffff00",
-				"_id": "15",
+				"_icon_color": "ff0000ff",
+				"_id": "39.0",
 				"_index": 0,
-				"_name": "Archer"
+				"_name": "Boss"
 			}
 		],
 		"_entities": [
-			{
-				"_category_id": "1",
-				"_icon_color": "ffffff00",
-				"_id": "12",
-				"_index": 0,
-				"_name": "archer"
-			},
 			{
 				"_category_id": "15",
 				"_icon_color": "ffffff00",
 				"_id": "32",
 				"_index": 0,
-				"_name": "archer"
+				"_name": "archer",
+				"_property_overrides": {
+					"damage": {
+						"type": "float",
+						"value": 1.5
+					},
+					"max_health": {
+						"type": "float",
+						"value": 100.0
+					},
+					"speed": {
+						"type": "float",
+						"value": 50.0
+					}
+				}
+			},
+			{
+				"_category_id": "36.0",
+				"_icon_color": "ffffff00",
+				"_id": "37.0",
+				"_index": 0,
+				"_name": "orc"
 			}
 		],
 		"_properties": [
@@ -60,20 +82,6 @@
 				"_default_value": 0.5,
 				"_id": "19",
 				"_name": "attack_cooldown",
-				"_type": "float"
-			},
-			{
-				"_category_id": "15",
-				"_default_value": 100.0,
-				"_id": "20",
-				"_name": "max_health",
-				"_type": "float"
-			},
-			{
-				"_category_id": "15",
-				"_default_value": 0.0,
-				"_id": "21",
-				"_name": "defense",
 				"_type": "float"
 			},
 			{
@@ -113,30 +121,44 @@
 			},
 			{
 				"_category_id": "15",
-				"_default_value": 1.5,
-				"_id": "30",
-				"_name": "damage",
-				"_type": "float"
-			},
-			{
-				"_category_id": "15",
-				"_default_value": 50.0,
-				"_id": "34",
-				"_name": "speed",
-				"_type": "float"
-			},
-			{
-				"_category_id": "15",
 				"_default_value": false,
 				"_id": "35",
 				"_name": "is_half_health",
 				"_type": "bool"
+			},
+			{
+				"_category_id": "39.0",
+				"_default_value": 0.0,
+				"_id": "41.0",
+				"_name": "max_health",
+				"_type": "float"
+			},
+			{
+				"_category_id": "39.0",
+				"_default_value": 0.0,
+				"_id": "43.0",
+				"_name": "damage",
+				"_type": "float"
+			},
+			{
+				"_category_id": "39.0",
+				"_default_value": 0.0,
+				"_id": "44.0",
+				"_name": "speed",
+				"_type": "float"
+			},
+			{
+				"_category_id": "39.0",
+				"_default_value": 0.0,
+				"_id": "45.0",
+				"_name": "defense",
+				"_type": "float"
 			}
 		]
 	},
 	"_id_generator": {
 		"_ids_by_context": {
-			"default": 35.0
+			"default": 45.0
 		}
 	}
 }

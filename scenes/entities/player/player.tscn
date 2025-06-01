@@ -971,7 +971,7 @@ player_stats = ExtResource("2_0xxfp")
 
 [node name="head" type="AnimatedSprite2D" parent="Visuals"]
 sprite_frames = SubResource("SpriteFrames_refuv")
-animation = &"idle"
+animation = &"hurt"
 
 [node name="body" type="AnimatedSprite2D" parent="Visuals"]
 y_sort_enabled = true

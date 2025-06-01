@@ -126,6 +126,7 @@ e={
 2d_physics/layer_1="custom"
 2d_physics/layer_4="玩家受伤层"
 2d_physics/layer_5="敌人受伤层"
+2d_physics/layer_10="大树遮挡层"
 2d_physics/layer_32="map"
 
 [physics]
