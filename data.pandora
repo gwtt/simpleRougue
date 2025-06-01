@@ -23,13 +23,7 @@
 				"_icon_color": "ffffff00",
 				"_id": "12",
 				"_index": 0,
-				"_name": "archer",
-				"_property_overrides": {
-					"defense": {
-						"type": "float",
-						"value": 0.0
-					}
-				}
+				"_name": "archer"
 			},
 			{
 				"_category_id": "15",
@@ -142,7 +136,7 @@
 	},
 	"_id_generator": {
 		"_ids_by_context": {
-			"default": 35
+			"default": 35.0
 		}
 	}
 }
