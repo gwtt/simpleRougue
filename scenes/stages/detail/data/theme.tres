@@ -1,15 +1,29 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bfgaj4x73v04f"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bfgaj4x73v04f"]
 
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_rewpy"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rewpy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rewpy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rewpy"]
+bg_color = Color(0, 0, 0, 1)
+
 [resource]
-Button/font_sizes/font_size = 24
+Button/font_sizes/font_size = 20
 Button/fonts/font = ExtResource("1_rewpy")
+Button/styles/normal = SubResource("StyleBoxEmpty_rewpy")
 Label/font_sizes/font_size = 48
 Label/fonts/font = ExtResource("1_rewpy")
+MarginContainer/constants/margin_bottom = 15
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 15
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_rewpy")
 ProgressBar/font_sizes/font_size = 48
 ProgressBar/fonts/font = ExtResource("1_rewpy")
-RichTextLabel/font_sizes/mono_font_size = 24
-RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/font_sizes/mono_font_size = 20
+RichTextLabel/font_sizes/normal_font_size = 20
 RichTextLabel/fonts/mono_font = ExtResource("1_rewpy")
 RichTextLabel/fonts/normal_font = ExtResource("1_rewpy")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_rewpy")

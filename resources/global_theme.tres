@@ -1,0 +1,81 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dybqr8kxgihto"]
+
+[ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="1_oyf17"]
+[ext_resource type="StyleBox" uid="uid://dd0te35ygy3qg" path="res://resources/hover_button.tres" id="2_v034a"]
+[ext_resource type="StyleBox" uid="uid://c50d75efbgwfr" path="res://resources/normal_button.tres" id="3_rr0hf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gx2ut"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rewpy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dksf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.724643, 0.724643, 0.724643, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d3i2g"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[resource]
+default_font = ExtResource("1_oyf17")
+default_font_size = 20
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_oyf17")
+Button/styles/focus = SubResource("StyleBoxEmpty_gx2ut")
+Button/styles/hover = ExtResource("2_v034a")
+Button/styles/normal = ExtResource("3_rr0hf")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.615686)
+Label/font_sizes/font_size = 48
+Label/fonts/font = ExtResource("1_oyf17")
+MarginContainer/constants/margin_bottom = 15
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 15
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_rewpy")
+ProgressBar/font_sizes/font_size = 48
+ProgressBar/fonts/font = ExtResource("1_oyf17")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 0)
+RichTextLabel/colors/font_selected_color = Color(0.775063, 0.775063, 0.775063, 0)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.72549)
+RichTextLabel/colors/selection_color = Color(0.460741, 0.390139, 0.456994, 0.8)
+RichTextLabel/colors/table_border = Color(0, 0, 0, 0)
+RichTextLabel/colors/table_even_row_bg = Color(1, 1, 1, 0)
+RichTextLabel/colors/table_odd_row_bg = Color(0, 0, 0, 0)
+RichTextLabel/constants/line_separation = 0
+RichTextLabel/constants/outline_size = 1
+RichTextLabel/constants/shadow_offset_x = 1
+RichTextLabel/constants/shadow_offset_y = 1
+RichTextLabel/constants/shadow_outline_size = 1
+RichTextLabel/constants/table_h_separation = 3
+RichTextLabel/constants/table_v_separation = 3
+RichTextLabel/constants/text_highlight_h_padding = 3
+RichTextLabel/constants/text_highlight_v_padding = 3
+RichTextLabel/font_sizes/mono_font_size = 24
+RichTextLabel/font_sizes/normal_font_size = 24
+RichTextLabel/fonts/mono_font = ExtResource("1_oyf17")
+RichTextLabel/fonts/normal_font = ExtResource("1_oyf17")
+RichTextLabel/styles/focus = SubResource("StyleBoxFlat_4dksf")
+RichTextLabel/styles/normal = SubResource("StyleBoxEmpty_d3i2g")
+VBoxContainer/constants/separation = 8

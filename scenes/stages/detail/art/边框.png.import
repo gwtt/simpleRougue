@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jpt2xatvd7dd"
-path="res://.godot/imported/瞄准镜.png-80919dc7c5b6d3c43634b050f9966f1f.ctex"
+uid="uid://crqx7erosn2iy"
+path="res://.godot/imported/边框.png-9865e0aaaa5c1082555b0782b478cd6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/item/assets/瞄准镜.png"
-dest_files=["res://.godot/imported/瞄准镜.png-80919dc7c5b6d3c43634b050f9966f1f.ctex"]
+source_file="res://scenes/stages/detail/art/边框.png"
+dest_files=["res://.godot/imported/边框.png-9865e0aaaa5c1082555b0782b478cd6b.ctex"]
 
 [params]
 

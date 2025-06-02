@@ -23,6 +23,14 @@
 				"_id": "39.0",
 				"_index": 0,
 				"_name": "Boss"
+			},
+			{
+				"_category_id": "",
+				"_generate_ids": true,
+				"_icon_color": "ffffff00",
+				"_id": "61.0",
+				"_index": 0,
+				"_name": "装备"
 			}
 		],
 		"_entities": [
@@ -65,6 +73,72 @@
 					"speed": {
 						"type": "float",
 						"value": 100.0
+					}
+				}
+			},
+			{
+				"_category_id": "61.0",
+				"_icon_color": "ffffff00",
+				"_id": "91.0",
+				"_index": 0,
+				"_name": "入门剑",
+				"_property_overrides": {
+					"add_attack_probability": {
+						"type": "float",
+						"value": 0.100000381469727
+					},
+					"add_coin_probability": {
+						"type": "float",
+						"value": 0.0
+					},
+					"add_mp_probability": {
+						"type": "float",
+						"value": 0.0
+					},
+					"description": {
+						"type": "string",
+						"value": "每次攻击10%概率加一攻击"
+					},
+					"item_name": {
+						"type": "string",
+						"value": "入门剑"
+					},
+					"item_texture": {
+						"type": "resource",
+						"value": "res://data/item/assets/入门剑.png"
+					},
+					"type": {
+						"type": "string",
+						"value": "装备"
+					}
+				}
+			},
+			{
+				"_category_id": "61.0",
+				"_icon_color": "ffffff00",
+				"_id": "95.0",
+				"_index": 0,
+				"_name": "入门钱币",
+				"_property_overrides": {
+					"add_coin_probability": {
+						"type": "float",
+						"value": 0.100000381469727
+					},
+					"description": {
+						"type": "string",
+						"value": "每次攻击10%概率加一金币"
+					},
+					"item_name": {
+						"type": "string",
+						"value": "入门钱币"
+					},
+					"item_texture": {
+						"type": "resource",
+						"value": "res://data/item/assets/入门钱币.png"
+					},
+					"type": {
+						"type": "string",
+						"value": "装备"
 					}
 				}
 			}
@@ -223,12 +297,194 @@
 				"_id": "59.0",
 				"_name": "attack_speed",
 				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": null,
+				"_id": "63.0",
+				"_name": "item_texture",
+				"_type": "resource"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": "装备名字",
+				"_id": "64.0",
+				"_name": "item_name",
+				"_type": "string"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": "类型",
+				"_id": "65.0",
+				"_name": "type",
+				"_type": "string"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": "描述",
+				"_id": "66.0",
+				"_name": "description",
+				"_type": "string"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": "1",
+				"_id": "67.0",
+				"_name": "pool_count",
+				"_type": "string"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": "100",
+				"_id": "68.0",
+				"_name": "cost",
+				"_type": "string"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "70.0",
+				"_name": "level",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "71.0",
+				"_name": "move_speed",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "72.0",
+				"_name": "attack_speed",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "73.0",
+				"_name": "base_damage",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "74.0",
+				"_name": "luck",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "75.0",
+				"_name": "hp",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "76.0",
+				"_name": "xp",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "77.0",
+				"_name": "defense",
+				"_type": "int"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "79.0",
+				"_name": "critical_chance",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "80.0",
+				"_name": "critical_damage",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "81.0",
+				"_name": "life_steal",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "82.0",
+				"_name": "health_regen",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "83.0",
+				"_name": "cooldown_reduction",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "84.0",
+				"_name": "exp_bonus",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "85.0",
+				"_name": "armor_penetration",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "86.0",
+				"_name": "attack_range",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "88.0",
+				"_name": "add_attack_probability",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "89.0",
+				"_name": "add_coin_probability",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "90.0",
+				"_name": "add_mp_probability",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "94.0",
+				"_name": "add_hp_probability",
+				"_type": "float"
 			}
 		]
 	},
 	"_id_generator": {
 		"_ids_by_context": {
-			"default": 60.0
+			"default": 95.0
 		}
 	}
 }

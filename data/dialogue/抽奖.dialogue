@@ -1,0 +1,6 @@
+~ start
+彩票商人: [[你好|嘿]], 想抽奖吗.
+- 抽奖
+	彩票商人: You picked the first one.
+- 离开 => END
+=> END

@@ -2,4 +2,5 @@
 class_name EntityIds
 
 
-const ARCHER = "32"
+const 入门剑 = "91.0"
+const 入门钱币 = "95.0"

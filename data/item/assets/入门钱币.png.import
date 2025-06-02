@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkc4kh1l7it4e"
-path="res://.godot/imported/鞋子.png-83d7b142038806d2c57ee79be7f0412a.ctex"
+uid="uid://dure3gxnrfrkf"
+path="res://.godot/imported/入门钱币.png-22028c9149106832485312402584d82f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/item/assets/鞋子.png"
-dest_files=["res://.godot/imported/鞋子.png-83d7b142038806d2c57ee79be7f0412a.ctex"]
+source_file="res://data/item/assets/入门钱币.png"
+dest_files=["res://.godot/imported/入门钱币.png-22028c9149106832485312402584d82f.ctex"]
 
 [params]
 

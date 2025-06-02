@@ -8,11 +8,8 @@ const weapon_bullet_pre = preload("res://entities/ui/bullet_shell/bullet_shell.t
 @onready var weapon_bullet_list: HBoxContainer = %BulletHbox
 @onready var hp_bar = $HPUI/血条
 @onready var level_label: Label = %经验
-# Called when the node enters the scene tree for the first time.
-var controller = AbstractController.new()
 
 func _ready() -> void:
-	controller.set_architecture(SimpleArchitecture.interface(SimpleArchitecture))
 	Utils.onGameStart.connect(self.onGameStart)
 	PlayerDataManager.onGoldChange.connect(self.onGoldChange)
 	PlayerDataManager.onPlayerLevelChange.connect(self.onPlayerLevelChange)

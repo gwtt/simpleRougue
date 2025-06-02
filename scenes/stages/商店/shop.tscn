@@ -1,15 +1,13 @@
 [gd_scene load_steps=20 format=3 uid="uid://dqhoj71t80ksq"]
 
-[ext_resource type="Theme" uid="uid://bfgaj4x73v04f" path="res://scenes/stages/detail/data/theme.tres" id="1_hfl3a"]
+[ext_resource type="Theme" uid="uid://dybqr8kxgihto" path="res://resources/global_theme.tres" id="1_n6ani"]
 [ext_resource type="Script" uid="uid://coytv36yj1y50" path="res://scenes/stages/商店/shop.gd" id="2_l6vlj"]
 [ext_resource type="Resource" uid="uid://bbhliqy6udgco" path="res://data/player/player_stats.tres" id="3_8uk3a"]
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="3_b18jt"]
 [ext_resource type="PackedScene" uid="uid://bniaqlyuyi5c4" path="res://scenes/stages/装备图标/item_icon.tscn" id="4_8uk3a"]
 [ext_resource type="Resource" uid="uid://mak054po2gbs" path="res://data/item_pool/item_pool.tres" id="4_tdfup"]
 [ext_resource type="Texture2D" uid="uid://dbkk6npuf4ynl" path="res://assets/金币/Coin Sheet.png" id="5_l6vlj"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofwku"]
-bg_color = Color(0.6, 0.6, 0.6, 0.356863)
+[ext_resource type="Texture2D" uid="uid://crqx7erosn2iy" path="res://scenes/stages/detail/art/边框.png" id="7_n6ani"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t32lm"]
 atlas = ExtResource("5_l6vlj")
@@ -93,7 +91,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_hfl3a")
+theme = ExtResource("1_n6ani")
 color = Color(0, 0, 0, 0.658824)
 script = ExtResource("2_l6vlj")
 player_stats = ExtResource("3_8uk3a")
@@ -113,9 +111,9 @@ text = "商店"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 60)
 layout_mode = 1
-offset_left = 1118.0
+offset_left = 1104.0
 offset_top = 592.0
-offset_right = 1218.0
+offset_right = 1204.0
 offset_bottom = 652.0
 text = "刷新"
 
@@ -123,9 +121,9 @@ text = "刷新"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 60)
 layout_mode = 1
-offset_left = 1118.0
+offset_left = 1104.0
 offset_top = 23.0
-offset_right = 1218.0
+offset_right = 1204.0
 offset_bottom = 83.0
 text = "关闭"
 icon_alignment = 1
@@ -164,16 +162,25 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="HBoxContainer"]
+[node name="Panel" type="NinePatchRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ofwku")
+texture = ExtResource("7_n6ani")
+patch_margin_left = 15
+patch_margin_top = 13
+patch_margin_right = 15
+patch_margin_bottom = 13
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Panel"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.085
+anchor_top = 0.034
+anchor_right = 0.925
+anchor_bottom = 0.964
+offset_top = -0.198001
+offset_right = -1.52588e-05
+offset_bottom = 0.09198
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 5
@@ -191,7 +198,7 @@ text = "当前等级:[color=yellow]
 
 [node name="coin" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(480, 56)
+position = Vector2(520, 58)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_b18jt")
 autoplay = "default"
@@ -199,10 +206,10 @@ autoplay = "default"
 [node name="当前金币" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 507.0
-offset_top = 30.0
-offset_right = 579.0
-offset_bottom = 79.0
+offset_left = 547.0
+offset_top = 32.0
+offset_right = 619.0
+offset_bottom = 81.0
 text = "100"
 label_settings = SubResource("LabelSettings_8uk3a")
 

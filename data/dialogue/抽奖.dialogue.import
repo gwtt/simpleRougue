@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b4p672igdrwl"
+path="res://.godot/imported/抽奖.dialogue-f9f6f7d614e6145da26d1d0dc1ee8e19.tres"
+
+[deps]
+
+source_file="res://data/dialogue/抽奖.dialogue"
+dest_files=["res://.godot/imported/抽奖.dialogue-f9f6f7d614e6145da26d1d0dc1ee8e19.tres"]
+
+[params]
+
+defaults=true

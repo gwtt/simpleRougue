@@ -261,10 +261,16 @@ offset_bottom = 678.0
 pivot_offset = Vector2(-15, -10)
 mouse_filter = 2
 
-[node name="鼠标光标" type="TextureRect" parent="." groups=["cursor"]]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_0fvn0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 101
+
+[node name="鼠标光标" type="TextureRect" parent="CanvasLayer" groups=["cursor"]]
+top_level = true
 z_index = 999
-y_sort_enabled = true
-layout_mode = 0
+z_as_relative = false
 offset_left = 575.0
 offset_top = 235.0
 offset_right = 595.0
@@ -274,8 +280,5 @@ mouse_filter = 2
 texture = ExtResource("6_kc0mq")
 expand_mode = 1
 script = ExtResource("6_oix4d")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_0fvn0")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

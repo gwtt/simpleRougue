@@ -3,6 +3,7 @@ class_name PandoraCategories
 
 
 const BOSS = "39.0"
+const 装备 = "61.0"
 
 
 class BossCategories:

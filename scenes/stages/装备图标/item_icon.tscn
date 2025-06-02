@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://bniaqlyuyi5c4"]
+[gd_scene load_steps=10 format=3 uid="uid://bniaqlyuyi5c4"]
 
-[ext_resource type="Theme" uid="uid://bfgaj4x73v04f" path="res://scenes/stages/detail/data/theme.tres" id="1_7406f"]
+[ext_resource type="Texture2D" uid="uid://crqx7erosn2iy" path="res://scenes/stages/detail/art/边框.png" id="2_had87"]
 [ext_resource type="Script" uid="uid://dvyjcyl6xd3lt" path="res://scenes/stages/装备图标/item_icon.gd" id="2_loav4"]
 [ext_resource type="Resource" uid="uid://bbhliqy6udgco" path="res://data/player/player_stats.tres" id="3_had87"]
 [ext_resource type="Texture2D" uid="uid://4jf4yhmfexu7" path="res://scenes/stages/装备图标/art/target_a.png" id="4_md841"]
@@ -8,34 +8,39 @@
 [ext_resource type="FontFile" uid="uid://cgx2cpo0iwjb6" path="res://assets/字体/ark-pixel-10px-monospaced-zh_cn.ttf" id="6_k57cm"]
 [ext_resource type="Script" uid="uid://dno7r6881l4yn" path="res://addons/label_font_auto_sizer/label_auto_sizer.gd" id="7_twt3w"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fehtv"]
-bg_color = Color(0, 0, 0, 1)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jpald"]
 texture = ExtResource("5_rkpy7")
 
 [sub_resource type="LabelSettings" id="LabelSettings_7406f"]
 font = ExtResource("6_k57cm")
-font_size = 44
+font_size = 40
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.470588)
 
-[node name="ItemIcon" type="Panel"]
+[node name="ItemIcon" type="NinePatchRect"]
 anchors_preset = -1
 anchor_right = 0.18
 anchor_bottom = 0.518
-offset_right = -0.400009
-offset_bottom = 0.0400085
+offset_right = 25.6
+offset_bottom = 11.04
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_7406f")
-theme_override_styles/panel = SubResource("StyleBoxFlat_fehtv")
+mouse_filter = 1
+texture = ExtResource("2_had87")
+patch_margin_left = 15
+patch_margin_top = 13
+patch_margin_right = 15
+patch_margin_bottom = 13
 script = ExtResource("2_loav4")
 player_stats = ExtResource("3_had87")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-offset_right = 460.0
-offset_bottom = 582.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 470.0
+offset_bottom = 740.0
 scale = Vector2(0.5, 0.5)
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
@@ -79,14 +84,15 @@ clip_text = true
 script = ExtResource("7_twt3w")
 _size_just_modified_by_autosizer = false
 _set_defaults = true
-_base_font_size = 44
-_current_font_size = 44
+_base_font_size = 40
+_current_font_size = 40
 _last_size_state = 1
 
 [node name="item_type" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "类型:[color=yellow]武器"
 fit_content = true
@@ -97,6 +103,7 @@ vertical_alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "[color=green]+3[/color] 攻击力"
 fit_content = true
@@ -109,13 +116,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -52.0
-offset_top = -45.0
-offset_right = 52.0
-offset_bottom = 27.0
+offset_left = -40.0
+offset_top = -72.0
+offset_right = 29.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.5, 0.5)
 text = "购买"
 
 [connection signal="pressed" from="BuyButton" to="." method="_on_animated_button_pressed"]
