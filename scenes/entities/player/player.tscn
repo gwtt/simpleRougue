@@ -33,6 +33,37 @@
 [ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://scenes/entities/player/ghost.tscn" id="30_brjyi"]
 [ext_resource type="Script" uid="uid://b5mb5vtymfysk" path="res://components/player/player_state.gd" id="31_bnv2y"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2pu7"]
+size = Vector2(10, 3)
+
+[sub_resource type="Curve" id="Curve_nb30i"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.436364), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5ggjt"]
+curve = SubResource("Curve_nb30i")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_55uia"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 3.0
+direction = Vector3(0, -1, 0)
+initial_velocity_max = 25.0
+gravity = Vector3(0, 0, 0)
+tangential_accel_max = 15.0
+scale_min = 2.0
+scale_max = 4.0
+scale_curve = SubResource("CurveTexture_5ggjt")
+color = Color(0.956863, 0.956863, 0.956863, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjkue"]
+size = Vector2(12, 18)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r6ath"]
+radius = 4.5
+height = 15.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbtsq"]
 atlas = ExtResource("3_he1b4")
 region = Rect2(0, 0, 48, 48)
@@ -929,64 +960,12 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2pu7"]
-size = Vector2(10, 3)
-
-[sub_resource type="Curve" id="Curve_nb30i"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.436364), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_5ggjt"]
-curve = SubResource("Curve_nb30i")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_55uia"]
-resource_local_to_scene = true
-particle_flag_disable_z = true
-emission_shape = 1
-emission_sphere_radius = 3.0
-direction = Vector3(0, -1, 0)
-initial_velocity_max = 25.0
-gravity = Vector3(0, 0, 0)
-tangential_accel_max = 15.0
-scale_min = 2.0
-scale_max = 4.0
-scale_curve = SubResource("CurveTexture_5ggjt")
-color = Color(0.956863, 0.956863, 0.956863, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjkue"]
-size = Vector2(12, 18)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r6ath"]
-radius = 4.5
-height = 15.0
-
 [node name="Player" type="CharacterBody2D"]
 z_index = 30
 y_sort_enabled = true
 scale = Vector2(2, 2)
 script = ExtResource("1_nbg82")
 player_stats = ExtResource("2_0xxfp")
-
-[node name="Visuals" type="CanvasGroup" parent="."]
-
-[node name="head" type="AnimatedSprite2D" parent="Visuals"]
-sprite_frames = SubResource("SpriteFrames_refuv")
-animation = &"hurt"
-
-[node name="body" type="AnimatedSprite2D" parent="Visuals"]
-y_sort_enabled = true
-sprite_frames = SubResource("SpriteFrames_1glbw")
-animation = &"die"
-
-[node name="left" type="AnimatedSprite2D" parent="Visuals"]
-y_sort_enabled = true
-sprite_frames = SubResource("SpriteFrames_lhuxv")
-animation = &"die"
-
-[node name="right" type="AnimatedSprite2D" parent="Visuals"]
-y_sort_enabled = true
-sprite_frames = SubResource("SpriteFrames_5dwks")
-animation = &"die"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.5)
@@ -1143,5 +1122,26 @@ shape = SubResource("CapsuleShape2D_r6ath")
 [node name="Camera2D" type="Camera2D" parent="."]
 process_callback = 0
 position_smoothing_enabled = true
+
+[node name="Visuals" type="CanvasGroup" parent="."]
+
+[node name="head" type="AnimatedSprite2D" parent="Visuals"]
+sprite_frames = SubResource("SpriteFrames_refuv")
+animation = &"run"
+
+[node name="body" type="AnimatedSprite2D" parent="Visuals"]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_1glbw")
+animation = &"run"
+
+[node name="left" type="AnimatedSprite2D" parent="Visuals"]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_lhuxv")
+animation = &"run"
+
+[node name="right" type="AnimatedSprite2D" parent="Visuals"]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_5dwks")
+animation = &"run"
 
 [connection signal="area_entered" from="HurtBoxComponent" to="HurtBoxComponent" method="_on_area_entered"]

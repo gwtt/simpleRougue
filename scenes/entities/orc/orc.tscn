@@ -1,8 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://xu4ianhv1tl0"]
+[gd_scene load_steps=19 format=3 uid="uid://xu4ianhv1tl0"]
 
 [ext_resource type="Script" uid="uid://bsww1834n3rh7" path="res://scenes/entities/orc/orc.gd" id="1_sxws1"]
 [ext_resource type="SpriteFrames" uid="uid://kk8ifyc5d4kf" path="res://scenes/entities/orc/data/orc.tres" id="2_77e8p"]
-[ext_resource type="Resource" uid="uid://d0jdyjs1mbug7" path="res://data/orc/orc_stats.tres" id="2_jqnmo"]
+[ext_resource type="Script" uid="uid://8q73873xik7s" path="res://addons/pandora/model/entity.gd" id="2_ecwni"]
 [ext_resource type="Script" uid="uid://drqwl4h286u12" path="res://components/enemy_health_component.gd" id="2_lr7qe"]
 [ext_resource type="PackedScene" uid="uid://cw86ntwlxqf3f" path="res://scenes/entities/player/ghost.tscn" id="2_oot3s"]
 [ext_resource type="Script" uid="uid://cljvbcc60xl7b" path="res://components/enemy_hit_box_component.gd" id="3_5aasi"]
@@ -15,6 +15,10 @@
 [ext_resource type="Script" uid="uid://b2mfla165mlak" path="res://components/orc/orc_skill.gd" id="12_jqnmo"]
 [ext_resource type="Script" uid="uid://c02jjimwuaj2k" path="res://components/orc/orc_state.gd" id="13_ecwni"]
 
+[sub_resource type="Resource" id="Resource_yf440"]
+script = ExtResource("2_ecwni")
+_id = "37.0"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yngm"]
 size = Vector2(12, 17.25)
 
@@ -22,13 +26,13 @@ size = Vector2(12, 17.25)
 size = Vector2(12, 3)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_54hmr"]
-radius = 12.2729
+radius = 14.0
 
 [node name="Orc" type="CharacterBody2D"]
 z_index = 40
 scale = Vector2(4, 4)
 script = ExtResource("1_sxws1")
-orc_stats = ExtResource("2_jqnmo")
+stats = SubResource("Resource_yf440")
 
 [node name="body" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -40,6 +44,7 @@ animation = &"walk"
 frame_progress = 0.0400745
 
 [node name="EnemyHealthComponent" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("2_lr7qe")
 
 [node name="EnemyHitBoxComponent" type="Area2D" parent="."]

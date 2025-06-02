@@ -37,7 +37,7 @@ func on_idle_physics_processing(_delte):
 
 ## 跑步状态
 func on_run_physics_processing(_delte):
-	player.velocity = player.direction * (player.SPEED + PlayerDataManager.移速加成)
+	player.velocity = player.direction * (player.player_stats.move_speed + PlayerDataManager.移速加成)
 	changeAnim(player.direction)
 	player_animations.anim_play("run")
 	player.move_and_slide()

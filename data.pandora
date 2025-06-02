@@ -52,7 +52,21 @@
 				"_icon_color": "ffffff00",
 				"_id": "37.0",
 				"_index": 0,
-				"_name": "orc"
+				"_name": "orc",
+				"_property_overrides": {
+					"damage": {
+						"type": "float",
+						"value": 1.0
+					},
+					"max_health": {
+						"type": "float",
+						"value": 200.0
+					},
+					"speed": {
+						"type": "float",
+						"value": 100.0
+					}
+				}
 			}
 		],
 		"_properties": [
@@ -153,12 +167,68 @@
 				"_id": "45.0",
 				"_name": "defense",
 				"_type": "float"
+			},
+			{
+				"_category_id": "36.0",
+				"_default_value": 0.200000762939453,
+				"_id": "46.0",
+				"_name": "speed_increase_rate",
+				"_type": "float"
+			},
+			{
+				"_category_id": "36.0",
+				"_default_value": 4.0,
+				"_id": "47.0",
+				"_name": "max_speed_multiplier",
+				"_type": "float"
+			},
+			{
+				"_category_id": "36.0",
+				"_default_value": 0,
+				"_id": "52.0",
+				"_name": "current_combo",
+				"_type": "int"
+			},
+			{
+				"_category_id": "36.0",
+				"_default_value": false,
+				"_id": "53.0",
+				"_name": "is_rage",
+				"_type": "bool"
+			},
+			{
+				"_category_id": "36.0",
+				"_default_value": 0.5,
+				"_id": "55.0",
+				"_name": "damage_reduction",
+				"_type": "float"
+			},
+			{
+				"_category_id": "36.0",
+				"_default_value": 1.0,
+				"_id": "56.0",
+				"_name": "attack_delay",
+				"_type": "float"
+			},
+			{
+				"_category_id": "36.0",
+				"_default_value": 5.0,
+				"_id": "57.0",
+				"_name": "rage_time",
+				"_type": "float"
+			},
+			{
+				"_category_id": "39.0",
+				"_default_value": 1.0,
+				"_id": "59.0",
+				"_name": "attack_speed",
+				"_type": "float"
 			}
 		]
 	},
 	"_id_generator": {
 		"_ids_by_context": {
-			"default": 45.0
+			"default": 60.0
 		}
 	}
 }

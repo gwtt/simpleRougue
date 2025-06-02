@@ -36,3 +36,6 @@ func find_player_and_flip_h():
 
 func on_die() -> void:
 	die.emit()
+
+func get_stats():
+	return archer_stats

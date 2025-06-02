@@ -8,7 +8,6 @@ class_name Player
 @onready var player_state: PlayerState = %PlayerState
 
 var gun = null
-var SPEED = 200
 var is_knockback = false # 后坐力
 var knockback_speed = 0 # 后坐力速度
 var direction: Vector2
@@ -49,9 +48,6 @@ func changeWeapon(weapon_id):
 	for item in weapon.get_children():
 		item.set_use(item.name == str(weapon_id))
 		
-func onSpeedChange(speed):
-	SPEED = speed
-	
 func cameraSnake(step):
 	get_tree().call_group("camera", "shootShake", step)
 	
