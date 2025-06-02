@@ -11,9 +11,9 @@ var current_item:Item
 signal buy_item
 
 func _on_animated_button_pressed() -> void:
-	player_stats.gold -= item_stats.cost
+	player_stats.gold -= item_stats.get_integer("cost")
 	player_stats.player_item_list.append(item_stats)
-	item_stats.add_to_player(player_stats)
+	Utils.add_to_player(item_stats, player_stats)
 	buy_item.emit()
 	print("购买成功")
 	#current_item.use()
@@ -33,7 +33,7 @@ func _set_item_stats(value: PandoraEntity) -> void:
 	if not is_node_ready():
 		await ready
 	self.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	item_icon.texture = value.get_resource("item")
+	item_icon.texture = value.get_resource("item_texture")
 	item_name.text = value.get_string("item_name")
 	item_type.text = value.get_string("type")
 	description.text = value.get_string("description")

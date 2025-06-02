@@ -1,9 +1,17 @@
-[gd_resource type="Resource" script_class="ItemPool" load_steps=3 format=3 uid="uid://mak054po2gbs"]
+[gd_resource type="Resource" script_class="ItemPool" load_steps=5 format=3 uid="uid://mak054po2gbs"]
 
 [ext_resource type="Script" uid="uid://8q73873xik7s" path="res://addons/pandora/model/entity.gd" id="1_xp6ki"]
 [ext_resource type="Script" uid="uid://bmafudxyuwhno" path="res://data/item_pool/item_pool.gd" id="2_1dls2"]
 
+[sub_resource type="Resource" id="Resource_xp6ki"]
+script = ExtResource("1_xp6ki")
+_id = "91.0"
+
+[sub_resource type="Resource" id="Resource_1dls2"]
+script = ExtResource("1_xp6ki")
+_id = "95.0"
+
 [resource]
 script = ExtResource("2_1dls2")
-available_items = Dictionary[ExtResource("1_xp6ki"), String]({})
+available_items = Array[ExtResource("1_xp6ki")]([SubResource("Resource_xp6ki"), SubResource("Resource_1dls2")])
 metadata/_custom_type_script = "uid://bmafudxyuwhno"

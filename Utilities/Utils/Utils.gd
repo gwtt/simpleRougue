@@ -86,4 +86,31 @@ func initGame():
 		player.global_position = player_init_postion
 		player.init_game()
 	initBoss()
-	
+
+## 添加装备属性到玩家
+func add_to_player(pandora: PandoraEntity, player_stats: PlayerStats):
+	player_stats.move_speed += pandora.get_integer("move_speed")
+	player_stats.attack_speed += pandora.get_integer("attack_speed")
+	player_stats.base_damage += pandora.get_integer("base_damage")
+	player_stats.luck += pandora.get_integer("luck")
+	player_stats.max_hp += pandora.get_integer("hp")
+	player_stats.max_xp += pandora.get_integer("xp")
+	player_stats.add_attack_probability += pandora.get_float("add_attack_probability")
+	player_stats.add_hp_probability += pandora.get_float("add_hp_probability")
+	player_stats.add_mp_probability += pandora.get_float("add_mp_probability")
+	player_stats.add_coin_probability += pandora.get_float("add_coin_probability")
+	player_stats.add_exp_probability += pandora.get_float("add_exp_probability")
+
+## 减去装备属性到玩家
+func minus_to_player(pandora: PandoraEntity, player_stats: PlayerStats):
+	player_stats.move_speed -= pandora.get_integer("move_speed")
+	player_stats.attack_speed -= pandora.get_integer("attack_speed")
+	player_stats.base_damage -= pandora.get_integer("base_damage")
+	player_stats.luck -= pandora.get_integer("luck")
+	player_stats.max_hp -= pandora.get_integer("hp")
+	player_stats.max_xp -= pandora.get_integer("xp")
+	player_stats.add_attack_probability -= pandora.get_float("add_attack_probability")
+	player_stats.add_hp_probability -= pandora.get_float("add_hp_probability")
+	player_stats.add_mp_probability -= pandora.get_float("add_mp_probability")
+	player_stats.add_coin_probability -= pandora.get_float("add_coin_probability")
+	player_stats.add_exp_probability -= pandora.get_float("add_exp_probability")

@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Utils="*res://utilities/utils/Utils.gd"
+Utils="*res://utilities/utils/utils.gd"
 BossDataManager="*res://utilities/boss_data_manager/boss_data_manager.gd"
 PlayerDataManager="*res://utilities/player_data_manager/player_data_manager.gd"
 SkillDataManager="*res://utilities/skill_data_manager/skill_data_manager.gd"

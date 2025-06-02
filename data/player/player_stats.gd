@@ -153,37 +153,37 @@ func _set_current_xp(value: int) -> void:
 	emit_changed()
 
 func _set_add_attack_probability(value: float) -> void:
-	add_attack_probability = value
+	add_attack_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_hp_probability(value: float) -> void:
-	add_hp_probability = value
+	add_hp_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_mp_probability(value: float) -> void:
-	add_mp_probability = value
+	add_mp_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_coin_probability(value: float) -> void:
-	add_coin_probability = value
+	add_coin_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_exp_probability(value: float) -> void:
-	add_exp_probability = value
+	add_exp_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_attack_rate_probability(value: float) -> void:
-	add_attack_rate_probability = value
+	add_attack_rate_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_range_probability(value: float) -> void:
-	add_range_probability = value
+	add_range_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_speed_probability(value: float) -> void:
-	add_speed_probability = value
+	add_speed_probability = snapped(value, 0.01)
 	emit_changed()
 
 func _set_add_armor_probability(value: float) -> void:
-	add_armor_probability = value
+	add_armor_probability = snapped(value, 0.01)
 	emit_changed()

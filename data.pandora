@@ -350,13 +350,6 @@
 			{
 				"_category_id": "61.0",
 				"_default_value": 0,
-				"_id": "71.0",
-				"_name": "move_speed",
-				"_type": "int"
-			},
-			{
-				"_category_id": "61.0",
-				"_default_value": 0,
 				"_id": "72.0",
 				"_name": "attack_speed",
 				"_type": "int"
@@ -479,12 +472,26 @@
 				"_id": "94.0",
 				"_name": "add_hp_probability",
 				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0.0,
+				"_id": "96.0",
+				"_name": "add_exp_probability",
+				"_type": "float"
+			},
+			{
+				"_category_id": "61.0",
+				"_default_value": 0,
+				"_id": "97.0",
+				"_name": "move_speed",
+				"_type": "int"
 			}
 		]
 	},
 	"_id_generator": {
 		"_ids_by_context": {
-			"default": 95.0
+			"default": 97.0
 		}
 	}
 }
