@@ -60,10 +60,15 @@ func showToast(msg,time = 1):
 	if canvasLayer:
 		canvasLayer.showToast(msg,time)
 
-func cross_hair_change(is_change: bool):
+## 设置原始光标状态
+func cross_hair_change(status: bool):
+	if status:
+		Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if !cursor:
 		cursor = get_tree().get_first_node_in_group("cursor")
-	cursor.visible = is_change
+	cursor.visible = status
 	
 func nextLevel():
 	now_level += 1

@@ -23,7 +23,8 @@ extends Resource
 @export_range(0, 10000) var max_xp: int = 1: set = _set_max_xp
 ## 当前蓝量
 @export_range(0, 10000) var current_xp: int = 0: set = _set_current_xp
-
+## 当前可抽奖次数
+@export_range(0, 10000) var raffle_count: int = 0: set = _set_raffle_count
 
 @export var add_attack_probability = 0.0 : set = _set_add_attack_probability
 @export var add_hp_probability = 0.0 : set = _set_add_hp_probability
@@ -186,4 +187,8 @@ func _set_add_speed_probability(value: float) -> void:
 
 func _set_add_armor_probability(value: float) -> void:
 	add_armor_probability = snapped(value, 0.01)
+	emit_changed()
+
+func _set_raffle_count(value: int) -> void:
+	raffle_count = value
 	emit_changed()

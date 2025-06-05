@@ -62,11 +62,9 @@ func _on_player_stats_changed() -> void:
 ## 当商店打开
 func on_visibility_changed() -> void:
 	if is_visible_in_tree():
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		Utils.cross_hair_change(false)
 		print("打开商店")
 	else:
-		Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 		Utils.cross_hair_change(true)
 		print("关闭商店")
 

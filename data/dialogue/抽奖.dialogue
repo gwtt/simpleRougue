@@ -1,6 +1,9 @@
 ~ start
-彩票商人: [[你好|嘿]], 想抽奖吗.
-- 抽奖
-	彩票商人: You picked the first one.
+战斗员: [[你好|嘿]], 来获取战斗奖励吗。（每升一级获得一次抽奖机会）
+- 抽奖(剩余{{Utils.player.player_stats.raffle_count}}次)
+	if Utils.player.player_stats.raffle_count <= 0
+		战斗员: 对不起，没有足够的次数，继续升级吧。
+	else：
+		战斗员: 抽奖成功
 - 离开 => END
 => END

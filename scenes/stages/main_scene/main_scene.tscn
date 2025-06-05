@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dyewhlh6h8w1l"]
+[gd_scene load_steps=36 format=4 uid="uid://dyewhlh6h8w1l"]
 
 [ext_resource type="Script" uid="uid://64haln6ein0h" path="res://scenes/stages/main_scene/main_scene.gd" id="1_6luf8"]
 [ext_resource type="PackedScene" uid="uid://cp7ei4p08hsst" path="res://scenes/stages/detail/detail.tscn" id="1_jhclc"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dhg8xbngla50n" path="res://scenes/entities/player/player.tscn" id="9_xvwk4"]
 [ext_resource type="Texture2D" uid="uid://c1r48uqxfpw7w" path="res://assets/我的素材/shift介绍.png" id="10_xu4qh"]
 [ext_resource type="Resource" uid="uid://bbhliqy6udgco" path="res://data/player/player_stats.tres" id="11_c0bth"]
+[ext_resource type="PackedScene" uid="uid://0mmhev8ufqw2" path="res://scenes/entities/merchant/merchant.tscn" id="11_pcx4k"]
 [ext_resource type="PackedScene" uid="uid://dqhoj71t80ksq" path="res://scenes/stages/商店/shop.tscn" id="12_34fts"]
 [ext_resource type="PackedScene" uid="uid://evvls8qecx4g" path="res://scenes/stages/first_scene/first_scene.tscn" id="12_aaikw"]
 [ext_resource type="Script" uid="uid://bxnkawkxs5dlv" path="res://components/map_manager.gd" id="13_aaikw"]
@@ -1208,6 +1209,11 @@ position = Vector2(782, 135)
 scale = Vector2(4, 4)
 texture = ExtResource("10_xu4qh")
 
+[node name="Npc" type="Node2D" parent="."]
+
+[node name="Merchant" parent="Npc" instance=ExtResource("11_pcx4k")]
+position = Vector2(20, 520)
+
 [node name="player" parent="." instance=ExtResource("9_xvwk4")]
 position = Vector2(589, 180)
 scale = Vector2(3, 3)
@@ -1218,6 +1224,7 @@ volume_db = -80.0
 autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="detailUI" parent="UI" instance=ExtResource("1_jhclc")]
 player_stats = ExtResource("11_c0bth")
