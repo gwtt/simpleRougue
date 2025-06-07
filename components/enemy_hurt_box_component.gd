@@ -17,7 +17,7 @@ func _physics_process(_delta):
 		Utils.showHitLabel(idle_frame_num,self)
 		idle_frame_num = 0
 
-func enemy_hurt(weapon, damage):
+func enemy_hurt(_weapon, damage):
 	onHit(damage)
 	audio_hit.play(0.17)
 

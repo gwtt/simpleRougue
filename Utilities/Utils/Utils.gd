@@ -65,11 +65,11 @@ func showToast(msg,time = 1):
 func cross_hair_change(status: bool):
 	if status:
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
-		player.set_physics_process(true)
+		pause_node(player, true)
 		GameManager.ui_active = false
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		player.set_physics_process(false)
+		pause_node(player, false)
 		GameManager.ui_active = true
 	if !cursor:
 		cursor = get_tree().get_first_node_in_group("cursor")
@@ -96,6 +96,13 @@ func initGame():
 		player.global_position = player_init_postion
 		player.init_game()
 	initBoss()
+	
+## 将节点的physics_process状态改变
+func pause_node(node, status:bool):
+	node.set_physics_process(status)
+	for child in node.get_children():
+		if child.has_method("set_physics_process"):
+			pause_node(child, status)
 
 ## 添加装备属性到玩家
 func add_to_player(pandora: PandoraEntity, player_stats: PlayerStats):

@@ -82,3 +82,4 @@ func _on_检测遮挡_body_shape_exited(body_rid, body, _body_shape_index, _loca
 func init_game():
 	player_stats.current_hp = player_stats.max_hp
 	player_stats.current_xp = player_stats.max_xp
+
