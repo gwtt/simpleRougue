@@ -5,7 +5,7 @@ class_name Bullet
 @export var bullet_impact:PackedScene
 @export var bullet_smoke:PackedScene
 
-@export var hurt = 1.0
+@export var damage = 1.0
 @export var speed = 600
 @export var knockback_speed = 50
 @export var knockback_time = 0.1
@@ -33,7 +33,7 @@ func start(local:Vector2,pos:Vector2):
 	velocity = local.direction_to(pos)
 
 func fire():
-	hurt += PlayerDataManager.基础伤害
+	damage += PlayerDataManager.基础伤害
 	velocity = Vector2(speed, 0).rotated(rotation)
 	set_process(true)
 	
@@ -44,8 +44,7 @@ func fire():
 	
 
 func _physics_process(delta: float) -> void:
-	#if Utils.freeze_frame:
-	#	delta = 0.0
+
 	var collisionResult = move_and_collide(velocity * delta)
 	if collisionResult:
 		_hit(collisionResult)

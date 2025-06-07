@@ -54,7 +54,7 @@ func on_hurt_entered():
 
 ## 受伤也能跑
 func on_hurt_physics_processing(_delte):
-	player.velocity = player.direction * (player.SPEED + PlayerDataManager.移速加成)
+	player.velocity = player.direction * (player.player_stats.move_speed + PlayerDataManager.移速加成)
 	changeAnim(player.direction)
 	player.move_and_slide()
 

@@ -174,3 +174,5 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+func _on_responses_menu_tree_exited() -> void:
+	Utils.cross_hair_change(true)

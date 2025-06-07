@@ -1224,7 +1224,6 @@ volume_db = -80.0
 autoplay = true
 
 [node name="UI" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="detailUI" parent="UI" instance=ExtResource("1_jhclc")]
 player_stats = ExtResource("11_c0bth")

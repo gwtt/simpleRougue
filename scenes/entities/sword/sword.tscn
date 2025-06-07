@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5dmoijkg87bi"]
+
+[ext_resource type="Texture2D" uid="uid://kii5tuli1hpg" path="res://scenes/entities/sword/art/剑.png" id="1_36hu3"]
+[ext_resource type="Script" uid="uid://buqa2cdpvsedi" path="res://scenes/entities/sword/sword.gd" id="1_vmuag"]
+[ext_resource type="Script" uid="uid://di3o7wp0qu0vf" path="res://scenes/entities/sword/polygon_2d.gd" id="3_ko0v4"]
+
+[sub_resource type="Gradient" id="Gradient_ko0v4"]
+colors = PackedColorArray(1, 1, 1, 0.8, 100, 100, 100, 0)
+
+[sub_resource type="Gradient" id="Gradient_6rbeo"]
+colors = PackedColorArray(1, 1, 1, 0.484, 0.982, 0.982, 0.982, 0)
+
+[sub_resource type="Gradient" id="Gradient_jiadd"]
+offsets = PackedFloat32Array(0.00253807, 1)
+colors = PackedColorArray(1, 1, 1, 0.8, 1, 1, 1, 0)
+
+[node name="Sword" type="Node2D"]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_vmuag")
+
+[node name="sword" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_36hu3")
+offset = Vector2(8, -8)
+
+[node name="sword_head" type="Node2D" parent="sword"]
+unique_name_in_owner = true
+position = Vector2(15, -15)
+
+[node name="sword_line" type="Polygon2D" parent="sword" node_paths=PackedStringArray("attack_area", "sword")]
+unique_name_in_owner = true
+script = ExtResource("3_ko0v4")
+points = PackedVector2Array(0, 0, 7.5, -7.5, 15, -15)
+length = 5
+smooth = 5
+trail_color = Array[Gradient]([SubResource("Gradient_ko0v4"), SubResource("Gradient_6rbeo"), SubResource("Gradient_jiadd")])
+attack_area = NodePath("../attack_area/CollisionPolygon2D")
+sword = NodePath("../..")
+
+[node name="attack_area" type="Area2D" parent="sword"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="sword/attack_area"]
+build_mode = 1

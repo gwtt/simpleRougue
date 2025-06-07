@@ -2,25 +2,24 @@ extends CharacterBody2D
 class_name Player
 
 @export var player_stats: PlayerStats
-@onready var weapon = $"WeaponRoot"
+@onready var weapon_root: Node2D = %WeaponRoot
+
 @onready var player_animations: PlayerAnimations = %PlayerAnimations
 @onready var player_skill: PlayerSkill = %PlayerSkill
 @onready var player_state: PlayerState = %PlayerState
 
-var gun = null
+var weapon = null
 var is_knockback = false # 后坐力
 var knockback_speed = 0 # 后坐力速度
 var direction: Vector2
 
 func _ready():
-	var local_gun = Utils.weapon_list["0"].instantiate() as BaseGun
-	PlayerDataManager.player_weapon_list[0] = local_gun
-	local_gun.name = str(1)
-	weapon.add_child(local_gun)
-	local_gun.setOwner(self)
-	if gun == null:
-		gun = local_gun
-		gun.set_use(true)
+	weapon = Utils.weapon_list["1"].instantiate()
+	PlayerDataManager.player_weapon_list[0] = weapon
+	weapon.name = str(1)
+	weapon_root.add_child(weapon)
+	#local_weapon.setOwner(self)
+	#weapon.set_use(true)
 	Utils.player = self
 	init_game()
 	
@@ -29,23 +28,23 @@ func _physics_process(_delta):
 	direction = Input.get_vector("left", "right", "up", "down")
 	player_state.changeAnim(direction)
 	player_animations.set_look_at(get_global_mouse_position())
-	# 如果有武器
-	if gun:
-		gun.look_at(get_global_mouse_position())	
+	## 如果有武器
+	#if weapon:
+		#weapon.look_at(get_global_mouse_position())	
 		
 func playerWeaponListChange(_new_value):
 	for weapon_id in PlayerDataManager.player_weapon_list:
-		if !weapon.has_node(str(weapon_id)):
+		if !weapon_root.has_node(str(weapon_id)):
 			var local_gun = PlayerDataManager.player_weapon_list[weapon_id] as BaseGun
 			local_gun.name = str(weapon_id)
-			weapon.add_child(local_gun)
+			weapon_root.add_child(local_gun)
 			local_gun.setOwner(self)
-			if gun == null:
-				gun = local_gun
-				gun.set_use(true)
+			if weapon == null:
+				weapon = local_gun
+				weapon.set_use(true)
 				
 func changeWeapon(weapon_id):
-	for item in weapon.get_children():
+	for item in weapon_root.get_children():
 		item.set_use(item.name == str(weapon_id))
 		
 func cameraSnake(step):

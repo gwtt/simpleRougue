@@ -989,9 +989,6 @@ collision_mask = 512
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_gjkue")
 
-[node name="WeaponRoot" type="Node2D" parent="."]
-position = Vector2(-1, 1)
-
 [node name="StateChart" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("15_lbb20")
@@ -1143,5 +1140,9 @@ animation = &"run"
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_5dwks")
 animation = &"run"
+
+[node name="WeaponRoot" type="Node2D" parent="Visuals"]
+unique_name_in_owner = true
+position = Vector2(-1, 1)
 
 [connection signal="area_entered" from="HurtBoxComponent" to="HurtBoxComponent" method="_on_area_entered"]

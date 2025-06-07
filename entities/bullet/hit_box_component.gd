@@ -10,5 +10,7 @@ func _init() -> void:
 
 func _on_area_entered(hurtbox: EnemyHurtBoxComponent) -> void:
 	print("[Hit] %s => %s" % [self.owner.name, hurtbox.owner.name])
+	if hurtbox.has_method("enemy_hurt"):
+		hurtbox.enemy_hurt(bullet, bullet.damage)
 	hit.emit(hurtbox)
 	hurtbox.hurt.emit(bullet)

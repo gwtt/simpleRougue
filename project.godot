@@ -24,6 +24,7 @@ SkillDataManager="*res://utilities/skill_data_manager/skill_data_manager.gd"
 Pandora="*res://addons/pandora/api.gd"
 EventBus="*res://utilities/utils/event_bus.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GameManager="*res://utilities/utils/game_manager.gd"
 
 [dialogue_manager]
 

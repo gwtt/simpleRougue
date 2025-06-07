@@ -17,10 +17,12 @@ func _physics_process(_delta):
 		Utils.showHitLabel(idle_frame_num,self)
 		idle_frame_num = 0
 
+func enemy_hurt(weapon, damage):
+	onHit(damage)
+	audio_hit.play(0.17)
 
-func hitFlash(bullet:Bullet):
-	Utils.freezeFrame(bullet.gun.time_scale)
-	onHit(bullet.hurt)
+func hitFlash(weapon):
+	onHit(weapon.damage)
 	audio_hit.play(0.17)
 
 ## 子弹击中

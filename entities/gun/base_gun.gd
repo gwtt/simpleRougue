@@ -56,6 +56,7 @@ var bullets_count = 0: #剩余子弹
 var is_reloading = false #是否正在换子弹
 var change_timer = Timer.new()
 var audio_reload_ammo = AudioStreamPlayer.new()
+var is_shooting = false
 
 func _init():
 	change_timer.one_shot = true
@@ -103,17 +104,24 @@ func _process(_delta):
 		_delta = 0.0
 	var mouse_pos = get_global_mouse_position()
 	direction = (mouse_pos - tip.global_position).normalized()
-	if Input.mouse_mode == Input.MOUSE_MODE_CONFINED_HIDDEN && Input.is_action_pressed("shoot") and can_shoot and !is_reloading:
+	if Input.mouse_mode == Input.MOUSE_MODE_CONFINED_HIDDEN && Input.is_action_pressed("shoot") and can_shoot and !is_reloading and is_shooting:
+		if GameManager.ui_active:
+			return
 		can_shoot = false
 		timer.start()
 		if bullets_count > 0:
 			_shoot()
 		else:
 			reload_ammo()
-	
 	if is_use && Input.is_action_pressed("reload"):
-		reload_ammo()
+		reload_ammo()		
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		is_shooting = true
+	if event.is_action_released("shoot"):
+		is_shooting = false
+		
 #设置是否正在使用
 func set_use(use:bool):
 	change_timer.stop()
@@ -138,7 +146,7 @@ func fire(bullet:Bullet,is_bullet = true,is_play = true):
 			return
 	
 	bullet.speed = bullet_speed
-	bullet.hurt = damage * (1+PlayerDataManager.伤害加成)
+	bullet.damage = damage * (1+PlayerDataManager.伤害加成)
 	bullet.knockback_speed = knockback_speed
 	bullet.knockback_time = knockback_time
 	bullet.gun = self

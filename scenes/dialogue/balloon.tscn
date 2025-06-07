@@ -96,3 +96,5 @@ text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/MarginContainer/NinePatchRect/MarginContainer/VBoxContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
+[connection signal="tree_exited" from="Balloon/MarginContainer/NinePatchRect/MarginContainer/VBoxContainer/ResponsesMenu" to="." method="_on_responses_menu_tree_exited"]
+[connection signal="tree_exiting" from="Balloon/MarginContainer/NinePatchRect/MarginContainer/VBoxContainer/ResponsesMenu" to="." method="_on_responses_menu_tree_exiting"]

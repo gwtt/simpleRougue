@@ -21,6 +21,7 @@ enum GUN_CHANGE_TYPE { #切枪类型
 
 var weapon_list = {
 	"0" = preload("res://entities/gun/custom_gun/custom_gun.tscn"),
+	"1" = preload("res://scenes/entities/sword/sword.tscn")
 }
 var temp_am_list = []
 
@@ -60,16 +61,20 @@ func showToast(msg,time = 1):
 	if canvasLayer:
 		canvasLayer.showToast(msg,time)
 
-## 设置原始光标状态
+## 设置旋转光标状态
 func cross_hair_change(status: bool):
 	if status:
 		Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+		player.set_physics_process(true)
+		GameManager.ui_active = false
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		player.set_physics_process(false)
+		GameManager.ui_active = true
 	if !cursor:
 		cursor = get_tree().get_first_node_in_group("cursor")
 	cursor.visible = status
-	
+
 func nextLevel():
 	now_level += 1
 	
